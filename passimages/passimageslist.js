@@ -1,4 +1,4 @@
-const images = [
+const animalsImages = [
     '/images/cachorros.jpg',
     '/images/capibara.jpg',
     '/images/cerdo.jpg',
@@ -16,6 +16,13 @@ const images = [
     '/images/leon.jfif',
     '/images/mapache.jfif',
     '/images/perezoso.jfif',
-
-
   ];
+  const geometryImages = [
+  ];
+  const iconografyImages = [
+];
+const famousImages = [
+];
+const bugsImages = [
+];
+
