@@ -1,91 +1,47 @@
-
-
 import React, { useState } from 'react';
-import './App.css';
-import'./password'
 
-function App() {
-  const [selectedImages, setSelectedImages] = useState([]);
+function UserForm({ onSubmit }) {
+  const [nombre, setNombre] = useState('');
+  const [edad, setEdad] = useState('');
+  const [email, setEmail] = useState('');
 
-  const images = [
-    '/images/cachorros.jpg',
-    '/images/capibara.jpg',
-    '/images/cerdo.jpg',
-    '/images/cuerpospin.jpg',
-    '/images/llama.jpg',
-    '/images/orangutan.avif',
-    '/images/perroblanco.jpg',
-    '/images/tigre-caminando.jpg',
-    '/images/vaca.jpg',
-    '/images/zebra.jpg',
-    '/images/zorro.jpg',
-    '/images/tortuga.jpg',
-    '/images/ardilla.jfif',
-    '/images/caballo.jfif',
-    '/images/leon.jfif',
-    '/images/mapache.jfif',
-    '/images/perezoso.jfif',
-
-
-  ];
-
-  const toggleImageSelection = (imageURL) => {
-    console.log(imageURL);
-    if (selectedImages.includes(imageURL)) {
-      setSelectedImages(selectedImages.filter(img => img !== imageURL));
-    } else if (selectedImages.length < 12) {
-      setSelectedImages([...selectedImages, imageURL]);
-    }
-  };
-
-  const handleSubmit = () => {
-    if (selectedImages.length === 12) {
-      console.log('Image Password:', selectedImages);
-    } else {
-      alert('Select exactly 12 images.');
-    }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    onSubmit({ nombre, edad, email });
   };
 
   return (
-    <div className="App">
-      <div className="App-header">
-        <div className="image-container">
-
-          <div class="sing-in-panel">
-            <form>
-              <h1>Sign In to your Dashboard</h1>
-              <div class="input">
-                <input type="text" required id="name" />
-                <div class="bar"></div>
-                <label>Username</label>
-              </div>
-             
-              <div class="button-wrapper">
-            
-              <button class="button-transparent sing-up" type="submit" onclick="window.location.href='password.js'">Generate my PassImage</button>
-               
-                
-              </div>
-            </form>
-            {/*   {images.map((imageURL, index) => (
-            <img
-              key={index}
-              src={process.env.PUBLIC_URL + imageURL}
-              alt={`Image ${index + 1}`}
-              className={`image ${selectedImages.includes(imageURL) ? 'selected' : ''}`}
-              onClick={() => toggleImageSelection(imageURL)}
-            />
-          ))} */}
-          </div>
-          <div>
-            <button onClick={handleSubmit} disabled={selectedImages.length !== 12}>
-              Submit
-            </button>
-          </div>
-        </div>
-    </div>
-    </div>
-      );
+    <form onSubmit={handleSubmit}>
+      <div>
+        <label htmlFor="nombre">Nombre:</label>
+        <input
+          type="text"
+          id="nombre"
+          value={nombre}
+          onChange={(e) => setNombre(e.target.value)}
+        />
+      </div>
+      <div>
+        <label htmlFor="edad">Edad:</label>
+        <input
+          type="number"
+          id="edad"
+          value={edad}
+          onChange={(e) => setEdad(e.target.value)}
+        />
+      </div>
+      <div>
+        <label htmlFor="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+      </div>
+      <button type="submit">Crear passimage</button>
+    </form>
+  );
 }
 
-      export default App;
+export default UserForm;
