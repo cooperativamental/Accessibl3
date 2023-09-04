@@ -1,5 +1,4 @@
 
-
 import React, { useState } from 'react';
 import './App.css';
 
@@ -12,7 +11,7 @@ function App() {
     '/images/cerdo.jpg',
     '/images/cuerpospin.jpg',
     '/images/llama.jpg',
-    '/images/orangutan.avif',
+    '/images/ajolote.jfif',
     '/images/perroblanco.jpg',
     '/images/tigre-caminando.jpg',
     '/images/vaca.jpg',
@@ -71,5 +70,3 @@ function App() {
 }
 
 export default App;
-
-
