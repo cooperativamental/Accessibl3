@@ -31,21 +31,24 @@ h1 {
   width: 90%;
   justify-content: center;
 }
-
+.button{border:solid darkmagenta 4px;margin-top: 10%;padding:  0.5em; font-size: x-large;}
+input{color:darkmagenta; margin-bottom: 32px;}
 img {
   height:120px;
   width: 120px;
   padding: 5px;
   margin: 10px;
 }
-
+input{border:solid darkmagenta 4px; justify-content: center;text-align: center;font-size: x-large;}
 .App-link {
   color: #61dafb;
 }
+form{border: solid 4px darkmagenta; padding: 3em;}
 .selected {
   border: 2px solid ;
   border-color: blue;
 }
+input{margin: 25px;}
 
 @keyframes App-logo-spin {
   from {

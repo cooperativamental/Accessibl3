@@ -63,7 +63,7 @@ function App() {
         <div className="background background-right"></div>
         <div className="sing-up-panel active">
           <form>
-            <h1>Lets get started</h1>
+            <h1 >Lets get started</h1>
             <div className="input">
               <input
                 type="text"
@@ -73,7 +73,7 @@ function App() {
                 onChange={(e) => setUsername(e.target.value)}
               />
               <div className="bar"></div>
-              <label>Username</label>
+              <label></label>
             </div>
             <div className="input">
               <input
@@ -84,12 +84,12 @@ function App() {
                 onChange={(e) => setEmail(e.target.value)}
               />
               <div className="bar"></div>
-              <label>Mail</label>
+              <label></label>
             </div>
 
             <div className="button-wrapper">
               <button
-                className="sing-up"
+                className="button"
                 type="button"
                 onClick={handleStepChange}
               >
