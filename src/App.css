@@ -13,7 +13,7 @@
   }
 }
 
-.App-header {
+body {
   background-color: #5d6e91;
   min-height: 100vh;
   display: flex;
@@ -28,7 +28,8 @@
 h1 {
   margin: 5px;
   font-size: larger;
-  width: 80%;
+  width: 90%;
+  justify-content: center;
 }
 
 img {
