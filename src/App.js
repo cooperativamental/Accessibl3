@@ -44,7 +44,7 @@ function App() {
       if (username.trim() !== '' && email.trim() !== '') {
         setStep(2); 
       } else {
-        alert('La validación falló. Por favor, complete el formulario correctamente.');
+        alert('Validation failed. Please fill out the form correctly..');
       }
     } else if (step === 2) {
       if (selectedImages.length === 12) {
