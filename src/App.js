@@ -1,10 +1,8 @@
+
 import React, { useState } from 'react';
 import './App.css';
 
 function App() {
-  const [step, setStep] = useState(1);
-  const [username, setUsername] = useState('');
-  const [email, setEmail] = useState('');
   const [selectedImages, setSelectedImages] = useState([]);
 
   const images = [
@@ -38,71 +36,15 @@ function App() {
     }
   };
 
-  const handleStepChange = () => {
-    if (step === 1) {
-     
-      if (username.trim() !== '' && email.trim() !== '') {
-        setStep(2); 
-      } else {
-        alert('Validation failed. Please fill out the form correctly..');
-      }
-    } else if (step === 2) {
-      if (selectedImages.length === 12) {
-        console.log('Image Password:', selectedImages);
-        
-      } else {
-        alert('Select exactly 12 images.');
-      }
+  const handleSubmit = () => {
+    if (selectedImages.length === 12) {
+      console.log('Image Password:', selectedImages);
+    } else {
+      alert('Select exactly 12 images.');
     }
   };
 
-  const renderForm = () => (
-    <div className="App">
-      <div className="content-wrapper">
-        <div className="background background-left"></div>
-        <div className="background background-right"></div>
-        <div className="sing-up-panel active">
-          <form>
-            <h1 >Lets get started</h1>
-            <div className="input">
-              <input
-                type="text"
-                required
-                placeholder="Username"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-              />
-              <div className="bar"></div>
-              <label></label>
-            </div>
-            <div className="input">
-              <input
-                type="text"
-                required
-                placeholder="Mail"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-              <div className="bar"></div>
-              <label></label>
-            </div>
-
-            <div className="button-wrapper">
-              <button
-                className="button"
-                type="button"
-                onClick={handleStepChange}
-              >
-                CreatePassImage
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  );
-
-  const renderImageSelection = () => (
+  return (
     <div className="App">
       <div className="App-header">
         <h1>Select Your Image Password</h1>
@@ -118,15 +60,13 @@ function App() {
           ))}
         </div>
         <div>
-          <button onClick={handleStepChange} disabled={selectedImages.length !== 12}>
+          <button onClick={handleSubmit} disabled={selectedImages.length !== 12}>
             CreatePassImage
           </button>
         </div>
       </div>
     </div>
   );
-
-  return step === 1 ? renderForm() : renderImageSelection();
 }
 
 export default App;
