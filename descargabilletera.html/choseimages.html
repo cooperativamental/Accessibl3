@@ -217,13 +217,12 @@
     images.forEach(image => {
         image.addEventListener('click', () => {
             if (image.classList.contains('selected')) {
-                // Si ya está seleccionada, quitar la selección
                 image.classList.remove('selected');
-                image.style.border = '2px solid transparent'; // Volver a ocultar el borde
+                image.style.border = '2px solid transparent';
             } else {
-                // Si no está seleccionada, marcarla como seleccionada
+                
                 image.classList.add('selected');
-                image.style.border = '2px solid #007bff'; // Mostrar el borde seleccionado
+                image.style.border = '2px solid #007bff'; 
             }
         });
     });
