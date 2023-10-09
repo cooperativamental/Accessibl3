@@ -6,15 +6,16 @@
 * {
     padding: 0;
     margin: 0;
+   
     box-sizing: border-box;
     font-family: 'rock';
 }
 body {
     margin: 0;
     padding: 0;
-    overflow: hidden;
     background: url(https://media.tenor.com/ISbK0fVpFJEAAAAC/chemistry-fire.gif) no-repeat center center fixed;
    background-size: cover;
+   
 }
 .go-back-button {
     position: relative;
@@ -47,8 +48,6 @@ body {
     left: 0;
     opacity: 1;
 }
-.container {  
-    margin: 15px;}
 
 .stay {
     display: grid;
@@ -108,7 +107,8 @@ button img {
 .image-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Ajusta el ancho de las columnas según el tamaño mínimo y el espacio disponible */
-    gap: 8px;
+    gap: 10px;
+    margin-bottom: 10px;
     justify-content: center; /* Centra horizontalmente las imágenes dentro del contenedor */
     align-items: center; /* Centra verticalmente las imágenes dentro del contenedor */
 }
@@ -130,5 +130,6 @@ button img {
     display: grid;
     margin-right: auto;
     margin-left: auto;
+    
     
 }
