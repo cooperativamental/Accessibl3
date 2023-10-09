@@ -36,34 +36,34 @@ export default function Home() {
           <div className="image">
             <img
               className="image"
-              src="../public/images/insectos/honey-bee-water-buckfast-59829.jpeg"
+              src="../public/insectos/honey-bee-water-buckfast-59829.jpeg"
               alt="Imagen 1"
             />
           </div>
           <div className="image">
             <img
-              src="../public/images/acsesorios/paraguas.jpg"
+              src="../public/acsesorios/paraguas.jpg"
               alt="Imagen 2"
             />
           </div>
           <div className="image">
-            <img src="../public/images/comida/frutilla.jpg" alt="Imagen 3" />
+            <img src="../public/comida/frutilla.jpg" alt="Imagen 3" />
           </div>
         </div>
         <div className="image-container">
           <div className="image">
             <img
               className="image"
-              src="../public/images/deportes/golf.jpg"
+              src="../public/deportes/golf.jpg"
               alt="Imagen 1"
             />
           </div>
           <div className="image">
-            <img src="../public/images/iconos/wifi.png" alt="Imagen 2" />
+            <img src="../public/iconos/wifi.png" alt="Imagen 2" />
           </div>
           <div className="image">
             <img
-              src="../public/images/digujos/capitan america.jpeg"
+              src="../public/digujos/capitan america.jpeg"
               alt="Imagen 3"
             />
           </div>
@@ -72,18 +72,18 @@ export default function Home() {
           <div className="image">
             <img
               className="image"
-              src="../public/images/animales/mamut.jfif"
+              src="../public/animales/mamut.jfif"
               alt="Imagen 1"
             />
           </div>
           <div className="image">
             <img
-              src="../public/images/astros/earth-blue-planet-globe-planet-87651.jpeg"
+              src="../public/astros/earth-blue-planet-globe-planet-87651.jpeg"
               alt="Imagen 2"
             />
           </div>
           <div className="image">
-            <img src="../public/images/cocina/palillos.jfif" alt="Imagen 3" />
+            <img src="../public/cocina/palillos.jfif" alt="Imagen 3" />
           </div>
         </div>
         <div className="input-container">
