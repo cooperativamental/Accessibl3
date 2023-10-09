@@ -8,7 +8,7 @@ export default function Home() {
     <main>
       <div className="container">
         <br />
-        <img className="logo" src="../public/ACC_EASE_sombra.png" alt="" />
+        <img className="logo" src="/ACC_EASE_sombra.png" alt="" />
         <br />
         <br />
         <h2
