@@ -8,6 +8,14 @@
 </head>
 
 <body>
+    <button class="go-back-button" style="margin-bottom: 20px;">
+        <span class="arrow">&#8592;</span>
+        <span class="text">Go Back</span>
+    </button>
+    <script>
+        document.querySelector(".go-back-button").addEventListener("click", function() {
+            window.location.href = "./choseimages.html";
+        }); </script>
     <div class="container">
         <br>
     <img class="logo" src="../public/ACC_EASE_sombra.png" alt="">
@@ -16,7 +24,7 @@
         <div class="input-container">
             <input style="margin-bottom: 20px;margin-top: 15px; " type="text" placeholder="a34yr47g4488t47ty...">
             <br>
-            <button class="download" style="margin-bottom: 20px;margin-top: 15px; ">Download <img src="../relampago.png" alt=""></button>
+            <button class="download" style="margin-bottom: 20px;margin-top: 15px; "><p>Download </p><img src="../public/RAYO_sombra.png" alt=""></button>
             
         </div>
         <br>

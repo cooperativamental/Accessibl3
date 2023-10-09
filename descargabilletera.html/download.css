@@ -47,24 +47,24 @@ body {
     left: 0;
     opacity: 1;
 }
-.container {
-    max-width: 100%;
-    margin: 8px;
-    padding: 8px;
-}
+.container {  
+    margin: 15px;}
 
 .stay {
     display: grid;
     position: fixed;
+    left: -1px;
     top: 500px;
     background-color: #ff0000;
     color: #fff;
-    padding: 10px 20px;
+    padding: 10px ;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: x-large;
-    width:90%;
+    width:100%;
+    margin-left: auto;
+    margin-right: auto;
     z-index: 999; 
 }
 
@@ -83,7 +83,7 @@ input {
     width: 100%;
     margin: 0;
     padding: 5px;
-    background-color: #ff6600;
+    background-color:#ff0000;
     color: #fff;
     border: none;
     border-radius: 8px;
@@ -107,7 +107,10 @@ button img {
 
 .image-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Ajusta el ancho de las columnas según el tamaño mínimo y el espacio disponible */
+    gap: 8px;
+    justify-content: center; /* Centra horizontalmente las imágenes dentro del contenedor */
+    align-items: center; /* Centra verticalmente las imágenes dentro del contenedor */
 }
 
 .image:hover {
@@ -124,4 +127,8 @@ button img {
 .image img{
     width: 120px;
     height: 120px;
+    display: grid;
+    margin-right: auto;
+    margin-left: auto;
+    
 }
