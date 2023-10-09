@@ -7,9 +7,18 @@
 </head>
 <body>
     <div class="container">
+        <br>
+    <img class="logo" src="../public/ACC_EASE_sombra.png" alt="">
+    <br>
+
         <div class="input-container">
             
-            <button class="stay" style="margin-bottom: 20px;">Confirm</button>
+            <button class="stay" style="margin-bottom: 20px;" id="Confirm">Confirm</button>
+            <script>
+                document.getElementById("Confirm").addEventListener("click", function() {
+                  window.location.href = "./download.html";
+                });
+              </script>
         </div>
         
         <div class="image-container">
@@ -19,7 +28,7 @@
             <div class="image">
                 <img src="../public/images/deportes/ajedres.jpg" alt="Imagen 2">
             </div>
-            <div class="../public/images/deportes/criket.jpg">
+            <div class="image">
                 <img src="../public/images/deportes/bowling.jpg" alt="Imagen 3">
             </div>
             
@@ -118,7 +127,7 @@
         <div class="image">
             <img src="../public/images/deportes/ajedres.jpg" alt="Imagen 2">
         </div>
-        <div class="../public/images/deportes/criket.jpg">
+        <div class="image">
             <img src="../public/images/deportes/bowling.jpg" alt="Imagen 3">
         </div>
         
@@ -217,10 +226,11 @@
     images.forEach(image => {
         image.addEventListener('click', () => {
             if (image.classList.contains('selected')) {
+               
                 image.classList.remove('selected');
-                image.style.border = '2px solid transparent';
+                image.style.border = '2px solid transparent'; 
             } else {
-                
+               
                 image.classList.add('selected');
                 image.style.border = '2px solid #007bff'; 
             }
