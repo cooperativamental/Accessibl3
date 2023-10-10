@@ -6,9 +6,21 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   const router = useRouter();
-
+  const images = [
+    "/insectos/honey-bee-water-buckfast-59829.jpeg",
+           "/acsesorios/paraguas.jpg",
+           "/comida/frutilla.jpg",
+          // "/deportes/golf.jpg",
+          "/comida/cebolla.jpg",
+           "/iconos/wifi.png",
+           "/digujos/capitan america.jpeg",
+           "/animales/mamut.jfif",
+           "/astros/earth-blue-planet-globe-planet-87651.jpeg",
+           "/cocina/palillos.jfif",
+  ];
   return (
     <main>
+    <div className="overflow-x-hidden overflow-y-auto max-h-[90vh] flex flex-col items-center justify-center">
       <div className="input-container">
         <button className="go-back-button" style={{ marginBottom: "20px" }}>
           <span className="arrow">&#8592;</span>
@@ -16,89 +28,36 @@ export default function Home() {
         </button>
       </div>
 
-      <br />
-      <img className="logo" src="../public/ACC_EASE_sombra.png" alt="" />
-      <br />
+      <img className="logo" src="/ACC_EASE_sombra.png" alt="" />
 
       <h2
-        style={{
-          display: "grid",
-          alignItems: "center",
-          justifyContent: "center",
-          fontSize: "larger",
-          fontWeight: "bolder",
-        }}
+        className="text-center text-[orangered] larger"
       >
         Chose your type of identity confirmation
       </h2>
-      <div className="container">
-        <div className="image-container">
-          <div className="image">
-            <img
-              className="image"
-              src="../public/images/insectos/honey-bee-water-buckfast-59829.jpeg"
-              alt="Imagen 1"
-            />
-          </div>
-          <div className="image">
-            <img
-              src="../public/images/acsesorios/paraguas.jpg"
-              alt="Imagen 2"
-            />
-          </div>
-          <div className="image">
-            <img src="../public/images/comida/frutilla.jpg" alt="Imagen 3" />
-          </div>
-        </div>
-        <div className="image-container">
-          <div className="image">
-            <img
-              className="image"
-              src="../public/images/deportes/golf.jpg"
-              alt="Imagen 1"
-            />
-          </div>
-          <div className="image">
-            <img src="../public/images/iconos/wifi.png" alt="Imagen 2" />
-          </div>
-          <div className="image">
-            <img
-              src="../public/images/digujos/capitan america.jpeg"
-              alt="Imagen 3"
-            />
-          </div>
-        </div>
-        <div className="image-container">
-          <div className="image">
-            <img
-              className="image"
-              src="../public/images/animales/mamut.jfif"
-              alt="Imagen 1"
-            />
-          </div>
-          <div className="image">
-            <img
-              src="../public/images/astros/earth-blue-planet-globe-planet-87651.jpeg"
-              alt="Imagen 2"
-            />
-          </div>
-          <div className="image">
-            <img src="../public/images/cocina/palillos.jfif" alt="Imagen 3" />
-          </div>
-        </div>
-        <div className="input-container">
-          <button
-            className="stay"
-            style={{ marginBottom: "20px" }}
-            id="Confirm"
-            onClick={() => {
-              router.push("/select");
-            }}
-          >
-            Confirm
-          </button>
-        </div>
+      <div className="grid grid-rows-3 grid-flow-col gap-4">
+        {images.map((image) => (
+          <Image
+            key={image}
+            src={image}
+            alt={image}
+            width={200}
+            height={200}
+            className=""
+          />
+        ))}
       </div>
-    </main>
+         
+    </div>
+     <button
+     className="bottom-0 bg-green-600 py-2 px-16 font-black  border-0 rounded-lg pointer mx-auto "
+     id="Confirm"
+     onClick={() => {
+       router.push("/select");
+     }}
+   >
+     Confirm
+   </button>
+  </main>
   );
 }

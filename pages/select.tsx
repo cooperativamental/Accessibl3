@@ -11,7 +11,7 @@ export default function Home() {
     <main>
       <div className="container">
         <br />
-        <img className="logo" src="../public/ACC_EASE_sombra.png" alt="" />
+        <img className="logo" src="/ACC_EASE_sombra.png" alt="" />
         <br />
         <div className="input-container">
           <button
@@ -27,189 +27,189 @@ export default function Home() {
         </div>
         <div className="image-container">
           <div className="image">
-            <img src="../public/images/deportes/atletismo.jpg" alt="Imagen 1" />
+            <img src="/deportes/atletismo.jpg" alt="Imagen 1" />
           </div>
           <div className="image">
-            <img src="../public/images/deportes/ajedres.jpg" alt="Imagen 2" />
+            <img src="/deportes/ajedres.jpg" alt="Imagen 2" />
           </div>
           <div className="image">
-            <img src="../public/images/deportes/bowling.jpg" alt="Imagen 3" />
+            <img src="/deportes/bowling.jpg" alt="Imagen 3" />
           </div>
         </div>
         <div className="image-container">
           <div className="image">
-            <img src="../public/images/deportes/baseball.jpg" alt="Imagen 1" />
+            <img src="/deportes/baseball.jpg" alt="Imagen 1" />
           </div>
           <div className="image">
             <img
-              src="../public/images/deportes/equitacion.jpg"
+              src="/deportes/equitacion.jpg"
               alt="Imagen 2"
             />
           </div>
           <div className="image">
-            <img src="../public/images/deportes/ciclismo.jpg" alt="Imagen 3" />
+            <img src="/deportes/ciclismo.jpg" alt="Imagen 3" />
           </div>
         </div>
         <div className="image-container">
           <div className="image">
-            <img src="../public/images/deportes/boxeo.jpg" alt="Imagen 1" />
+            <img src="/deportes/boxeo.jpg" alt="Imagen 1" />
           </div>
           <div className="image">
-            <img src="../public/images/deportes/escalada.jpg" alt="Imagen 2" />
+            <img src="/deportes/escalada.jpg" alt="Imagen 2" />
           </div>
           <div className="image">
             <img
-              src="../public/images/deportes/pelota hokey.jpg"
+              src="/deportes/pelota hokey.jpg"
               alt="Imagen 3"
             />
           </div>
         </div>
         <div className="image-container">
           <div className="image">
-            <img src="../public/images/deportes/golf.jpg" alt="Imagen 1" />
+            <img src="/deportes/golf.jpg" alt="Imagen 1" />
           </div>
           <div className="image">
-            <img src="../public/images/deportes/martillo.jpg" alt="Imagen 2" />
+            <img src="/deportes/martillo.jpg" alt="Imagen 2" />
           </div>
           <div className="image">
-            <img src="../public/images/deportes/rugby.jpg" alt="Imagen 3" />
-          </div>
-        </div>
-        <div className="image-container">
-          <div className="image">
-            <img src="../public/images/deportes/golf.jpg" alt="Imagen 1" />
-          </div>
-          <div className="image">
-            <img src="../public/images/deportes/martillo.jpg" alt="Imagen 2" />
-          </div>
-          <div className="image">
-            <img src="../public/images/deportes/rugby.jpg" alt="Imagen 3" />
+            <img src="/deportes/rugby.jpg" alt="Imagen 3" />
           </div>
         </div>
         <div className="image-container">
           <div className="image">
-            <img src="../public/images/deportes/golf.jpg" alt="Imagen 1" />
+            <img src="/deportes/golf.jpg" alt="Imagen 1" />
           </div>
           <div className="image">
-            <img src="../public/images/deportes/martillo.jpg" alt="Imagen 2" />
+            <img src="/deportes/martillo.jpg" alt="Imagen 2" />
           </div>
           <div className="image">
-            <img src="../public/images/deportes/rugby.jpg" alt="Imagen 3" />
-          </div>
-        </div>
-        <div className="image-container">
-          <div className="image">
-            <img src="../public/images/deportes/golf.jpg" alt="Imagen 1" />
-          </div>
-          <div className="image">
-            <img src="../public/images/deportes/martillo.jpg" alt="Imagen 2" />
-          </div>
-          <div className="image">
-            <img src="../public/images/deportes/rugby.jpg" alt="Imagen 3" />
+            <img src="/deportes/rugby.jpg" alt="Imagen 3" />
           </div>
         </div>
         <div className="image-container">
           <div className="image">
-            <img src="../public/images/deportes/golf.jpg" alt="Imagen 1" />
+            <img src="/deportes/golf.jpg" alt="Imagen 1" />
           </div>
           <div className="image">
-            <img src="../public/images/deportes/martillo.jpg" alt="Imagen 2" />
+            <img src="/deportes/martillo.jpg" alt="Imagen 2" />
           </div>
           <div className="image">
-            <img src="../public/images/deportes/rugby.jpg" alt="Imagen 3" />
+            <img src="/deportes/rugby.jpg" alt="Imagen 3" />
+          </div>
+        </div>
+        <div className="image-container">
+          <div className="image">
+            <img src="/deportes/golf.jpg" alt="Imagen 1" />
+          </div>
+          <div className="image">
+            <img src="/deportes/martillo.jpg" alt="Imagen 2" />
+          </div>
+          <div className="image">
+            <img src="/deportes/rugby.jpg" alt="Imagen 3" />
+          </div>
+        </div>
+        <div className="image-container">
+          <div className="image">
+            <img src="/deportes/golf.jpg" alt="Imagen 1" />
+          </div>
+          <div className="image">
+            <img src="/deportes/martillo.jpg" alt="Imagen 2" />
+          </div>
+          <div className="image">
+            <img src="/deportes/rugby.jpg" alt="Imagen 3" />
           </div>
         </div>
       </div>
 
       <div className="image-container">
         <div className="image">
-          <img src="../public/images/deportes/atletismo.jpg" alt="Imagen 1" />
+          <img src="/deportes/atletismo.jpg" alt="Imagen 1" />
         </div>
         <div className="image">
-          <img src="../public/images/deportes/ajedres.jpg" alt="Imagen 2" />
+          <img src="/deportes/ajedres.jpg" alt="Imagen 2" />
         </div>
         <div className="image">
-          <img src="../public/images/deportes/bowling.jpg" alt="Imagen 3" />
-        </div>
-      </div>
-      <div className="image-container">
-        <div className="image">
-          <img src="../public/images/deportes/baseball.jpg" alt="Imagen 1" />
-        </div>
-        <div className="image">
-          <img src="../public/images/deportes/equitacion.jpg" alt="Imagen 2" />
-        </div>
-        <div className="image">
-          <img src="../public/images/deportes/ciclismo.jpg" alt="Imagen 3" />
+          <img src="/deportes/bowling.jpg" alt="Imagen 3" />
         </div>
       </div>
       <div className="image-container">
         <div className="image">
-          <img src="../public/images/deportes/boxeo.jpg" alt="Imagen 1" />
+          <img src="/deportes/baseball.jpg" alt="Imagen 1" />
         </div>
         <div className="image">
-          <img src="../public/images/deportes/escalada.jpg" alt="Imagen 2" />
+          <img src="/deportes/equitacion.jpg" alt="Imagen 2" />
+        </div>
+        <div className="image">
+          <img src="/deportes/ciclismo.jpg" alt="Imagen 3" />
+        </div>
+      </div>
+      <div className="image-container">
+        <div className="image">
+          <img src="/deportes/boxeo.jpg" alt="Imagen 1" />
+        </div>
+        <div className="image">
+          <img src="/deportes/escalada.jpg" alt="Imagen 2" />
         </div>
         <div className="image">
           <img
-            src="../public/images/deportes/pelota hokey.jpg"
+            src="/deportes/pelota hokey.jpg"
             alt="Imagen 3"
           />
         </div>
       </div>
       <div className="image-container">
         <div className="image">
-          <img src="../public/images/deportes/golf.jpg" alt="Imagen 1" />
+          <img src="/deportes/golf.jpg" alt="Imagen 1" />
         </div>
         <div className="image">
-          <img src="../public/images/deportes/martillo.jpg" alt="Imagen 2" />
+          <img src="/deportes/martillo.jpg" alt="Imagen 2" />
         </div>
         <div className="image">
-          <img src="../public/images/deportes/rugby.jpg" alt="Imagen 3" />
-        </div>
-      </div>
-      <div className="image-container">
-        <div className="image">
-          <img src="../public/images/deportes/golf.jpg" alt="Imagen 1" />
-        </div>
-        <div className="image">
-          <img src="../public/images/deportes/martillo.jpg" alt="Imagen 2" />
-        </div>
-        <div className="image">
-          <img src="../public/images/deportes/rugby.jpg" alt="Imagen 3" />
+          <img src="/deportes/rugby.jpg" alt="Imagen 3" />
         </div>
       </div>
       <div className="image-container">
         <div className="image">
-          <img src="../public/images/deportes/golf.jpg" alt="Imagen 1" />
+          <img src="/deportes/golf.jpg" alt="Imagen 1" />
         </div>
         <div className="image">
-          <img src="../public/images/deportes/martillo.jpg" alt="Imagen 2" />
+          <img src="/deportes/martillo.jpg" alt="Imagen 2" />
         </div>
         <div className="image">
-          <img src="../public/images/deportes/rugby.jpg" alt="Imagen 3" />
-        </div>
-      </div>
-      <div className="image-container">
-        <div className="image">
-          <img src="../public/images/deportes/golf.jpg" alt="Imagen 1" />
-        </div>
-        <div className="image">
-          <img src="../public/images/deportes/martillo.jpg" alt="Imagen 2" />
-        </div>
-        <div className="image">
-          <img src="../public/images/deportes/rugby.jpg" alt="Imagen 3" />
+          <img src="/deportes/rugby.jpg" alt="Imagen 3" />
         </div>
       </div>
       <div className="image-container">
         <div className="image">
-          <img src="../public/images/deportes/golf.jpg" alt="Imagen 1" />
+          <img src="/deportes/golf.jpg" alt="Imagen 1" />
         </div>
         <div className="image">
-          <img src="../public/images/deportes/martillo.jpg" alt="Imagen 2" />
+          <img src="/deportes/martillo.jpg" alt="Imagen 2" />
         </div>
         <div className="image">
-          <img src="../public/images/deportes/rugby.jpg" alt="Imagen 3" />
+          <img src="/deportes/rugby.jpg" alt="Imagen 3" />
+        </div>
+      </div>
+      <div className="image-container">
+        <div className="image">
+          <img src="/deportes/golf.jpg" alt="Imagen 1" />
+        </div>
+        <div className="image">
+          <img src="/deportes/martillo.jpg" alt="Imagen 2" />
+        </div>
+        <div className="image">
+          <img src="/deportes/rugby.jpg" alt="Imagen 3" />
+        </div>
+      </div>
+      <div className="image-container">
+        <div className="image">
+          <img src="/deportes/golf.jpg" alt="Imagen 1" />
+        </div>
+        <div className="image">
+          <img src="/deportes/martillo.jpg" alt="Imagen 2" />
+        </div>
+        <div className="image">
+          <img src="/deportes/rugby.jpg" alt="Imagen 3" />
         </div>
       </div>
     </main>
