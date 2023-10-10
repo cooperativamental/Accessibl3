@@ -68,7 +68,7 @@ export default function Home() {
         <br />
         <div className="grid grid-rows-3 grid-flow-col gap-4">
 
-        {keys[0].split(" ").map((word) => {
+        {keys[0]?.split(" ")?.map((word) => {
           const index = words.findIndex((w) => w === word);
           if (images.length > index) {
             return (
