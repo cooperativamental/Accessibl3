@@ -16,8 +16,7 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background: url(https://media.tenor.com/ISbK0fVpFJEAAAAC/chemistry-fire.gif)
-    no-repeat center center fixed;
+  background: #18181b;
   background-size: cover;
 }
 .go-back-button {

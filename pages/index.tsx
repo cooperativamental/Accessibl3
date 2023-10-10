@@ -7,10 +7,8 @@ export default function Home() {
   return (
     <main>
       <div className="container">
-        <br />
-        <img className="logo" src="/ACC_EASE_sombra.png" alt="" />
-        <br />
-        <br />
+       
+        <img className="h-auto w-auto logo" src="/ACC_EASE_sombra.png" alt="" />
         <h2
           style={{
             display: "grid",
