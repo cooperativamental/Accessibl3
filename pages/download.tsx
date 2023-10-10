@@ -1,27 +1,25 @@
 import Image from "next/image";
-import { Inter } from "next/font/google";
 import { useRouter } from "next/router";
-import { Keypair, PublicKey } from "@solana/web3.js";
+import { Keypair } from "@solana/web3.js";
 import { useEffect, useState } from "react";
 import * as bip39 from "bip39";
 
 export default function Home() {
-
   const [keys, setKeys] = useState<(string)[]>([]);
 
   useEffect(() => {
     let keys = [];
-    try { keys = JSON.parse(localStorage.getItem('mnemonic')??"");
+    try {
+      keys = JSON.parse(localStorage.getItem('mnemonic') ?? "");
     } catch (error) { }
     if (keys.length > 0) {
-     setKeys(keys);
-    }else{      
+      setKeys(keys);
+    } else {
       const key = bip39?.generateMnemonic();
-
       const keyspairs = [key]
       localStorage.setItem('mnemonic', JSON.stringify(keyspairs));
       setKeys(keyspairs);
-      
+
     }
   }, []);
 
@@ -52,9 +50,7 @@ export default function Home() {
               // return a wallet.json file with the keypairs secretKey
               const element = document.createElement("a");
               const seed = bip39.mnemonicToSeedSync(keys[0], ""); // (mnemonic, password)
-      const keypair = Keypair.fromSeed(seed.slice(0, 32));
-      console.log(`${keypair.publicKey.toBase58()}`); // 5ZWj7a1f8tWkjBESHKgrLmXshuXxqeY9SYcfbshpAqPG
-      console.log(`Private key: [${keypair.secretKey.toString()}]`);
+              const keypair = Keypair.fromSeed(seed.slice(0, 32));
               const file = new Blob([`[${keypair.secretKey.toString()}]`], {
                 type: "text/plain;charset=utf-8",
               });
