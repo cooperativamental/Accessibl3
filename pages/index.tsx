@@ -12,10 +12,8 @@ export default function Home() {
         <br />
         <br />
         <h2
+          className="flex items-center text-center"
           style={{
-            display: "grid",
-            alignItems: "center",
-            justifyContent: "center",
             fontSize: "larger",
             fontWeight: "bolder",
             color: "orangered",
@@ -26,23 +24,13 @@ export default function Home() {
         </h2>
       </div>
       <br />
-      <div className="container">
         <div
           className="image-container"
           style={{ display: "grid", justifyItems: "center" }}
         >
           <button
             id="PassWord"
-            style={{
-              width: "auto",
-              height: "80px",
-              padding: "25%",
-              fontSize: "large",
-              textAlign: "center",
-              display: "flex",
-              alignItems: "center",
-              background: "white",
-            }}
+            className="flex items-center p-8 h-20 justify-items-center bg-white"
             onClick={() => {
               alert("Will add this feature soon!");
             }}
@@ -51,16 +39,7 @@ export default function Home() {
           </button>
           <button
             id="PassImages"
-            style={{
-              width: "auto",
-              height: "80px",
-              padding: "25%",
-              fontSize: "large",
-              textAlign: "center",
-              display: "flex",
-              alignItems: "center",
-              background: "white",
-            }}
+            className="flex items-center p-8 h-20 justify-items-center bg-white"
             onClick={() => {
               router.push("/chose");
             }}
@@ -68,7 +47,6 @@ export default function Home() {
             PassImages
           </button>
         </div>
-      </div>
     </main>
   );
 }

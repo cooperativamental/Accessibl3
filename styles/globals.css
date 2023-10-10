@@ -3,7 +3,7 @@
 @tailwind utilities;
 @font-face {
   font-family: "rock";
-  src: url(/NewRocker-Regular.ttf);
+  src: url(/opendyslexic/OpenDyslexic-Regular.otf);
 }
 
 * {
@@ -16,9 +16,7 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background: url(https://media.tenor.com/ISbK0fVpFJEAAAAC/chemistry-fire.gif)
-    no-repeat center center fixed;
-  background-size: cover;
+  background-color: #222;
 }
 .go-back-button {
   position: relative;
