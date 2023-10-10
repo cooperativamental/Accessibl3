@@ -3,7 +3,7 @@
 @tailwind utilities;
 @font-face {
   font-family: "rock";
-  src: url(/NewRocker-Regular.ttf);
+  src: url(/opendyslexic/OpenDyslexic-Regular.otf);
 }
 
 * {
@@ -16,8 +16,7 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background: #18181b;
-  background-size: cover;
+  background-color: #222;
 }
 .go-back-button {
   position: relative;
@@ -59,7 +58,7 @@ body {
 .stay {
   display: grid;
   position: fixed;
-  top: 500px;
+  bottom: 50px;
   background-color: #ff0000;
   color: #fff;
   padding: 10px 20px;
@@ -112,7 +111,7 @@ button img {
   grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
 }
 
-.image:hover {
+.image:hover img {
   cursor: pointer;
   border: 3px solid #ffcc00;
   border-radius: 8px;
@@ -128,4 +127,5 @@ img.logo {
 .image img {
   width: 120px;
   height: 120px;
+  margin-bottom: 2rem;
 }
