@@ -111,7 +111,7 @@ button img {
   grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
 }
 
-.image:hover {
+.image:hover img {
   cursor: pointer;
   border: 3px solid #ffcc00;
   border-radius: 8px;
@@ -127,4 +127,5 @@ img.logo {
 .image img {
   width: 120px;
   height: 120px;
+  margin-bottom: 2rem;
 }
