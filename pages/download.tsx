@@ -3,6 +3,8 @@ import { useRouter } from "next/router";
 import { Keypair } from "@solana/web3.js";
 import { useEffect, useState } from "react";
 import * as bip39 from "bip39";
+import words from "@/consts/words";
+import images from "@/consts/images";
 
 export default function Home() {
   const [keys, setKeys] = useState<(string)[]>([]);
@@ -64,58 +66,36 @@ export default function Home() {
           </button>
         </div>
         <br />
-        <div className="image-container" style={{ marginTop: "15px" }}>
-          <div className="image">
-            <img src="/deportes/atletismo.jpg" alt="Imagen 1" />
-          </div>
-          <div className="image">
-            <img src="/deportes/ajedres.jpg" alt="Imagen 2" />
-          </div>
-          <div className="image">
-            <img src="/deportes/bowling.jpg" alt="Imagen 3" />
-          </div>
-        </div>
-        <div className="image-container">
-          <div className="image">
-            <img src="/deportes/baseball.jpg" alt="Imagen 1" />
-          </div>
-          <div className="image">
-            <img
-              src="/deportes/equitacion.jpg"
-              alt="Imagen 2"
-            />
-          </div>
-          <div className="image">
-            <img src="/deportes/ciclismo.jpg" alt="Imagen 3" />
-          </div>
-        </div>
-        <div className="image-container">
-          <div className="image">
-            <img src="/deportes/boxeo.jpg" alt="Imagen 1" />
-          </div>
-          <div className="image">
-            <img src="/deportes/escalada.jpg" alt="Imagen 2" />
-          </div>
-          <div className="image">
-            <img
-              src="/deportes/pelota hokey.jpg"
-              alt="Imagen 3"
-            />
-          </div>
-        </div>
-        <div className="image-container">
-          <div className="image">
-            <img src="/deportes/golf.jpg" alt="Imagen 1" />
-          </div>
-          <div className="image">
-            <img src="/deportes/martillo.jpg" alt="Imagen 2" />
-          </div>
-          <div className="image">
-            <img src="/deportes/rugby.jpg" alt="Imagen 3" />
-          </div>
+        <div className="grid grid-rows-3 grid-flow-col gap-4">
+
+        {keys[0].split(" ").map((word) => {
+          const index = words.findIndex((w) => w === word);
+          if (images.length > index) {
+            return (
+              <Image
+                key={word}
+                src={images[index]}
+                alt={word}
+                width={200}
+                height={200}
+                className=""
+              />
+            );
+          } else {
+            return (
+              <Image
+                key={word}
+                src={images[0]}
+                alt={word}
+                width={200}
+                height={200}
+                className=""
+              />
+            );
+          } 
+        })}
         </div>
       </div>
-      <div className="flame"></div>
     </main>
   );
 }
