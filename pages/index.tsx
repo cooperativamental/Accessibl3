@@ -12,11 +12,9 @@ export default function Home() {
         <br />
         <br />
         <h2
-          className="flex items-center text-center"
+          className="text-center text-[orangered]"
           style={{
             fontSize: "larger",
-            fontWeight: "bolder",
-            color: "orangered",
             marginBottom: "75px",
           }}
         >

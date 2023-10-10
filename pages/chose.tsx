@@ -21,10 +21,8 @@ export default function Home() {
       <br />
 
       <h2
+        className="text-center text-[orangered]"
         style={{
-          display: "grid",
-          alignItems: "center",
-          justifyContent: "center",
           fontSize: "larger",
           fontWeight: "bolder",
         }}
