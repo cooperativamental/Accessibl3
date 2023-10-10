@@ -28,7 +28,7 @@ export default function Home() {
         >
           <button
             id="PassWord"
-            className="flex items-center p-8 h-20 justify-items-center bg-white"
+            className="flex items-center p-8 h-20 justify-items-center bg-green-600"
             onClick={() => {
               alert("Will add this feature soon!");
             }}
@@ -37,7 +37,7 @@ export default function Home() {
           </button>
           <button
             id="PassImages"
-            className="flex items-center p-8 h-20 justify-items-center bg-white"
+            className="flex items-center p-8 h-20 justify-items-center bg-green-600"
             onClick={() => {
               router.push("/chose");
             }}
