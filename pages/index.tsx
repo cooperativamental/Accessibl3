@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import * as bip39 from "bip39";
 import words from "@/consts/words";
 import images from "@/consts/images";
+import Link from "next/link";
 
 export default function Home() {
   const [keys, setKeys] = useState<(string)[]>([]);
@@ -44,7 +45,9 @@ export default function Home() {
               Keypair.fromSeed((bip39.mnemonicToSeedSync(keys[0], "")).slice(0, 32)).publicKey.toBase58()
             }
           />
-          <br />
+          <Link href={"/recovery"} className="bg-green-600 p-2 px-8 rounded">
+            Recover other wallet
+          </Link>
           <button
             className="download"
             style={{ marginBottom: "20px", marginTop: "15px" }}
