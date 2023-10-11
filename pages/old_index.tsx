@@ -22,29 +22,29 @@ export default function Home() {
         </h2>
       </div>
       <br />
-        <div
-          className="image-container"
-          style={{ display: "grid", justifyItems: "center" }}
+      <div
+        className="image-container"
+        style={{ display: "grid", justifyItems: "center" }}
+      >
+        <button
+          id="PassWord"
+          className="flex items-center p-8 h-20 justify-items-center bg-green-600"
+          onClick={() => {
+            alert("Will add this feature soon!");
+          }}
         >
-          <button
-            id="PassWord"
-            className="flex items-center p-8 h-20 justify-items-center bg-green-600"
-            onClick={() => {
-              alert("Will add this feature soon!");
-            }}
-          >
-            PassWord
-          </button>
-          <button
-            id="PassImages"
-            className="flex items-center p-8 h-20 justify-items-center bg-green-600"
-            onClick={() => {
-              router.push("/chose");
-            }}
-          >
-            PassImages
-          </button>
-        </div>
+          PassWord
+        </button>
+        <button
+          id="PassImages"
+          className="flex items-center p-8 h-20 justify-items-center bg-green-600"
+          onClick={() => {
+            router.push("/chose");
+          }}
+        >
+          PassImages
+        </button>
+      </div>
     </main>
   );
 }

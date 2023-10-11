@@ -1300,6 +1300,9 @@ const images = `/series/hagrid.jpeg
   /insectos/honey-bee-water-buckfast-59829.jpeg
   /insectos/pexels-photo-6722951.webp
   /insectos/spin-web-nature-bug-51394.jpeg
-  /insectos/pexels-photo-1119582.jpeg`.split('\n').map((e) => e.trim()).filter((e) => e.length > 0) 
+  /insectos/pexels-photo-1119582.jpeg`
+  .split("\n")
+  .map((e) => e.trim())
+  .filter((e) => e.length > 0);
 
-export default images
+export default images;

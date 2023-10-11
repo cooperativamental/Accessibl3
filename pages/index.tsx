@@ -8,24 +8,25 @@ import images from "@/consts/images";
 import Link from "next/link";
 
 export default function Home() {
-  const [keys, setKeys] = useState<(string)[]>([]);
-
+  const [keys, setKeys] = useState<string[]>([]);
+  const [walletIndex, setWalletIndex] = useState<number>(0);
   useEffect(() => {
     let keys = [];
     try {
-      keys = JSON.parse(localStorage.getItem('mnemonic') ?? "");
-    } catch (error) { }
+      keys = JSON.parse(localStorage.getItem("mnemonic") ?? "");
+    } catch (error) {}
     if (keys.length > 0) {
       setKeys(keys);
     } else {
       const key = bip39?.generateMnemonic();
-      const keyspairs = [key]
-      localStorage.setItem('mnemonic', JSON.stringify(keyspairs));
+      const keyspairs = [key];
+      localStorage.setItem("mnemonic", JSON.stringify(keyspairs));
       setKeys(keyspairs);
-
     }
   }, []);
-
+  const handleWalletChange = (i: number) => {
+    setWalletIndex(i);
+  };
   const router = useRouter();
 
   return (
@@ -36,15 +37,25 @@ export default function Home() {
         <br />
         <div className="container" style={{ marginTop: "15px" }} />
         <div className="input-container">
-          <input
-            style={{ marginBottom: "20px", marginTop: "15px" }}
-            type="text"
-            placeholder="..."
-            readOnly
-            value={
-              Keypair.fromSeed((bip39.mnemonicToSeedSync(keys[0], "")).slice(0, 32)).publicKey.toBase58()
-            }
-          />
+          <div className="relative">
+            <div className="absolute top-0 left-0 ml-4 mt-2 p-2">
+              {keys.map((pubkey, index) => (
+                <button
+                  className=" bg-blue-600 p-2"
+                  onClick={() => {
+                    handleWalletChange(index);
+                  }}
+                  key={Keypair.fromSeed(
+                    bip39.mnemonicToSeedSync(pubkey, "").slice(0, 32)
+                  ).publicKey.toBase58()}
+                >
+                  {Keypair.fromSeed(
+                    bip39.mnemonicToSeedSync(pubkey, "").slice(0, 32)
+                  ).publicKey.toBase58()}
+                </button>
+              ))}
+            </div>
+          </div>
           <Link href={"/recovery"} className="bg-green-600 p-2 px-8 rounded">
             Recover other wallet
           </Link>
@@ -54,7 +65,7 @@ export default function Home() {
             onClick={() => {
               // return a wallet.json file with the keypairs secretKey
               const element = document.createElement("a");
-              const seed = bip39.mnemonicToSeedSync(keys[0], ""); // (mnemonic, password)
+              const seed = bip39.mnemonicToSeedSync(keys[walletIndex], ""); // (mnemonic, password)
               const keypair = Keypair.fromSeed(seed.slice(0, 32));
               const file = new Blob([`[${keypair.secretKey.toString()}]`], {
                 type: "text/plain;charset=utf-8",
@@ -70,33 +81,32 @@ export default function Home() {
         </div>
         <br />
         <div className="grid grid-rows-3 grid-flow-col gap-4">
-
-        {keys[0]?.split(" ")?.map((word) => {
-          const index = words.findIndex((w) => w === word);
-          if (images.length > index) {
-            return (
-              <Image
-                key={word}
-                src={images[index]}
-                alt={word}
-                width={200}
-                height={200}
-                className=""
-              />
-            );
-          } else {
-            return (
-              <Image
-                key={word}
-                src={images[0]}
-                alt={word}
-                width={200}
-                height={200}
-                className=""
-              />
-            );
-          } 
-        })}
+          {keys[walletIndex]?.split(" ")?.map((word) => {
+            const index = words.findIndex((w) => w === word);
+            if (images.length > index) {
+              return (
+                <Image
+                  key={word}
+                  src={images[index]}
+                  alt={word}
+                  width={200}
+                  height={200}
+                  className=""
+                />
+              );
+            } else {
+              return (
+                <Image
+                  key={word}
+                  src={images[0]}
+                  alt={word}
+                  width={200}
+                  height={200}
+                  className=""
+                />
+              );
+            }
+          })}
         </div>
       </div>
     </main>
