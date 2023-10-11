@@ -3,6 +3,7 @@ const path = require('path');
 
 const directorioProyecto = [
     '../acsesorios',
+    '../series',
   '../animales',
   '../astros',
   '../cocina',
