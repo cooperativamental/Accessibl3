@@ -41,10 +41,7 @@ export default function Home() {
             <img src="/deportes/baseball.jpg" alt="Imagen 1" />
           </div>
           <div className="image">
-            <img
-              src="/deportes/equitacion.jpg"
-              alt="Imagen 2"
-            />
+            <img src="/deportes/equitacion.jpg" alt="Imagen 2" />
           </div>
           <div className="image">
             <img src="/deportes/ciclismo.jpg" alt="Imagen 3" />
@@ -58,10 +55,7 @@ export default function Home() {
             <img src="/deportes/escalada.jpg" alt="Imagen 2" />
           </div>
           <div className="image">
-            <img
-              src="/deportes/pelota hokey.jpg"
-              alt="Imagen 3"
-            />
+            <img src="/deportes/pelota hokey.jpg" alt="Imagen 3" />
           </div>
         </div>
         <div className="image-container">
@@ -151,10 +145,7 @@ export default function Home() {
           <img src="/deportes/escalada.jpg" alt="Imagen 2" />
         </div>
         <div className="image">
-          <img
-            src="/deportes/pelota hokey.jpg"
-            alt="Imagen 3"
-          />
+          <img src="/deportes/pelota hokey.jpg" alt="Imagen 3" />
         </div>
       </div>
       <div className="image-container">

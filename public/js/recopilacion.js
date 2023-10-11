@@ -1,35 +1,35 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
 
 const directorioProyecto = [
-    '../acsesorios',
-    '../series',
-  '../animales',
-  '../astros',
-  '../cocina',
-  '../deportes',
-  '../figuras geometricas',
-  '../pokemon',
-  '../casa',
-  '../flowers',
-  '../herramientas',  
-  '../acsesorios',
-  '../it'  ,
-  '../iconos',
-  '../digujos',
-  '../metodos de comunicacion',
-  '../insectos',
-  '../libreria',
-  '../lugares',
-  '../oficios',
-  '../transporte',
-  '..',
-  '../consolas',
-  '../juegoss mecanicos',
-  '../juguetes',
-  '../mascotas',
-    '../comida',
-  '../',
+  "../acsesorios",
+  "../series",
+  "../animales",
+  "../astros",
+  "../cocina",
+  "../deportes",
+  "../figuras geometricas",
+  "../pokemon",
+  "../casa",
+  "../flowers",
+  "../herramientas",
+  "../acsesorios",
+  "../it",
+  "../iconos",
+  "../digujos",
+  "../metodos de comunicacion",
+  "../insectos",
+  "../libreria",
+  "../lugares",
+  "../oficios",
+  "../transporte",
+  "..",
+  "../consolas",
+  "../juegoss mecanicos",
+  "../juguetes",
+  "../mascotas",
+  "../comida",
+  "../",
 ];
 
 function obtenerNombresDeArchivos(directorio) {
@@ -53,4 +53,4 @@ directorioProyecto.forEach((directorio) => {
   nombresDeImagenes.push(...nombresEnDirectorio);
 });
 
-console.log(nombresDeImagenes , nombresDeImagenes.length);
+console.log(nombresDeImagenes, nombresDeImagenes.length);

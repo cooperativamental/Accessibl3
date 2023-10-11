@@ -2046,5 +2046,5 @@ zebra
 zero
 zone
 zoo
-`.split('\n');
+`.split("\n");
 export default words;
