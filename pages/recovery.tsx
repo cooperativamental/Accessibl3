@@ -1,23 +1,12 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import { useRouter } from "next/router";
-
+import images from "@/consts/images";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   const router = useRouter();
-  const images = [
-    "/insectos/honey-bee-water-buckfast-59829.jpeg",
-           "/acsesorios/paraguas.jpg",
-           "/comida/frutilla.jpg",
-          // "/deportes/golf.jpg",
-          "/comida/cebolla.jpg",
-           "/iconos/wifi.png",
-           "/digujos/capitan america.jpeg",
-           "/animales/mamut.jfif",
-           "/astros/earth-blue-planet-globe-planet-87651.jpeg",
-           "/cocina/palillos.jfif",
-  ];
+ 
   return (
     <main>
     <div className="overflow-x-hidden overflow-y-auto max-h-[90vh] flex flex-col items-center justify-center">
@@ -30,13 +19,10 @@ export default function Home() {
 
       <img className="logo" src="/ACC_EASE_sombra.png" alt="" />
 
-      <h2
-        className="text-center text-[orangered] larger"
-      >
-        Chose your type of identity confirmation
-      </h2>
-      <div className="grid grid-rows-3 grid-flow-col gap-4">
+      
+      <div className="">
         {images.map((image) => (
+          <div className="inline-block p-2">
           <Image
             key={image}
             src={image}
@@ -45,6 +31,7 @@ export default function Home() {
             height={200}
             className=""
           />
+          </div>
         ))}
       </div>
          
