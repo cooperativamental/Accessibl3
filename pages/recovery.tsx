@@ -18,6 +18,7 @@ export default function Home() {
     } else {
       setMnemonicIndexes([...mnemonicIndexes, index]);
     }
+    router.push("/");
   };
 
   const handleMnemonic = () => {
