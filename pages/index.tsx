@@ -45,23 +45,22 @@ export default function Home() {
         setNotify(false);
       }, 2000);
     }
-  }, [notify]
-  );
+  }, [notify]);
   return (
     <main className="flex flex-col justify-center items-center w-full overflow-hidden">
       <img src="/ACC_EASE_sombra.png" alt="" />
       <div
         className="bg-white hover:bg-green-300"
-        onClick={() =>{
+        onClick={() => {
           copyText(
             keys.length > walletIndex
               ? Keypair.fromSeed(
                   bip39.mnemonicToSeedSync(keys[walletIndex], "").slice(0, 32)
                 ).publicKey.toBase58()
               : ""
-          )
-          onNotify()}
-        }
+          );
+          onNotify();
+        }}
       >
         {keys.length > walletIndex
           ? Keypair.fromSeed(
@@ -150,8 +149,7 @@ export default function Home() {
         <div className="absolute top-20 bg-green-600 py-2 px-16 font-black  border-0 rounded-lg pointer mx-auto ">
           Copied!
         </div>
-      ) : null  
-      }
+      ) : null}
     </main>
   );
 }
