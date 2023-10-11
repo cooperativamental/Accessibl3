@@ -18,7 +18,6 @@ export default function Home() {
     } else {
       setMnemonicIndexes([...mnemonicIndexes, index]);
     }
-    router.push("/");
   };
 
   const handleMnemonic = () => {
@@ -28,6 +27,7 @@ export default function Home() {
       mnemonic,
     ];
     localStorage.setItem("mnemonic", JSON.stringify(keys));
+    router.push("/");
   };
   return (
     <main>
