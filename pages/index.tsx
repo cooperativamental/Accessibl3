@@ -47,7 +47,7 @@ export default function Home() {
     }
   }, [notify]);
   return (
-    <main className="flex flex-col justify-center items-center w-full overflow-hidden">
+    <main className="flex flex-col justify-center items-center w-full overflow-y-hidden">
       <div>
         <div className="flex flex-col items-center mt-2"> 
           <img className="h-6 w-12" src="/ACC_EASE_sombra.png" alt="AcceseaseLogo" />
@@ -55,8 +55,8 @@ export default function Home() {
           <p className="text-yellow-600 leading-5 text-center p-2 mb-2">This images, in this order, is the ONLY way to recover your wallet.</p>
           </div>
       </div>
-      <div className="grid grid-rows-3 grid-flow-col gap-4 ">
-        {keys[walletIndex]?.split(" ")?.map((word) => {
+      <div className="grid grid-rows-3 grid-flow-col gap-4 transition-all duration-300 ">
+        {!show && keys[walletIndex]?.split(" ")?.map((word) => {
           const index = words.findIndex((w) => w === word);
           if (images.length > index) {
             return (
@@ -83,7 +83,6 @@ export default function Home() {
           }
         })}
       </div>
-      
       <div className="text-zinc-200 text-center p-2 leading-5 mt-6 text-sm">Your New Wallet Public Key:</div>
       <div
         className="bg-zinc-700 hover:bg-green-600 p-2 break-words w-11/12 rounded-md"
@@ -108,11 +107,12 @@ export default function Home() {
       <div className="flex flex-col p-4 border rounded-md border-zinc-600 gap-2">
       <div
           className={`relative overflow-x-hidden transition-all duration-300 rounded-md ${
-            show ? "h-60 overflow-y-auto" : "h-10"
+            show ? "h-40 overflow-y-auto" : "h-10"
           }`}
         >
+
           <button onClick={toggle} className=" h-8 text-center text-xs p-2 text-zinc-200 ">
-            {show ? "hide" : "select wallet"}
+            {show ? "Show PassImage" : "Select Wallet"}
           </button>
           <div className="ml-4 mt-2 p-2">
             {keys.map((pubkey, index) => (

@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { Inter } from "next/font/google";
 import { useRouter } from "next/router";
 import images from "@/consts/images";
 import words from "@/consts/words";
@@ -41,15 +40,16 @@ export default function Home() {
 
         <img className="logo" src="/ACC_EASE_sombra.png" alt="" />
 
-        <div className="">
+        <div className="grid grid-cols-3 gap-4">
           {images.map((image, index) => (
-            <div className="inline-block p-2">
+            <div className="flex justify-center max-w-[200px] max-h-[200px] overflow-hidden">
               <Image
                 key={image}
                 src={image}
                 alt={image}
                 width={200}
-                height={200}
+               height={200}
+                layout="contain"
                 onClick={() => {
                   handleMnemonicIndex(index);
                 }}
@@ -65,7 +65,7 @@ export default function Home() {
       </div>
       {mnemonicIndexes.length === 12 ? (
         <button
-          className="bottom-0 bg-green-600 py-2 px-16 font-black  border-0 rounded-lg pointer mx-auto "
+          className="bottom-0 bg-green-600 py-2 w-full font-black  border-0 rounded-lg pointer mx-auto "
           id="Confirm"
           onClick={handleMnemonic}
         >
