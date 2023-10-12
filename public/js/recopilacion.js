@@ -18,6 +18,7 @@ const directorioProyecto = [
   "../iconos",
   "../dibujos",
   "../metodos de comunicacion",
+  "../marcas autos"
   "../caballo",
   "../gatos",
   "../insectos",
