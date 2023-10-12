@@ -36,7 +36,7 @@ const directorioProyecto = [
   "../comida",
   "../perros",
   "../basquet",
-  "../",
+  "../tenis",
 ];
 
 function obtenerNombresDeArchivos(directorio) {
