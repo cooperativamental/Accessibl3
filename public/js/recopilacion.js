@@ -47,7 +47,8 @@ function obtenerNombresDeArchivos(directorio) {
     const rutaCompleta = path.join(directorio, archivo);
 
     if (fs.statSync(rutaCompleta).isFile()) {
-      nombresDeArchivos.push(archivo);
+      nombresDeArchivos.push(`"${rutaCompleta}"
+      `);
     }
   });
 
@@ -58,7 +59,7 @@ const nombresDeImagenes = [];
 
 directorioProyecto.forEach((directorio) => {
   const nombresEnDirectorio = obtenerNombresDeArchivos(directorio);
-  nombresDeImagenes.push(...nombresEnDirectorio);
+  nombresDeImagenes.push(nombresEnDirectorio);
 });
 
-console.log(nombresDeImagenes, nombresDeImagenes.length);
+nombresDeImagenes.map((nombre)=>console.log(`${nombre},`));

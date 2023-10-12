@@ -1,1308 +1,2052 @@
-const images = `/series/hagrid.jpeg
-  /series/slade.jpeg
-  /series/tokio.png
-  /series/malfoyd.jpeg
-  /series/dr house.jpeg
-  /series/joey.jpeg
-  /series/hermaiony.jpeg
-  /series/dobby.jpeg
-  /series/ron.jpeg
-  /series/sculy.jpeg
-  /series/peterdinclke.jpeg
-  /oficios/politico.jpg
-  /oficios/maestro.jfif
-  /oficios/bombero.jfif
-  /oficios/livegard.jfif
-  /oficios/escritor.jpg
-  /oficios/colectivder.jfif
-  /oficios/emfermero.jfif
-  /oficios/repartidor.jfif
-  /oficios/bailarin.jfif
-  /oficios/carpintero.jfif
-  /oficios/programador.jfif
-  /oficios/police.jfif
-  /oficios/referi.jfif
-  /oficios/doctor.jfif
-  /oficios/electricista.jfif
-  /oficios/actor.jpg
-  /oficios/albanil.jfif
-  /oficios/cajero.jfif
-  /oficios/chef.jfif
-  /oficios/militar.jfif
-  /oficios/astronauta.jpg
-  /oficios/abogada.jfif
-  /oficios/modelo.jpg
-  /oficios/musico.jpg
-  /oficios/piloto.jfif
-  /oficios/arquitecto.jfif
-  /oficios/azafata.jpg
-  /figuras geometricas/rectangulo.png
-  /figuras geometricas/semicirculloo.png
-  /figuras geometricas/obalo.jfif
-  /figuras geometricas/parallelogramo.png
-  /figuras geometricas/flecha arriba.png
-  /figuras geometricas/estrella.png
-  /figuras geometricas/cilindro.png
-  /figuras geometricas/cono.png
-  /figuras geometricas/flecha a derecha.png
-  /figuras geometricas/descarga.png
-  /figuras geometricas/piramide-73.webp
-  /figuras geometricas/trapecio.png
-  /figuras geometricas/deltoide.jfif
-  /figuras geometricas/rombo.jfif
-  /figuras geometricas/cubo.png
-  /figuras geometricas/octogono.png
-  /figuras geometricas/flecha a izquiera.png
-  /figuras geometricas/esfera.jfif
-  /figuras geometricas/flecha abajo.png
-  /figuras geometricas/cuadrado.png
-  /figuras geometricas/images.png
-  /figuras geometricas/triangulo.png
-  /favicon.ico
-  /libreria/tempera.jfif
-  /libreria/cuaderno.jfif
-  /libreria/carbonico.jfif
-  /libreria/fibras.jfif
-  /libreria/calcar.jfif
-  /libreria/compas.jfif
-  /libreria/carpeta.jfif
-  /libreria/pluma.jfif
-  /libreria/lapicera.jfif
-  /libreria/ruler.jfif
-  /libreria/planisferio.jfif
-  /libreria/lapiz.jfif
-  /libreria/glue.jfif
-  /libreria/resaltadores.jfif
-  /libreria/rubber.jfif
-  /libreria/pincel.jfif
-  /libreria/correctorliquido.jfif
-  /libreria/escuadra.jfif
-  /libreria/tinta.jfif
-  /libreria/libros.jfif
-  /libreria/crayones.jfif
-  /libreria/transportador.jfif
-  /.DS_Store
-  /cocina/pimentero.jpg
-  /cocina/plato.jpg
-  /cocina/batidora electrica.jfif
-  /cocina/bowl.jpg
-  /cocina/cuchara.jfif
-  /cocina/taza.jpg
-  /cocina/choping board.jfif
-  /cocina/woden spoon.jfif
-  /cocina/prosesadora.jfif
-  /cocina/mixer.jfif
-  /cocina/espumadera.jfif
-  /cocina/tenedor.png
-  /cocina/jarra.jpg
-  /cocina/wock.jfif
-  /cocina/salero.jpg
-  /cocina/picadora.jfif
-  /cocina/vaso.jpg
-  /cocina/rayador.jfif
-  /cocina/abrelatas.jfif
-  /cocina/batidora manual.jfif
-  /cocina/casuela.jfif
-  /cocina/sacacorcho.jpg
-  /cocina/exprimidor.jfif
-  /cocina/sarten.jfif
-  /cocina/palillos.jfif
-  /cocina/jarra medidora.jfif
-  /cocina/parrilla.jfif
-  /cocina/knife.jfif
-  /cocina/electricgrill.jfif
-  /cocina/placa de horno.jfif
-  /cocina/tuper.jpg
-  /cocina/serving tongs.jfif
-  /cocina/colador.jfif
-  /cocina/icecream spoon.jfif
-  /cocina/martillo.jfif
-  /cocina/palo de amasar.jfif
-  /cocina/termo.jpg
-  /cocina/holla.jfif
-  /cocina/tostadora.jfif
-  /cocina/cocina-hogar.jfif
-  /animales/cuerpospin.jpg
-  /animales/perromaarron.jpeg
-  /animales/pexels-photo-704454.jpeg
-  /animales/mapache.jfif
-  /animales/pexels-photo-3220368.jpeg
-  /animales/ajolote.jfif
-  /animales/pexels-photo-106686.jpeg
-  /animales/dragon de comodo.jfif
-  /animales/mamut.jfif
-  /animales/tardigrado.jfif
-  /animales/hipopotamo.jfif
-  /animales/pexels-photo.jpg
-  /animales/pexels-photo-133459.jpeg
-  /animales/bison.jfif
-  /animales/cabra.jfif
-  /animales/pexels-photo-982230.jpeg
-  /animales/panda rojo.jfif
-  /animales/vaca.jpg
-  /animales/cerdo.jpg
-  /animales/pexels-photo-1216482.jpeg
-  /animales/caraacol demar.jfif
-  /animales/orca.jfif
-  /animales/perezoso.jfif
-  /animales/tigre-caminando.jpg
-  /animales/zebra.jpg
-  /animales/puma.jfif
-  /animales/pexels-photo-1661179.jpeg
-  /animales/wombat.jfif
-  /animales/cachorros.jpg
-  /animales/meduza.jfif
-  /animales/caballo.jfif
-  /animales/pexels-photo-1386560.jpeg
-  /animales/zorro.jpg
-  /animales/pexels-photo-11760851.jpeg
-  /animales/nerval.jfif
-  /animales/pexels-photo-726478.webp
-  /animales/pulto.jfif
-  /animales/aguila.jfif
-  /animales/pezglobo.jfif
-  /animales/pexels-photo-660266.webp
-  /animales/pabo real.jfif
-  /animales/pexels-photo-4666751.webp
-  /animales/ardilla.jfif
-  /animales/perroblanco.jpg
-  /animales/pexels-photo-2922672.webp
-  /animales/pexels-photo-3889695.webp
-  /animales/llama.jfif
-  /animales/capibara.jpg
-  /animales/pexels-photo-1181181.jpeg
-  /animales/pexels-photo-674318.jpeg
-  /animales/leon.jfif
-  /animales/conejitodelaindia.jfif
-  /animales/tortuga.jpg
-  /animales/pexels-photo-2255564.webp
-  /animales/pexels-photo-3608263.jpeg
-  /animales/ornitorrinco.jfif
-  /animales/llama.jpg
-  /animales/pezpayaso.jfif
-  /animales/pexels-photo-3493730.jpeg
-  /animales/pexels-photo-567540.jpeg
-  /animales/caballito de mar.jfif
-  /lugares/triunfo.jfif
-  /lugares/piramides egipto.jfif
-  /lugares/piramides peru.jfif
-  /lugares/londres.jfif
-  /lugares/dubai.jfif
-  /lugares/gran cañon.jfif
-  /lugares/coliceo.jfif
-  /lugares/rosmore.jfif
-  /lugares/iguazu.jfif
-  /lugares/640px-Taj_Mahal,_Agra,_India_edit3.jpg
-  /lugares/museofrancia.jfif
-  /lugares/sidney.jfif
-  /lugares/obelizco.jfif
-  /lugares/bigben.jfif
-  /lugares/pascua.jfif
-  /lugares/stonehege.jfif
-  /lugares/murallachina.jfif
-  /lugares/piza.jfif
-  /lugares/effeil.jfif
-  /lugares/everest.jfif
-  /lugares/liberty.jfif
-  /lugares/Monte-Fuji.jpg
-  /js/recopilacion.js
-  /casa/casa.jpg
-  /casa/silla.jpeg
-  /casa/escaleras.jpg
-  /casa/pared.jpg
-  /casa/cerradura.jpeg
-  /casa/messa.jpeg
-  /casa/botonera ascensor.jpeg
-  /casa/ventana.jpg
-  /casa/chimenea.jpg
-  /casa/puerta.jpg
-  /casa/dormitorio.jpg
-  /casa/acc_ease_3_copy.pdf
-  /casa/plancha para pelo.jpeg
-  /casa/lavarropa.jpeg
-  /casa/enchufe.jpeg
-  /casa/techo.jpg
-  /casa/baño.jpg
-  /casa/futon.jpeg
-  /casa/canastoropa.jpeg
-  /casa/taburete.jpeg
-  /casa/alfombra.jpeg
-  /casa/zapatilla.jpeg
-  /casa/sala de estar.jpg
-  /casa/garaje.jpg
-  /casa/comedro.jpg
-  /casa/dorbell.jpeg
-  /casa/piso.jpg
-  /casa/extensor.jpeg
-  /casa/interruptor.jpeg
-  /pokemon/tn_577_Solosis.jpg
-  /pokemon/tn_wishiwashi_forma_banco.jpg
-  /pokemon/tn_morpeko_forma_saciada.jpg
-  /pokemon/tn_minior_1.jpg
-  /pokemon/tn_442Spiritomb.jpg
-  /pokemon/tn_grookey.jpg
-  /pokemon/tn_comfey.jpg
-  /pokemon/tn_607_Litwick.jpg
-  /pokemon/tn_crabrawler.jpg
-  /pokemon/tn_dartrix.jpg
-  /pokemon/tn_537_Seismitoad.jpg
-  /pokemon/tn_394Prinplup.jpg
-  /pokemon/tn_geodude_alola.jpg
-  /pokemon/tn_445Garchomp.jpg
-  /pokemon/tn_sobble.jpg
-  /pokemon/tn_402Kricketune.jpg
-  /pokemon/tn_lurantis.jpg
-  /pokemon/tn_ponyta_galar.jpg
-  /pokemon/tn_678Meowstic-Male.jpg
-  /pokemon/tn_sandygasti.jpg
-  /pokemon/tn_412Burmy_Plant_Cloak.jpg
-  /pokemon/tn_541_Swadloon.jpg
-  /pokemon/tn_582_Vanillite.jpg
-  /pokemon/tn_556_Maractus.jpg
-  /pokemon/tn_536_Palpitoad.jpg
-  /pokemon/tn_araquanid.jpg
-  /pokemon/tn_625_Bisharp.jpg
-  /pokemon/tn_tapu_lele.jpg
-  /pokemon/tn_444Gabite.jpg
-  /pokemon/tn_454Toxicroak.jpg
-  /pokemon/tn_torracat.jpg
-  /pokemon/tn_passimian.jpg
-  /pokemon/tn_melmetal.jpg
-  /pokemon/tn_minior_2.jpg
-  /pokemon/tn_obstagoon.jpg
-  /pokemon/tn_meltan.jpg
-  /pokemon/tn_521_Unfezant.jpg
-  /pokemon/tn_incineroar.jpg
-  /pokemon/tn_459Snover.jpg
-  /pokemon/tn_518_Musharna.jpg
-  /pokemon/tn_626_Bouffalant.jpg
-  /pokemon/tn_498_Tepig.jpg
-  /pokemon/tn_434Stunky.jpg
-  /pokemon/tn_polteageist.jpg
-  /pokemon/tn_oricorio_estilo_placido.jpg
-  /pokemon/tn_637_Volcarona.jpg
-  /pokemon/tn_604_Eelektross.jpg
-  /pokemon/tn_644_Zekrom.jpg
-  /pokemon/tn_496_Servine.jpg
-  /pokemon/tn_437Bronzong.jpg
-  /pokemon/tn_422Shellos_East_Sea.jpg
-  /pokemon/tn_graveler_alola.jpg
-  /pokemon/tn_drampa.jpg
-  /pokemon/tn_581_Swanna.jpg
-  /pokemon/tn_429Mismagius.jpg
-  /pokemon/tn_579_Reuniclus.jpg
-  /pokemon/tn_393Piplup.jpg
-  /pokemon/tn_499_Pignite.jpg
-  /pokemon/tn_golem_alola.jpg
-  /pokemon/tn_516_Simipour.jpg
-  /pokemon/tn_416Vespiquen.jpg
-  /pokemon/tn_406Budew.jpg
-  /pokemon/tn_565_Carracosta.jpg
-  /pokemon/tn_388Grotle.jpg
-  /pokemon/tn_oranguru.jpg
-  /pokemon/tn_616_Shelmet.jpg
-  /pokemon/tn_500_Emboar.jpg
-  /pokemon/tn_413Wormadam_Plant_Cloak.jpg
-  /pokemon/tn_506_Lillipup.jpg
-  /pokemon/tn_634_Zweilous.jpg
-  /pokemon/tn_572_Minccino.jpg
-  /pokemon/tn_571_Zoroark.jpg
-  /pokemon/tn_inteleon.jpg
-  /pokemon/tn_511_Pansage.jpg
-  /pokemon/tn_sandslash_alola.jpg
-  /pokemon/tn_toxtricity_forma_grave.jpg
-  /pokemon/tn_crabominable.jpg
-  /pokemon/tn_551_Sandile.jpg
-  /pokemon/tn_529_Drilbur.jpg
-  /pokemon/tn_ultra_ente_03_resplandor.jpg
-  /pokemon/tn_501_Oshawott.jpg
-  /pokemon/tn_wishiwashi_forma_individual.jpg
-  /pokemon/tn_421Cherrim_Sunshine_Form.jpg
-  /pokemon/tn_594_Alomomola.jpg
-  /pokemon/tn_cutiefly.jpg
-  /pokemon/tn_631_Heatmor.jpg
-  /pokemon/tn_507_Herdier.jpg
-  /pokemon/tn_389Torterra.jpg
-  /pokemon/tn_505_Watchog.jpg
-  /pokemon/tn_gigantamax_toxtricity.jpg
-  /pokemon/tn_rattata_alola.jpg
-  /pokemon/tn_422Shellos_West_Sea.jpg
-  /pokemon/tn_665.jpg
-  /pokemon/tn_671.jpg
-  /pokemon/tn_585_Deerling_Autumn_Form.jpg
-  /pokemon/tn_659.jpg
-  /pokemon/tn_602_Tynamo.jpg
-  /pokemon/tn_zigzagoon_galar.jpg
-  /pokemon/tn_436Bronzor.jpg
-  /pokemon/tn_618_Stunfisk.jpg
-  /pokemon/tn_413Wormadam_Sandy_Cloak.jpg
-  /pokemon/tn_413Wormadam_Trash_Cloak.jpg
-  /pokemon/tn_weezing_galar.jpg
-  /pokemon/tn_587_Emolga.jpg
-  /pokemon/tn_711.jpg
-  /pokemon/tn_705.jpg
-  /pokemon/tn_704.jpg
-  /pokemon/tn_710.jpg
-  /pokemon/tn_619_Mienfoo.jpg
-  /pokemon/tn_morpeko_forma_voraz.jpg
-  /pokemon/tn_primarina.jpg
-  /pokemon/tn_638_Cobalion.jpg
-  /pokemon/tn_golisopod.jpg
-  /pokemon/tn_658.jpg
-  /pokemon/tn_670.jpg
-  /pokemon/tn_664.jpg
-  /pokemon/tn_632_Durant.jpg
-  /pokemon/tn_424Ambipom.jpg
-  /pokemon/tn_611_Fraxure.jpg
-  /pokemon/tn_699.jpg
-  /pokemon/tn_tsareena.jpg
-  /pokemon/tn_672.jpg
-  /pokemon/tn_666.jpg
-  /pokemon/tn_615_Cryogonal.jpg
-  /pokemon/tn_550_Basculin_Blue_Stripe_Form.jpg
-  /pokemon/tn_raichu_alola.jpg
-  /pokemon/tn_441Chatot.jpg
-  /pokemon/tn_510_Liepard.jpg
-  /pokemon/tn_706.jpg
-  /pokemon/tn_712.jpg
-  /pokemon/tn_greninja_ash.jpg
-  /pokemon/tn_713.jpg
-  /pokemon/tn_707.jpg
-  /pokemon/tn_564_Tirtouga.jpg
-  /pokemon/tn_560_Scrafty.jpg
-  /pokemon/tn_linoone_galar.jpg
-  /pokemon/tn_432Purugly.jpg
-  /pokemon/tn_667.jpg
-  /pokemon/tn_673.jpg
-  /pokemon/tn_698.jpg
-  /pokemon/tn_zamazenta.jpg
-  /pokemon/tn_cosmog.jpg
-  /pokemon/tn_688.jpg
-  /pokemon/tn_639_Terrakion.jpg
-  /pokemon/tn_677.jpg
-  /pokemon/tn_663.jpg
-  /pokemon/tn_412Burmy_Sandy_Cloak.jpg
-  /pokemon/tn_497_Serperior.jpg
-  /pokemon/tn_630_Mandibuzz.jpg
-  /pokemon/tn_460Abomasnow.jpg
-  /pokemon/tn_pyukumuku.jpg
-  /pokemon/586_Sawsbuck_Autumn_Form.jpg
-  /pokemon/tn_703.jpg
-  /pokemon/tn_717.jpg
-  /pokemon/tn_716.jpg
-  /pokemon/tn_702.jpg
-  /pokemon/tn_387Turtwig.jpg
-  /pokemon/tn_443Gible.jpg
-  /pokemon/tn_596_Galvantula.jpg
-  /pokemon/tn_litten.jpg
-  /pokemon/tn_589_Escavalier.jpg
-  /pokemon/tn_519_Pidove.jpg
-  /pokemon/tn_423Gastrodon_East_Sea.jpg
-  /pokemon/tn_shiinotic.jpg
-  /pokemon/tn_440Happiny.jpg
-  /pokemon/tn_662.jpg
-  /pokemon/tn_676.jpg
-  /pokemon/tn_523_Zebstrika.jpg
-  /pokemon/tn_gumshoos.jpg
-  /pokemon/tn_430Honchkrow.jpg
-  /pokemon/tn_689.jpg
-  /pokemon/tn_scorbunny.jpg
-  /pokemon/tn_660.jpg
-  /pokemon/tn_674.jpg
-  /pokemon/tn_580_Ducklett.jpg
-  /pokemon/tn_mudbray.jpg
-  /pokemon/tn_marowak_alola.jpg
-  /pokemon/tn_salandit.jpg
-  /pokemon/tn_636_Larvesta.jpg
-  /pokemon/tn_411Bastiodon.jpg
-  /pokemon/tn_714.jpg
-  /pokemon/tn_bewear.jpg
-  /pokemon/tn_700.jpg
-  /pokemon/tn_701.jpg
-  /pokemon/tn_715.jpg
-  /pokemon/tn_433Chingling.jpg
-  /pokemon/tn_622_Golett.jpg
-  /pokemon/tn_455Carnivine.jpg
-  /pokemon/tn_620_Mienshao.jpg
-  /pokemon/tn_553_Krookodile.jpg
-  /pokemon/tn_494_Victini.jpg
-  /pokemon/tn_421Cherrim_Overcast_Form.jpg
-  /pokemon/tn_675.jpg
-  /pokemon/tn_661.jpg
-  /pokemon/tn_stufful.jpg
-  /pokemon/tn_687.jpg
-  /pokemon/tn_693.jpg
-  /pokemon/tn_650.jpg
-  /pokemon/tn_513_Pansear.jpg
-  /pokemon/tn_591_Amoonguss.jpg
-  /pokemon/tn_brionne.jpg
-  /pokemon/tn_678.jpg
-  /pokemon/tn_414Mothim.jpg
-  /pokemon/tn_593_Jellicent_Female.jpg
-  /pokemon/tn_komala.jpg
-  /pokemon/tn_steenee.jpg
-  /pokemon/tn_jangmo-o.jpg
-  /pokemon/tn_514_Simisear.jpg
-  /pokemon/tn_vulpix_alola.jpg
-  /pokemon/tn_566_Archen.jpg
-  /pokemon/tn_718.jpg
-  /pokemon/tn_wooloo.jpg
-  /pokemon/tn_390Chimchar.jpg
-  /pokemon/tn_solgaleo.jpg
-  /pokemon/tn_decidueye.jpg
-  /pokemon/tn_dewpider.jpg
-  /pokemon/tn_681Aegislash-Blade.jpg
-  /pokemon/tn_590_Foongus.jpg
-  /pokemon/tn_562_Yamask.jpg
-  /pokemon/tn_trumbeak.jpg
-  /pokemon/tn_559_Scraggy.jpg
-  /pokemon/tn_679.jpg
-  /pokemon/tn_651.jpg
-  /pokemon/tn_lycanroc_forma_nocturna.jpg
-  /pokemon/tn_692.jpg
-  /pokemon/tn_persian_alola.jpg
-  /pokemon/tn_515_Panpour.jpg
-  /pokemon/tn_686.jpg
-  /pokemon/tn_690.jpg
-  /pokemon/tn_684.jpg
-  /pokemon/tn_415Combee.jpg
-  /pokemon/tn_tapu_fini.jpg
-  /pokemon/tn_653.jpg
-  /pokemon/tn_oricorio_estilo_apasionado.jpg
-  /pokemon/tn_salazzle.jpg
-  /pokemon/tn_646_Kyurem.jpg
-  /pokemon/tn_613_Cubchoo.jpg
-  /pokemon/tn_425Drifloon.jpg
-  /pokemon/tn_sandshrew_alola.jpg
-  /pokemon/tn_toucannon.jpg
-  /pokemon/tn_456Finneon.jpg
-  /pokemon/tn_575_Gothorita.jpg
-  /pokemon/tn_427Buneary.jpg
-  /pokemon/tn_mysterious.jpg
-  /pokemon/tn_thwackey.jpg
-  /pokemon/tn_645_Landorus.jpg
-  /pokemon/tn_598_Ferrothorn.jpg
-  /pokemon/tn_rolycoly.jpg
-  /pokemon/tn_ninetales_alola.jpg
-  /pokemon/tn_392Infernape.jpg
-  /pokemon/tn_404Luxio.jpg
-  /pokemon/tn_codigo_cero.jpg
-  /pokemon/tn_urshifu_estilo_brusco.jpg
-  /pokemon/tn_561_Sigilyph.jpg
-  /pokemon/tn_tapu_bulu.jpg
-  /pokemon/tn_652.jpg
-  /pokemon/tn_628_Braviary.jpg
-  /pokemon/tn_685.jpg
-  /pokemon/tn_691.jpg
-  /pokemon/tn_695.jpg
-  /pokemon/tn_524_Roggenrola.jpg
-  /pokemon/tn_681.jpg
-  /pokemon/tn_532_Timburr.jpg
-  /pokemon/tn_656.jpg
-  /pokemon/tn_614_Beartic.jpg
-  /pokemon/tn_yungoos.jpg
-  /pokemon/tn_turtonator.jpg
-  /pokemon/tn_grubbin.jpg
-  /pokemon/tn_meowth_alola.jpg
-  /pokemon/tn_629_Vullaby.jpg
-  /pokemon/tn_410Shieldon.jpg
-  /pokemon/tn_tapu_koko.jpg
-  /pokemon/tn_678Meowstic-Female.jpg
-  /pokemon/tn_522_Blitzle.jpg
-  /pokemon/tn_657.jpg
-  /pokemon/tn_527_Woobat.jpg
-  /pokemon/tn_680.jpg
-  /pokemon/tn_694.jpg
-  /pokemon/tn_533_Gurdurr.jpg
-  /pokemon/tn_682.jpg
-  /pokemon/tn_hakamo-o.jpg
-  /pokemon/tn_696.jpg
-  /pokemon/tn_417Pachirisu.jpg
-  /pokemon/tn_669.jpg
-  /pokemon/tn_655.jpg
-  /pokemon/tn_517_Munna.jpg
-  /pokemon/tn_531_Audino.jpg
-  /pokemon/tn_709.jpg
-  /pokemon/tn_509_Purrloin.jpg
-  /pokemon/tn_708.jpg
-  /pokemon/tn_ultra_entre_05_voracidad.jpg
-  /pokemon/tn_409Rampardos.jpg
-  /pokemon/tn_mudsdale.jpg
-  /pokemon/tn_597_Ferroseed.jpg
-  /pokemon/tn_408Cranidos.jpg
-  /pokemon/tn_wimpod.jpg
-  /pokemon/tn_654.jpg
-  /pokemon/tn_668.jpg
-  /pokemon/tn_zygarde_nucleo_celula.jpg
-  /pokemon/tn_697.jpg
-  /pokemon/tn_zygarde_10_porciento.jpg
-  /pokemon/tn_683.jpg
-  /pokemon/tn_508_Stoutland.jpg
-  /pokemon/tn_557_Dwebble.jpg
-  /pokemon/tn_495_Snivy.jpg
-  /pokemon/tn_420Cherubi.jpg
-  /pokemon/tn_512_Simisage.jpg
-  /pokemon/tn_bounsweet.jpg
-  /pokemon/tn_624_Pawniard.jpg
-  /pokemon/tn_526_Gigalith.jpg
-  /pokemon/tn_muk_alola.jpg
-  /pokemon/tn_528_Swoobat.jpg
-  /pokemon/tn_592_Frillish_Male.jpg
-  /pokemon/tn_fomantis.jpg
-  /pokemon/tn_554_Darumaka.jpg
-  /pokemon/tn_431Glameow.jpg
-  /pokemon/tn_627_Rufflet.jpg
-  /pokemon/tn_grimer_alola.jpg
-  /pokemon/tn_623_Golurk.jpg
-  /pokemon/tn_574_Gothita.jpg
-  /pokemon/tn_pikipek.jpg
-  /pokemon/tn_zacian.jpg
-  /pokemon/tn_608_Lampent.jpg
-  /pokemon/tn_633_Deino.jpg
-  /pokemon/tn_diglett_alola.jpg
-  /pokemon/tn_ribombee.jpg
-  /pokemon/tn_588_Karrablast.jpg
-  /pokemon/tn_silvally.jpg
-  /pokemon/tn_599_Klink.jpg
-  /pokemon/tn_oricorio_estilo_animado.jpg
-  /pokemon/tn_magearna.jpg
-  /pokemon/tn_401Kricketot.jpg
-  /pokemon/tn_426Drifblim.jpg
-  /pokemon/tn_576_Gothitelle.jpg
-  /pokemon/tn_609_Chandelure.jpg
-  /pokemon/tn_520_Tranquill.jpg
-  /pokemon/tn_stonjourner.jpg
-  /pokemon/tn_mareanie.jpg
-  /pokemon/tn_535_Tympole.jpg
-  /pokemon/tn_539_Sawk.jpg
-  /pokemon/tn_418Buizel.jpg
-  /pokemon/tn_643_Reshiram.jpg
-  /pokemon/tn_rillaboom.jpg
-  /pokemon/tn_togedemaru.jpg
-  /pokemon/tn_503_Samurott.jpg
-  /pokemon/tn_zygarde_50_porciento.jpg
-  /pokemon/tn_617_Accelgor.jpg
-  /pokemon/tn_640_Virizion.jpg
-  /pokemon/tn_rockruff.jpg
-  /pokemon/tn_mimikyu.jpg
-  /pokemon/tn_525_Boldore.jpg
-  /pokemon/tn_612_Haxorus.jpg
-  /pokemon/tn_kommo-o.jpg
-  /pokemon/tn_sirfetchd.jpg
-  /pokemon/tn_555_Darmanitan.jpg
-  /pokemon/tn_428Lopunny.jpg
-  /pokemon/tn_563_Cofagrigus.jpg
-  /pokemon/tn_rowlet.jpg
-  /pokemon/tn_popplio.jpg
-  /pokemon/tn_540_Sewaddle.jpg
-  /pokemon/tn_530_Excadrill.jpg
-  /pokemon/tn_610_Axew.jpg
-  /pokemon/tn_sandaconda.jpg
-  /pokemon/tn_605_Elgyem.jpg
-  /pokemon/tn_568_Trubbish.jpg
-  /pokemon/tn_charjabug.jpg
-  /pokemon/tn_toxapex.jpg
-  /pokemon/tn_palossand.jpg
-  /pokemon/tn_raticate_alola.jpg
-  /pokemon/tn_kubfu.jpg
-  /pokemon/tn_raboot.jpg
-  /pokemon/tn_534_Conkeldurr.jpg
-  /pokemon/tn_403Shinx.jpg
-  /pokemon/tn_569_Garbodor.jpg
-  /pokemon/tn_vikavolt.jpg
-  /pokemon/tn_gossifleur.jpg
-  /pokemon/tn_502_Dewott.jpg
-  /pokemon/tn_toxtricity_forma_aguda.jpg
-  /pokemon/tn_oricorio_estilo_refinado.jpg
-  /pokemon/tn_621_Druddigon.jpg
-  /pokemon/tn_570_Zorua.jpg
-  /pokemon/tn_lycanroc_forma_diurna.jpg
-  /pokemon/tn_538_Throh.jpg
-  /pokemon/tn_morelull.jpg
-  /pokemon/tn_458Mantyke.jpg
-  /pokemon/tn_dhelmise.jpg
-  /pokemon/tn_zygarde_forma_completa.jpg
-  /pokemon/tn_573_Cinccino.jpg
-  /pokemon/tn_exeggutor_alola.jpg
-  /pokemon/tn_603_Eelektrik.jpg
-  /pokemon/tn_595_Joltik.jpg
-  /it/CPU.jpg
-  /it/headseat.jpg
-  /it/webcam.jpg
-  /it/cableusb.jpg
-  /it/Motherboard.jpg
-  /it/Ventiladores y disipadores térmicos.jpg
-  /it/speakers.jpg
-  /it/microfono.jpg
-  /it/monitor.jpg
-  /it/mouse.jpg
-  /it/Disco Duro.jpg
-  /it/pendrive.jpg
-  /it/teclado.jpg
-  /it/memoria.jpg
-  /it/printer.jpg
-  /it/sd card.jpg
-  /flowers/lavander.jfif
-  /flowers/magnolia.jfif
-  /flowers/hydrangea.jfif
-  /flowers/diente de leon.jfif
-  /flowers/popy.jfif
-  /flowers/Daisy flower.jfif
-  /flowers/Lirio.jfif
-  /flowers/orchid.jfif
-  /flowers/springflower.jfif
-  /flowers/vervena.jfif
-  /flowers/tulipan.jfif
-  /flowers/sunflower.jfif
-  /flowers/rose.jfif
-  /deportes/hokey sobre cesped.jpg
-  /deportes/bowling.jpg
-  /deportes/futbolamericano.jpg
-  /deportes/natacion.jpg
-  /deportes/criket.jpg
-  /deportes/discohokey.jpg
-  /deportes/rugby.jpg
-  /deportes/pelotabaseball.jpg
-  /deportes/hokey.jpg
-  /deportes/bola.jpg
-  /deportes/pelotapingpong.jpg
-  /deportes/voley.jpg
-  /deportes/pelotavoley.jpg
-  /deportes/javalina.jpg
-  /deportes/boxglobes.jpg
-  /deportes/pelotarugby.jpg
-  /deportes/martillo.jpg
-  /deportes/pelotagolf.jpg
-  /deportes/arqueria.jpg
-  /deportes/ciclismo.jpg
-  /deportes/pelotafutbol.jpg
-  /deportes/pelota hokey.jpg
-  /deportes/basket.jpg
-  /deportes/ajedres.jpg
-  /deportes/halterofilia.jpg
-  /deportes/baseballbat.jpg
-  /deportes/futbol.jpg
-  /deportes/pelotatenis.jpg
-  /deportes/raqueeta pingopong.jpg
-  /deportes/baseball.jpg
-  /deportes/boxeo.jpg
-  /deportes/ping pong.jpg
-  /deportes/golkeaperglobes.jpg
-  /deportes/tenis.jpg
-  /deportes/karate.jpg
-  /deportes/escalada.jpg
-  /deportes/atletismo.jpg
-  /deportes/golf.jpg
-  /deportes/equitacion.jpg
-  /deportes/raqueta tenis.jpg
-  /comida/hamburguesa.jpg
-  /comida/ajo.jpg
-  /comida/sopa de fideo.jpg
-  /comida/naranja.jpg
-  /comida/sandia.jpg
-  /comida/frutilla.jpg
-  /comida/manteca.jpg
-  /comida/hiervas aromaticas.jpg
-  /comida/tacos.jpg
-  /comida/fruta.jpg
-  /comida/mango.jpg
-  /comida/manzana.jpg
-  /comida/cereza.jpg
-  /comida/aceite de oliva.jpg
-  /comida/cebolla.jpg
-  /comida/harina.jpg
-  /comida/curri.jpg
-  /comida/platano.jpg
-  /comida/piña.jpg
-  /comida/helado.jpg
-  /comida/azucar.jpg
-  /comida/uvas.jpg
-  /comida/arroz.jpg
-  /comida/leche.jpg
-  /comida/tomate.jpg
-  /comida/durazno.jpg
-  /comida/granada.jpg
-  /comida/melon.jpg
-  /comida/pomelo.jpg
-  /comida/pera.jpg
-  /comida/sushi.jpg
-  /comida/limon.jpg
-  /comida/tarta de manzana.jpg
-  /comida/pizza.jpg
-  /comida/Papayas.jpg
-  /comida/higo.jpg
-  /comida/huevos.jpg
-  /comida/pollofrito.jpg
-  /comida/pasta.jpg
-  /comida/sopa de tomate.jpg
-  /comida/kiwi.jpg
-  /comida/queso.jpg
-  /juguetes/barbi.jpg
-  /juguetes/Peluches.jpg
-  /juguetes/Scrabble.jpg
-  /juguetes/microscopios.jpg
-  /juguetes/Cubos de Rubik.jpg
-  /juguetes/Monopoly.jpg
-  /juguetes/Action Figures.jpg
-  /juguetes/Puzzles.jpg
-  /juguetes/descarga.jpg
-  /juguetes/bingo.jpeg
-  /juguetes/Blackjack.jpeg
-  /juguetes/ruleeta.jpeg
-  /juguetes/Playmobil.jpg
-  /juguetes/weel of fortune.jpeg
-  /juguetes/pelotaplaya.jpg
-  /juguetes/Hot Wheels.jpg
-  /juguetes/Máquinas Tragamonedas.jpeg
-  /juguetes/Trenes de juguete.jpg
-  /juguetes/retroracer.jpg
-  /juguetes/telescopio de juguete.jpg
-  /juguetes/Craps.jpeg
-  /RAYO_sombra.png
-  /digujos/puca.jpeg
-  /digujos/Supernova.jpeg
-  /digujos/elena avalor.jpeg
-  /digujos/Nancy.jpeg
-  /digujos/edd zuliban.jpeg
-  /digujos/charlybrown.jpeg
-  /digujos/robin.png
-  /digujos/Shleemypants.jpeg
-  /digujos/Director_Gene_Vagina.webp
-  /digujos/Icon_Zombieman.webp
-  /digujos/Frank Palicky.jpeg
-  /digujos/atrocitus.jpeg
-  /digujos/ensiassangrantes.png
-  /digujos/alicia.jpeg
-  /digujos/gruñon.jpeg
-  /digujos/Icon_Tats.webp
-  /digujos/r2d2.jpeg
-  /digujos/bb8.jpeg
-  /digujos/Icon_Kamikaze.webp
-  /digujos/dracula.jpeg
-  /digujos/munal.jpg
-  /digujos/eli\`s girlfriend.jpeg
-  /digujos/dora.png
-  /digujos/chicassuperpoderosas.jpeg
-  /digujos/tn_396Starly.jpg
-  /digujos/moana.jpeg
-  /digujos/snopy.png
-  /digujos/spiderman.jpg
-  /digujos/flash.png
-  /digujos/banelope.jpeg
-  /digujos/descarga.jpeg
-  /digujos/mirabell.jpeg
-  /digujos/El_Presidente.webp
-  /digujos/elsa.jpeg
-  /digujos/puchi.png
-  /digujos/bella.jpeg
-  /digujos/codos.jpeg
-  /digujos/rapunzel.jpeg
-  /digujos/abram.png
-  /digujos/baby wizard.jpeg
-  /digujos/Dr. Wong.jpeg
-  /digujos/hellboy.jpeg
-  /digujos/hawkeye.jpeg
-  /digujos/Evil Morty.jpeg
-  /digujos/bugs.jpg
-  /digujos/birdperson.jpeg
-  /digujos/Gwendolyn.jpeg
-  /digujos/hulk.jpeg
-  /digujos/thanos.jpeg
-  /digujos/Icon_Genos.webp
-  /digujos/nick.png
-  /digujos/sauron.jpeg
-  /digujos/starfire.jpeg
-  /digujos/skiner.jpeg
-  /digujos/frankestein.jpeg
-  /digujos/blackwidow.jpeg
-  /digujos/Squanchy.webp
-  /digujos/slastycgirl.jpeg
-  /digujos/Icon_Flashy_Flash.webp
-  /digujos/Icon_TTM.webp
-  /digujos/Glaxo Slimslom.jpeg
-  /digujos/blackpanther.jpeg
-  /digujos/rockomodernslife.jpeg
-  /digujos/Million Ants.jpeg
-  /digujos/Blim Blam the Korblok.jpeg
-  /digujos/punisher.jpeg
-  /digujos/been.jpeg
-  /digujos/scandalosos.jpeg
-  /digujos/arthricia_from_rick_and_morty_by_constantchange45_db85yrf-fullview.jpg
-  /digujos/pikachu.jpg
-  /digujos/Espantoso_Terry.webp
-  /digujos/squanchy.jpg
-  /digujos/Abradolf Lincler.jpeg
-  /digujos/jazmin.jpeg
-  /digujos/c3p0.jpeg
-  /digujos/itchy.png
-  /digujos/superman.jpeg
-  /digujos/patodonal.jpg
-  /digujos/pocahontas.jpeg
-  /digujos/Crocubot.jpeg
-  /digujos/homero.jpeg
-  /digujos/moe.jpeg
-  /digujos/samurayjack.jpeg
-  /digujos/milhowse.png
-  /digujos/Pencilvester.jpeg
-  /digujos/asterix.png
-  /digujos/tarzan.jpeg
-  /digujos/totoro.jpeg
-  /digujos/mike wasausky.jpeg
-  /digujos/obelix.jpeg
-  /digujos/musculoso.jpeg
-  /digujos/coco.jpeg
-  /digujos/Uncle Steve.jpeg
-  /digujos/edna modax.jpeg
-  /digujos/The Cromulons.jpeg
-  /digujos/Tricia_Lange.webp
-  /digujos/buzz.jpeg
-  /digujos/jimmy neutron.jpeg
-  /digujos/goofie.jpeg
-  /digujos/carl.jpeg
-  /digujos/pitufos.png
-  /digujos/santa.jpeg
-  /digujos/supergirl.jpeg
-  /digujos/chubaca.jpeg
-  /digujos/silversurfer.jpeg
-  /digujos/Frankenstein.jpeg
-  /digujos/Icon_King.webp
-  /digujos/familyguy.jpeg
-  /digujos/coraje.jpeg
-  /digujos/Icon_Blast.webp
-  /digujos/ironman.jpeg
-  /digujos/Ruben.jpeg
-  /digujos/hibbert.png
-  /digujos/chico bestia.jpeg
-  /digujos/wonderwoman.jpeg
-  /digujos/raven.jpeg
-  /digujos/loki.jpeg
-  /digujos/catdog.jpeg
-  /digujos/lisa.png
-  /digujos/hercules.jpeg
-  /digujos/Taddy Mason.jpeg
-  /digujos/Arma_de_Pepinillo_Rick.webp
-  /digujos/grodd.jpeg
-  /digujos/señoritabelo.jpeg
-  /digujos/snoopy.png
-  /digujos/sinestro.jpeg
-  /digujos/gambito.jpeg
-  /digujos/harrypotter.jpeg
-  /digujos/Jaguar.jpeg
-  /digujos/tontin.jpeg
-  /digujos/Dr. Glip-Glop.jpeg
-  /digujos/nelson.jpeg
-  /digujos/voldemor.jpeg
-  /digujos/mulan.jpeg
-  /digujos/padrinos magicos.jpeg
-  /digujos/Bepis.jpeg
-  /digujos/ben10.jpeg
-  /digujos/darcksidius.jpeg
-  /digujos/ciborg.jpeg
-  /digujos/simba.jpeg
-  /digujos/ades.jpeg
-  /digujos/greenarrow.jpeg
-  /digujos/SD_%3Fcono.webp
-  /digujos/Tony.jpeg
-  /digujos/Amish Cyborg.jpeg
-  /digujos/dongato.jpeg
-  /digujos/gatubela.jpeg
-  /digujos/barney.jpeg
-  /digujos/kripto.jpeg
-  /digujos/rick sanches.jpeg
-  /digujos/maude.png
-  /digujos/duendeverde.jpeg
-  /digujos/Reverse Giraffe.jpeg
-  /digujos/penguien.jpeg
-  /digujos/dexter.jpeg
-  /digujos/merida.jpeg
-  /digujos/acuaman.jpeg
-  /digujos/queen of hearts.jpeg
-  /digujos/minions.jpeg
-  /digujos/cruela de vil.jpeg
-  /digujos/ariel.jpeg
-  /digujos/batman.jpeg
-  /digujos/pedro.jpeg
-  /digujos/malefica.jpeg
-  /digujos/lexluthor.jpeg
-  /digujos/forky.jpeg
-  /digujos/bojack.jpeg
-  /digujos/daria.jpeg
-  /digujos/bobsponja.jpeg
-  /digujos/Fart.jpeg
-  /digujos/antman.jpeg
-  /digujos/magui.png
-  /digujos/gatubella.jpeg
-  /digujos/thor.jpeg
-  /digujos/peterpan.jpeg
-  /digujos/Tony\`s wife.jpeg
-  /digujos/homero.png
-  /digujos/constantin.jpeg
-  /digujos/jonny bravo.jpeg
-  /digujos/spawn.jpeg
-  /digujos/Chris.jpeg
-  /digujos/linternaverde.jpeg
-  /digujos/capitan america.jpeg
-  /digujos/martian manhunter.png
-  /digujos/popeye.jpg
-  /digujos/gargamel.jpeg
-  /digujos/hombrelobo.jpeg
-  /digujos/comicguy.png
-  /digujos/Stealy.jpeg
-  /digujos/Kyle.jpeg
-  /digujos/jerry.jpeg
-  /digujos/olaf.jpeg
-  /digujos/tammy.jpeg
-  /digujos/doraemon.jpeg
-  /digujos/duffman.jpeg
-  /digujos/ninjaturtles.jpeg
-  /digujos/quienengañoarollerrabit.jpeg
-  /digujos/jorobado.jpeg
-  /digujos/Icon_Bankenman.webp
-  /digujos/Jessica.webp
-  /digujos/Los_Vindicadores.webp
-  /digujos/Shrimply Pibbles.jpeg
-  /digujos/archundia.png
-  /digujos/muerte.jpeg
-  /digujos/hello kitty.png
-  /digujos/morthy.jpeg
-  /digujos/mini.jpg
-  /digujos/tn_399Bidoof.jpg
-  /digujos/bart.png
-  /digujos/Tinkles.jpeg
-  /digujos/Drive_Knight_anime.webp
-  /digujos/green hornet.jpeg
-  /digujos/MeeseeksHQ.webp
-  /digujos/powerrangers.jpeg
-  /digujos/descarga (1).jpeg
-  /digujos/goku.jpg
-  /digujos/beast.jpeg
-  /digujos/ralf.jpeg
-  /digujos/ottopus.jpeg
-  /digujos/daredavil.jpeg
-  /digujos/The Cat in the Hat.jpeg
-  /digujos/smiders.jpeg
-  /digujos/meimei.jpeg
-  /digujos/lenny.png
-  /digujos/ace.jpeg
-  /digujos/swamp thing.jpeg
-  /digujos/summer smith.jpeg
-  /digujos/tn_395Empoleon.jpg
-  /digujos/morty.jr.jpeg
-  /digujos/Bruce.jpeg
-  /digujos/deadpool.jpeg
-  /digujos/phineas y fer.jpeg
-  /digujos/chavo del 8.jpeg
-  /digujos/burns.jpeg
-  /digujos/Gearhead.jpeg
-  /digujos/cornvelious daniel.jpeg
-  /digujos/Ponsta.jpeg
-  /digujos/billy.jpeg
-  /digujos/prince nebulon.jpeg
-  /digujos/Michael Jenkins.jpeg
-  /digujos/Pig_God_anime.webp
-  /digujos/flanders.png
-  /digujos/gobo.jpeg
-  /digujos/Beth_Smith.webp
-  /digujos/nana.jpeg
-  /digujos/doctor strange.jpeg
-  /digujos/bobsponja.jpg
-  /digujos/harley quinn.jpeg
-  /digujos/Dr. Xenon Bloom.jpeg
-  /digujos/scooby.jpg
-  /digujos/cenicienta.jpeg
-  /digujos/aurora.jpeg
-  /digujos/Icon_Metal_Knight.webp
-  /digujos/shazam.jpeg
-  /digujos/poison hivi.jpeg
-  /digujos/stich.jpeg
-  /digujos/Snowball.jpeg
-  /digujos/ozz.jpeg
-  /digujos/bho.jpeg
-  /digujos/Sr._Pantalones_de_Pop%3F.webp
-  /digujos/pinkyycerebro.jpeg
-  /digujos/Jerry Smith.jpeg
-  /digujos/Icon_Tats (1).webp
-  /digujos/mushu.jpeg
-  /digujos/mafalda.jpeg
-  /digujos/Icon_Prisionero.webp
-  /digujos/jake.png
-  /digujos/Krombopulos Michael.jpeg
-  /digujos/rogue.jpeg
-  /digujos/EL.jpeg
-  /digujos/blancanieves.jpeg
-  /digujos/pajaroloco.png
-  /digujos/darwin.png
-  /digujos/tiana.jpeg
-  /digujos/Alan_Trenes.webp
-  /digujos/mordecay.png
-  /digujos/shreck.jpeg
-  /digujos/mickey.png
-  /digujos/jack.jpeg
-  /digujos/Unidad.webp
-  /digujos/gorgory.jpeg
-  /digujos/dory.jpeg
-  /digujos/Gazorpazorpfield_UNCENSORED.webp
-  /digujos/leyendadeang.jpeg
-  /digujos/rasal gul.jpeg
-  /digujos/Zeep Xanflorp.jpeg
-  /digujos/darkvader.jpeg
-  /digujos/joker.jpeg
-  /digujos/Noob-Noob.jpeg
-  /digujos/scratchy.jpeg
-  /digujos/Trunkphobic suspenders guy.jpeg
-  /digujos/otto.jpeg
-  /digujos/storm.jpeg
-  /digujos/marge.png
-  /digujos/magneto.jpeg
-  /metodos de comunicacion/television.jpeg
-  /metodos de comunicacion/publicidad.jpeg
-  /metodos de comunicacion/redessociales.jpeg
-  /metodos de comunicacion/periodicos.jpeg
-  /metodos de comunicacion/telefono.jpeg
-  /metodos de comunicacion/revistas.jpeg
-  /metodos de comunicacion/cartAS.jpeg
-  /metodos de comunicacion/internet.jpeg
-  /metodos de comunicacion/telefonomovil.jpeg
-  /metodos de comunicacion/videocall.jpeg
-  /metodos de comunicacion/radio.jpeg
-  /consolas/Atari 2600.jpg
-  /consolas/PlayStation Portable (PSP).jpg
-  /consolas/Sega Genesis (también conocida como Sega Mega Drive).jpg
-  /consolas/Nintendo Entertainment System (NES).jpg
-  /consolas/Game Boy.jpg
-  /consolas/tetris1000-1.jpg
-  /consolas/Neo Geo.jpg
-  /consolas/tamagotch.jpg
-  /consolas/Xbox.jpg
-  /consolas/PlayStation 2.jpg
-  /vercel.svg
-  /walterwhite.jpg
-  /juegoss mecanicos/Tren Fantasma.jpg
-  /juegoss mecanicos/Carruseles.jpg
-  /juegoss mecanicos/Montaña Rusa.jpg
-  /juegoss mecanicos/Norias Gigantes.jpg
-  /juegoss mecanicos/Top Spin.jpg
-  /juegoss mecanicos/Rápidos en Balsa.jpg
-  /juegoss mecanicos/Barcas Vikingas.jpg
-  /juegoss mecanicos/Góndolas Voladoras.jpg
-  /juegoss mecanicos/Tagada.jpg
-  /juegoss mecanicos/(Drop Tower).jpg
-  /next.svg
-  /iconos/headphones.png
-  /iconos/wifi.png
-  /iconos/check.png
-  /iconos/brigthness.png
-  /iconos/battery.png
-  /iconos/gps.png
-  /iconos/hamburguer.png
-  /iconos/apagado.png
-  /iconos/to rigth arrow.png
-  /iconos/dislike.png
-  /iconos/dowunload.png
-  /iconos/video.jfif
-  /iconos/down arrow.png
-  /iconos/contactos.png
-  /iconos/android.png
-  /iconos/windows.jfif
-  /iconos/user.png
-  /iconos/sheare.png
-  /iconos/minimizar.png
-  /iconos/lupa.jfif
-  /iconos/tools.png
-  /iconos/correo.png
-  /iconos/microfono apagado.png
-  /iconos/microfono.png
-  /iconos/folder.png
-  /iconos/apple.png
-  /iconos/like.jfif
-  /iconos/shopping-cart.png
-  /iconos/up arrow.png
-  /iconos/save.jfif
-  /iconos/camara apagada.png
-  /iconos/error.png
-  /iconos/pause.png
-  /iconos/upload.png
-  /iconos/rewind.png
-  /iconos/stop-multimedia.png
-  /iconos/sin coneccion.png
-  /iconos/phone.png
-  /iconos/calculator.jfif
-  /iconos/linux.jfif
-  /iconos/trash-delet.png
-  /iconos/house.jfif
-  /iconos/calendario.png
-  /iconos/sun.png
-  /iconos/volumen.png
-  /iconos/mute.png
-  /iconos/to left arrow.png
-  /iconos/clock.jfif
-  /iconos/play.png
-  /iconos/ajustes.png
-  /iconos/refresh.png
-  /astros/istockphoto-1073058750-612x612.jpg
-  /astros/earth-blue-planet-globe-planet-87651.jpeg
-  /astros/space-shuttle-atlantis-liftoff-mission-rocket-39698.webp
-  /astros/istockphoto-1300652810-612x612.jpg
-  /astros/pexels-photo-1819656.webp
-  /astros/solar-flare-sun-eruption-energy-39561.jpeg
-  /astros/istockphoto-466727938-612x612.jpg
-  /astros/pexels-photo-412026.jpeg
-  /astros/istockphoto-1187258342-612x612.jpg
-  /astros/sky-space-dark-galaxy.jpg
-  /astros/pexels-photo-4702442.jpeg
-  /astros/pexels-photo-12498805.webp
-  /astros/pexels-photo-821718.webp
-  /astros/sky-earth-space-working.jpg
-  /herramientas/espatula.jfif
-  /herramientas/pala.jfif
-  /herramientas/pico.jfif
-  /herramientas/serrucho.webp
-  /herramientas/azada.jfif
-  /herramientas/formones.jfif
-  /herramientas/lima.jfif
-  /herramientas/llave cruz.jfif
-  /herramientas/rench.jfif
-  /herramientas/tenaza.jfif
-  /herramientas/cinta metrica.jfif
-  /herramientas/pinza2.jfif
-  /herramientas/maza.jfif
-  /herramientas/pinza.jfif
-  /herramientas/guantes.jfif
-  /herramientas/descarga.jfif
-  /herramientas/Martillo-de-garras.jpg
-  /herramientas/rastrillo.jfif
-  /herramientas/sargento.jfif
-  /herramientas/nivel.jfif
-  /herramientas/acha.jfif
-  /herramientas/casco.jfif
-  /herramientas/alicate.jfif
-  /herramientas/sierra electrica.jfif
-  /herramientas/sierra de arco.jfif
-  /herramientas/destornilladores.jfif
-  /herramientas/gato.jfif
-  /herramientas/barreta.jfif
-  /herramientas/taladros.jfif
-  /herramientas/french.jfif
-  /opendyslexic/OpenDyslexic-Bold-Italic.eot
-  /opendyslexic/OpenDyslexic-Italic.eot
-  /opendyslexic/OpenDyslexic-Italic.otf
-  /opendyslexic/OpenDyslexic-Bold-Italic.otf
-  /opendyslexic/OpenDyslexic-Italic.woff2
-  /opendyslexic/OpenDyslexic-Bold-Italic.woff
-  /opendyslexic/OpenDyslexic-Bold.otf
-  /opendyslexic/OpenDyslexic-Bold.woff
-  /opendyslexic/OpenDyslexic-Regular.woff2
-  /opendyslexic/OpenDyslexic-Regular.woff
-  /opendyslexic/opendyslexic-characters.pdf
-  /opendyslexic/OpenDyslexic-Bold-Italic.woff2
-  /opendyslexic/OpenDyslexic-Bold.eot
-  /opendyslexic/OpenDyslexic-Regular.eot
-  /opendyslexic/OpenDyslexic-Bold.woff2
-  /opendyslexic/OpenDyslexic-Italic.woff
-  /opendyslexic/OpenDyslexic-Regular.otf
-  /acsesorios/collar.jpg
-  /acsesorios/Peine.jpg
-  /acsesorios/pendientes.jpg
-  /acsesorios/Lima de uñas.jpg
-  /acsesorios/toalla.jpg
-  /acsesorios/telefono movil.jpg
-  /acsesorios/Sudadera con capucha.jpg
-  /acsesorios/cartera.jpg
-  /acsesorios/Camisa.jpg
-  /acsesorios/mochila.jpg
-  /acsesorios/cinturon.jpg
-  /acsesorios/Falda.jpg
-  /acsesorios/Traje.jpg
-  /acsesorios/hisopos.jpg
-  /acsesorios/Cuchilla de afeitar.jpg
-  /acsesorios/barbijo.jpg
-  /acsesorios/cepillo.jpg
-  /acsesorios/paraguas.jpg
-  /acsesorios/lentes.jpg
-  /acsesorios/Jeans.jpg
-  /acsesorios/llaveros.jpg
-  /acsesorios/descarga.jpg
-  /acsesorios/corbata.jpg
-  /acsesorios/Hilo dental.jpg
-  /acsesorios/Chaqueta.jpg
-  /acsesorios/alicate.jpg
-  /acsesorios/bufanda.jpg
-  /acsesorios/sombrero.jpg
-  /acsesorios/jabon.jpg
-  /acsesorios/reloj.jpg
-  /acsesorios/Camiseta.jpg
-  /acsesorios/lentes de sol.jpg
-  /acsesorios/pasta dental.jpg
-  /acsesorios/zapatos.jpg
-  /acsesorios/billetera.jpg
-  /acsesorios/Papel higiénico.jpg
-  /acsesorios/anillos.jpg
-  /acsesorios/bolso.jpg
-  /transporte/tuktuk.jfif
-  /transporte/veleros.jpeg
-  /transporte/jet-ski.jfif
-  /transporte/camioneta.jpeg
-  /transporte/truck.jfif
-  /transporte/moto.jpeg
-  /transporte/bicicleta.jpeg
-  /transporte/submarino.jfif
-  /transporte/tractor.jpeg
-  /transporte/buss.jpeg
-  /transporte/teleferico.jpeg
-  /transporte/escabadora.jpeg
-  /transporte/helicoptero.jpeg
-  /transporte/skate.jfif
-  /transporte/chariot.jfif
-  /transporte/bote.jpeg
-  /transporte/tren.jpeg
-  /transporte/jet.jpeg
-  /transporte/jate.jpeg
-  /transporte/rollers.jfif
-  /transporte/globo.webp
-  /transporte/auto.jpeg
-  /transporte/scooter.jfif
-  /transporte/airship.jfif
-  /transporte/tranvia.jpeg
-  /transporte/avion.webp
-  /transporte/sled.jfif
-  /ACC_EASE_sombra.png
-  /output.txt
-  /mascotas/Hamsters.jpg
-  /mascotas/aves.jpg
-  /mascotas/gatos.jpg
-  /mascotas/conejos.jpg
-  /mascotas/vivoras.jpg
-  /mascotas/reptiles.jpg
-  /mascotas/descarga.jpg
-  /mascotas/Erizos africanosErizos africanos.jpg
-  /mascotas/Cobayas.jpg
-  /mascotas/peces.jpg
-  /mascotas/Hurones.jpg
-  /mascotas/tortugas.jpg
-  /mascotas/images.jpg
-  /insectos/ormiga mielera.jfif
-  /insectos/mosquito.jfif
-  /insectos/escarabajo.jfif
-  /insectos/pexels-photo-1085542.jpeg
-  /insectos/pexels-photo-1046492.jpeg
-  /insectos/ladybugs-ladybirds-bugs-insects-144243.jpeg
-  /insectos/pexels-photo-209074.jpeg
-  /insectos/pexels-photo-6962243.jpeg
-  /insectos/escarabajo pelotero.jfif
-  /insectos/caracol.jfif
-  /insectos/pexels-photo-1114318.jpeg
-  /insectos/pexels-photo-17290182.webp
-  /insectos/pexels-photo-675313.jpeg
-  /insectos/pexels-photo-1114171.webp
-  /insectos/pexels-photo-7808577.jpeg
-  /insectos/pexels-photo-7887002.jpeg
-  /insectos/pexels-photo-206770.jpeg
-  /insectos/honey-bee-water-buckfast-59829.jpeg
-  /insectos/pexels-photo-6722951.webp
-  /insectos/spin-web-nature-bug-51394.jpeg
-  /insectos/pexels-photo-1119582.jpeg`
-  .split("\n")
-  .map((e) => e.trim())
-  .filter((e) => e.length > 0);
+const images = [
+  "/acsesorios/Camisa.jpg",
+  "/acsesorios/Camiseta.jpg",
+  "/acsesorios/Chaqueta.jpg",
+  "/acsesorios/Cuchilla de afeitar.jpg",
+  "/acsesorios/Falda.jpg",
+  "/acsesorios/Hilo dental.jpg",
+  "/acsesorios/Jeans.jpg",
+  "/acsesorios/Lima de uñas.jpg",
+  "/acsesorios/Papel higiénico.jpg",
+  "/acsesorios/Peine.jpg",
+  "/acsesorios/Sudadera con capucha.jpg",
+  "/acsesorios/Traje.jpg",
+  "/acsesorios/alicate.jpg",
+  "/acsesorios/anillos.jpg",
+  "/acsesorios/auriculares.jpeg",
+  "/acsesorios/barbijo.jpg",
+  "/acsesorios/billetera.jpg",
+  "/acsesorios/bolso.jpg",
+  "/acsesorios/bufanda.jpg",
+  "/acsesorios/cartera.jpg",
+  "/acsesorios/cepillo.jpg",
+  "/acsesorios/cinturon.jpg",
+  "/acsesorios/collar.jpg",
+  "/acsesorios/corbata.jpg",
+  "/acsesorios/cucharasmedidoras.jpeg",
+  "/acsesorios/descarga.jpg",
+  "/acsesorios/hisopos.jpg",
+  "/acsesorios/jabon.jpg",
+  "/acsesorios/lentes de sol.jpg",
+  "/acsesorios/lentes.jpg",
+  "/acsesorios/llaveros.jpg",
+  "/acsesorios/mochila.jpg",
+  "/acsesorios/paraguas.jpg",
+  "/acsesorios/pasta dental.jpg",
+  "/acsesorios/pendientes.jpg",
+  "/acsesorios/reloj.jpg",
+  "/acsesorios/sombrero.jpg",
+  "/acsesorios/telefono movil.jpg",
+  "/acsesorios/toalla.jpg",
+  "/acsesorios/vestido.jpeg",
+  "/acsesorios/zapatos.jpg",
+  "/series/dobby.jpeg",
+  "/series/dr house.jpeg",
+  "/series/hagrid.jpeg",
+  "/series/hermaiony.jpeg",
+  "/series/joey.jpeg",
+  "/series/malfoyd.jpeg",
+  "/series/peterdinclke.jpeg",
+  "/series/ron.jpeg",
+  "/series/sculy.jpeg",
+  "/series/slade.jpeg",
+  "/series/tokio.png",
+  "/animales/aguila.jfif",
+  "/animales/ajolote.jfif",
+  "/animales/ardilla.jfif",
+  "/animales/bison.jfif",
+  "/animales/caballito de mar.jfif",
+  "/animales/caballo.jfif",
+  "/animales/cabra.jfif",
+  "/animales/cachorros.jpg",
+  "/animales/capibara.jpg",
+  "/animales/caraacol demar.jfif",
+  "/animales/cerdo.jpg",
+  "/animales/conejitodelaindia.jfif",
+  "/animales/cuerpospin.jpg",
+  "/animales/dragon de comodo.jfif",
+  "/animales/hipopotamo.jfif",
+  "/animales/leon.jfif",
+  "/animales/llama.jfif",
+  "/animales/llama.jpg",
+  "/animales/mamut.jfif",
+  "/animales/mapache.jfif",
+  "/animales/meduza.jfif",
+  "/animales/nerval.jfif",
+  "/animales/orca.jfif",
+  "/animales/ornitorrinco.jfif",
+  "/animales/pabo real.jfif",
+  "/animales/panda rojo.jfif",
+  "/animales/perezoso.jfif",
+  "/animales/perroblanco.jpg",
+  "/animales/perromaarron.jpeg",
+  "/animales/pexels-photo-106686.jpeg",
+  "/animales/pexels-photo-11760851.jpeg",
+  "/animales/pexels-photo-1181181.jpeg",
+  "/animales/pexels-photo-1216482.jpeg",
+  "/animales/pexels-photo-133459.jpeg",
+  "/animales/pexels-photo-1386560.jpeg",
+  "/animales/pexels-photo-1661179.jpeg",
+  "/animales/pexels-photo-2255564.webp",
+  "/animales/pexels-photo-2922672.webp",
+  "/animales/pexels-photo-3220368.jpeg",
+  "/animales/pexels-photo-3493730.jpeg",
+  "/animales/pexels-photo-3608263.jpeg",
+  "/animales/pexels-photo-3889695.webp",
+  "/animales/pexels-photo-4666751.webp",
+  "/animales/pexels-photo-567540.jpeg",
+  "/animales/pexels-photo-660266.webp",
+  "/animales/pexels-photo-674318.jpeg",
+  "/animales/pexels-photo-704454.jpeg",
+  "/animales/pexels-photo-726478.webp",
+  "/animales/pexels-photo-982230.jpeg",
+  "/animales/pexels-photo.jpg",
+  "/animales/pezglobo.jfif",
+  "/animales/pezpayaso.jfif",
+  "/animales/pulto.jfif",
+  "/animales/puma.jfif",
+  "/animales/tardigrado.jfif",
+  "/animales/tigre-caminando.jpg",
+  "/animales/tortuga.jpg",
+  "/animales/vaca.jpg",
+  "/animales/wombat.jfif",
+  "/animales/zebra.jpg",
+  "/animales/zorro.jpg",
+  "/astros/AGUA.png",
+  "/astros/ARENA.png",
+  "/astros/CESPED.png",
+  "/astros/FUEGO.png",
+  "/astros/GLASS.png",
+  "/astros/HIELO.png",
+  "/astros/MADERA.png",
+  "/astros/MARMOL.png",
+  "/astros/MESETA.png",
+  "/astros/METAL.png",
+  "/astros/PIEDRAS.png",
+  "/astros/PLASTIC.png",
+  "/astros/TIERRA.png",
+  "/astros/earth-blue-planet-globe-planet-87651.jpeg",
+  "/astros/istockphoto-1073058750-612x612.jpg",
+  "/astros/istockphoto-1187258342-612x612.jpg",
+  "/astros/istockphoto-1300652810-612x612.jpg",
+  "/astros/istockphoto-466727938-612x612.jpg",
+  "/astros/pexels-photo-12498805.webp",
+  "/astros/pexels-photo-1819656.webp",
+  "/astros/pexels-photo-412026.jpeg",
+  "/astros/pexels-photo-4702442.jpeg",
+  "/astros/pexels-photo-821718.webp",
+  "/astros/sky-earth-space-working.jpg",
+  "/astros/sky-space-dark-galaxy.jpg",
+  "/astros/solar-flare-sun-eruption-energy-39561.jpeg",
+  "/astros/space-shuttle-atlantis-liftoff-mission-rocket-39698.webp",
+  "/cocina/abrelatas.jfif",
+  "/cocina/batidora electrica.jfif",
+  "/cocina/batidora manual.jfif",
+  "/cocina/bowl.jpg",
+  "/cocina/casuela.jfif",
+  "/cocina/choping board.jfif",
+  "/cocina/cocina-hogar.jfif",
+  "/cocina/colador.jfif",
+  "/cocina/cuchara.jfif",
+  "/cocina/electricgrill.jfif",
+  "/cocina/espumadera.jfif",
+  "/cocina/exprimidor.jfif",
+  "/cocina/holla.jfif",
+  "/cocina/icecream spoon.jfif",
+  "/cocina/jarra medidora.jfif",
+  "/cocina/jarra.jpg",
+  "/cocina/knife.jfif",
+  "/cocina/martillo.jfif",
+  "/cocina/mixer.jfif",
+  "/cocina/palillos.jfif",
+  "/cocina/palo de amasar.jfif",
+  "/cocina/parrilla.jfif",
+  "/cocina/picadora.jfif",
+  "/cocina/pimentero.jpg",
+  "/cocina/placa de horno.jfif",
+  "/cocina/plato.jpg",
+  "/cocina/prosesadora.jfif",
+  "/cocina/rayador.jfif",
+  "/cocina/sacacorcho.jpg",
+  "/cocina/salero.jpg",
+  "/cocina/sarten.jfif",
+  "/cocina/serving tongs.jfif",
+  "/cocina/taza.jpg",
+  "/cocina/tenedor.png",
+  "/cocina/termo.jpg",
+  "/cocina/tostadora.jfif",
+  "/cocina/tuper.jpg",
+  "/cocina/vaso.jpg",
+  "/cocina/wock.jfif",
+  "/cocina/woden spoon.jfif",
+  "/deportes/ajedres.jpg",
+  "/deportes/arqueria.jpg",
+  "/deportes/atletismo.jpg",
+  "/deportes/baseball.jpg",
+  "/deportes/baseballbat.jpg",
+  "/deportes/basket.jpg",
+  "/deportes/bola.jpg",
+  "/deportes/bowling.jpg",
+  "/deportes/boxeo.jpg",
+  "/deportes/boxglobes.jpg",
+  "/deportes/ciclismo.jpg",
+  "/deportes/criket.jpg",
+  "/deportes/discohokey.jpg",
+  "/deportes/equitacion.jpg",
+  "/deportes/escalada.jpg",
+  "/deportes/futbol.jpg",
+  "/deportes/futbolamericano.jpg",
+  "/deportes/golf.jpg",
+  "/deportes/golkeaperglobes.jpg",
+  "/deportes/halterofilia.jpg",
+  "/deportes/hokey sobre cesped.jpg",
+  "/deportes/hokey.jpg",
+  "/deportes/javalina.jpg",
+  "/deportes/karate.jpg",
+  "/deportes/martillo.jpg",
+  "/deportes/natacion.jpg",
+  "/deportes/pelota hokey.jpg",
+  "/deportes/pelotabaseball.jpg",
+  "/deportes/pelotafutbol.jpg",
+  "/deportes/pelotagolf.jpg",
+  "/deportes/pelotapingpong.jpg",
+  "/deportes/pelotarugby.jpg",
+  "/deportes/pelotatenis.jpg",
+  "/deportes/pelotavoley.jpg",
+  "/deportes/ping pong.jpg",
+  "/deportes/raqueeta pingopong.jpg",
+  "/deportes/raqueta tenis.jpg",
+  "/deportes/rugby.jpg",
+  "/deportes/tenis.jpg",
+  "/deportes/voley.jpg",
+  "/figuras geometricas/cilindro.png",
+  "/figuras geometricas/cono.png",
+  "/figuras geometricas/cuadrado.png",
+  "/figuras geometricas/cubo.png",
+  "/figuras geometricas/deltoide.jfif",
+  "/figuras geometricas/descarga.png",
+  "/figuras geometricas/esfera.jfif",
+  "/figuras geometricas/estrella.png",
+  "/figuras geometricas/flecha a derecha.png",
+  "/figuras geometricas/flecha a izquiera.png",
+  "/figuras geometricas/flecha abajo.png",
+  "/figuras geometricas/flecha arriba.png",
+  "/figuras geometricas/images.png",
+  "/figuras geometricas/obalo.jfif",
+  "/figuras geometricas/octogono.png",
+  "/figuras geometricas/parallelogramo.png",
+  "/figuras geometricas/piramide-73.webp",
+  "/figuras geometricas/rectangulo.png",
+  "/figuras geometricas/rombo.jfif",
+  "/figuras geometricas/semicirculloo.png",
+  "/figuras geometricas/trapecio.png",
+  "/figuras geometricas/triangulo.png",
+  "/pokemon/586_Sawsbuck_Autumn_Form.jpg",
+  "/pokemon/Anorith.jpg",
+  "/pokemon/tn_387Turtwig.jpg",
+  "/pokemon/tn_388Grotle.jpg",
+  "/pokemon/tn_389Torterra.jpg",
+  "/pokemon/tn_390Chimchar.jpg",
+  "/pokemon/tn_392Infernape.jpg",
+  "/pokemon/tn_393Piplup.jpg",
+  "/pokemon/tn_394Prinplup.jpg",
+  "/pokemon/tn_401Kricketot.jpg",
+  "/pokemon/tn_402Kricketune.jpg",
+  "/pokemon/tn_403Shinx.jpg",
+  "/pokemon/tn_404Luxio.jpg",
+  "/pokemon/tn_406Budew.jpg",
+  "/pokemon/tn_408Cranidos.jpg",
+  "/pokemon/tn_409Rampardos.jpg",
+  "/pokemon/tn_410Shieldon.jpg",
+  "/pokemon/tn_411Bastiodon.jpg",
+  "/pokemon/tn_412Burmy_Plant_Cloak.jpg",
+  "/pokemon/tn_412Burmy_Sandy_Cloak.jpg",
+  "/pokemon/tn_413Wormadam_Plant_Cloak.jpg",
+  "/pokemon/tn_413Wormadam_Sandy_Cloak.jpg",
+  "/pokemon/tn_413Wormadam_Trash_Cloak.jpg",
+  "/pokemon/tn_414Mothim.jpg",
+  "/pokemon/tn_415Combee.jpg",
+  "/pokemon/tn_416Vespiquen.jpg",
+  "/pokemon/tn_417Pachirisu.jpg",
+  "/pokemon/tn_418Buizel.jpg",
+  "/pokemon/tn_420Cherubi.jpg",
+  "/pokemon/tn_421Cherrim_Overcast_Form.jpg",
+  "/pokemon/tn_421Cherrim_Sunshine_Form.jpg",
+  "/pokemon/tn_422Shellos_East_Sea.jpg",
+  "/pokemon/tn_422Shellos_West_Sea.jpg",
+  "/pokemon/tn_423Gastrodon_East_Sea.jpg",
+  "/pokemon/tn_424Ambipom.jpg",
+  "/pokemon/tn_425Drifloon.jpg",
+  "/pokemon/tn_426Drifblim.jpg",
+  "/pokemon/tn_427Buneary.jpg",
+  "/pokemon/tn_428Lopunny.jpg",
+  "/pokemon/tn_429Mismagius.jpg",
+  "/pokemon/tn_430Honchkrow.jpg",
+  "/pokemon/tn_431Glameow.jpg",
+  "/pokemon/tn_432Purugly.jpg",
+  "/pokemon/tn_433Chingling.jpg",
+  "/pokemon/tn_434Stunky.jpg",
+  "/pokemon/tn_436Bronzor.jpg",
+  "/pokemon/tn_437Bronzong.jpg",
+  "/pokemon/tn_440Happiny.jpg",
+  "/pokemon/tn_441Chatot.jpg",
+  "/pokemon/tn_442Spiritomb.jpg",
+  "/pokemon/tn_443Gible.jpg",
+  "/pokemon/tn_444Gabite.jpg",
+  "/pokemon/tn_445Garchomp.jpg",
+  "/pokemon/tn_454Toxicroak.jpg",
+  "/pokemon/tn_455Carnivine.jpg",
+  "/pokemon/tn_456Finneon.jpg",
+  "/pokemon/tn_458Mantyke.jpg",
+  "/pokemon/tn_459Snover.jpg",
+  "/pokemon/tn_460Abomasnow.jpg",
+  "/pokemon/tn_494_Victini.jpg",
+  "/pokemon/tn_495_Snivy.jpg",
+  "/pokemon/tn_496_Servine.jpg",
+  "/pokemon/tn_497_Serperior.jpg",
+  "/pokemon/tn_498_Tepig.jpg",
+  "/pokemon/tn_499_Pignite.jpg",
+  "/pokemon/tn_500_Emboar.jpg",
+  "/pokemon/tn_501_Oshawott.jpg",
+  "/pokemon/tn_502_Dewott.jpg",
+  "/pokemon/tn_503_Samurott.jpg",
+  "/pokemon/tn_505_Watchog.jpg",
+  "/pokemon/tn_506_Lillipup.jpg",
+  "/pokemon/tn_507_Herdier.jpg",
+  "/pokemon/tn_508_Stoutland.jpg",
+  "/pokemon/tn_509_Purrloin.jpg",
+  "/pokemon/tn_510_Liepard.jpg",
+  "/pokemon/tn_511_Pansage.jpg",
+  "/pokemon/tn_512_Simisage.jpg",
+  "/pokemon/tn_513_Pansear.jpg",
+  "/pokemon/tn_514_Simisear.jpg",
+  "/pokemon/tn_515_Panpour.jpg",
+  "/pokemon/tn_516_Simipour.jpg",
+  "/pokemon/tn_517_Munna.jpg",
+  "/pokemon/tn_518_Musharna.jpg",
+  "/pokemon/tn_519_Pidove.jpg",
+  "/pokemon/tn_520_Tranquill.jpg",
+  "/pokemon/tn_521_Unfezant.jpg",
+  "/pokemon/tn_522_Blitzle.jpg",
+  "/pokemon/tn_523_Zebstrika.jpg",
+  "/pokemon/tn_524_Roggenrola.jpg",
+  "/pokemon/tn_525_Boldore.jpg",
+  "/pokemon/tn_526_Gigalith.jpg",
+  "/pokemon/tn_527_Woobat.jpg",
+  "/pokemon/tn_528_Swoobat.jpg",
+  "/pokemon/tn_529_Drilbur.jpg",
+  "/pokemon/tn_530_Excadrill.jpg",
+  "/pokemon/tn_531_Audino.jpg",
+  "/pokemon/tn_532_Timburr.jpg",
+  "/pokemon/tn_533_Gurdurr.jpg",
+  "/pokemon/tn_534_Conkeldurr.jpg",
+  "/pokemon/tn_535_Tympole.jpg",
+  "/pokemon/tn_536_Palpitoad.jpg",
+  "/pokemon/tn_537_Seismitoad.jpg",
+  "/pokemon/tn_538_Throh.jpg",
+  "/pokemon/tn_539_Sawk.jpg",
+  "/pokemon/tn_540_Sewaddle.jpg",
+  "/pokemon/tn_541_Swadloon.jpg",
+  "/pokemon/tn_550_Basculin_Blue_Stripe_Form.jpg",
+  "/pokemon/tn_551_Sandile.jpg",
+  "/pokemon/tn_553_Krookodile.jpg",
+  "/pokemon/tn_554_Darumaka.jpg",
+  "/pokemon/tn_555_Darmanitan.jpg",
+  "/pokemon/tn_556_Maractus.jpg",
+  "/pokemon/tn_557_Dwebble.jpg",
+  "/pokemon/tn_559_Scraggy.jpg",
+  "/pokemon/tn_560_Scrafty.jpg",
+  "/pokemon/tn_561_Sigilyph.jpg",
+  "/pokemon/tn_562_Yamask.jpg",
+  "/pokemon/tn_563_Cofagrigus.jpg",
+  "/pokemon/tn_564_Tirtouga.jpg",
+  "/pokemon/tn_565_Carracosta.jpg",
+  "/pokemon/tn_566_Archen.jpg",
+  "/pokemon/tn_568_Trubbish.jpg",
+  "/pokemon/tn_569_Garbodor.jpg",
+  "/pokemon/tn_570_Zorua.jpg",
+  "/pokemon/tn_571_Zoroark.jpg",
+  "/pokemon/tn_572_Minccino.jpg",
+  "/pokemon/tn_573_Cinccino.jpg",
+  "/pokemon/tn_574_Gothita.jpg",
+  "/pokemon/tn_575_Gothorita.jpg",
+  "/pokemon/tn_576_Gothitelle.jpg",
+  "/pokemon/tn_577_Solosis.jpg",
+  "/pokemon/tn_579_Reuniclus.jpg",
+  "/pokemon/tn_580_Ducklett.jpg",
+  "/pokemon/tn_581_Swanna.jpg",
+  "/pokemon/tn_582_Vanillite.jpg",
+  "/pokemon/tn_585_Deerling_Autumn_Form.jpg",
+  "/pokemon/tn_587_Emolga.jpg",
+  "/pokemon/tn_588_Karrablast.jpg",
+  "/pokemon/tn_589_Escavalier.jpg",
+  "/pokemon/tn_590_Foongus.jpg",
+  "/pokemon/tn_591_Amoonguss.jpg",
+  "/pokemon/tn_592_Frillish_Male.jpg",
+  "/pokemon/tn_593_Jellicent_Female.jpg",
+  "/pokemon/tn_594_Alomomola.jpg",
+  "/pokemon/tn_595_Joltik.jpg",
+  "/pokemon/tn_596_Galvantula.jpg",
+  "/pokemon/tn_597_Ferroseed.jpg",
+  "/pokemon/tn_598_Ferrothorn.jpg",
+  "/pokemon/tn_599_Klink.jpg",
+  "/pokemon/tn_602_Tynamo.jpg",
+  "/pokemon/tn_603_Eelektrik.jpg",
+  "/pokemon/tn_604_Eelektross.jpg",
+  "/pokemon/tn_605_Elgyem.jpg",
+  "/pokemon/tn_607_Litwick.jpg",
+  "/pokemon/tn_608_Lampent.jpg",
+  "/pokemon/tn_609_Chandelure.jpg",
+  "/pokemon/tn_610_Axew.jpg",
+  "/pokemon/tn_611_Fraxure.jpg",
+  "/pokemon/tn_612_Haxorus.jpg",
+  "/pokemon/tn_613_Cubchoo.jpg",
+  "/pokemon/tn_614_Beartic.jpg",
+  "/pokemon/tn_615_Cryogonal.jpg",
+  "/pokemon/tn_616_Shelmet.jpg",
+  "/pokemon/tn_617_Accelgor.jpg",
+  "/pokemon/tn_618_Stunfisk.jpg",
+  "/pokemon/tn_619_Mienfoo.jpg",
+  "/pokemon/tn_620_Mienshao.jpg",
+  "/pokemon/tn_621_Druddigon.jpg",
+  "/pokemon/tn_622_Golett.jpg",
+  "/pokemon/tn_623_Golurk.jpg",
+  "/pokemon/tn_624_Pawniard.jpg",
+  "/pokemon/tn_625_Bisharp.jpg",
+  "/pokemon/tn_626_Bouffalant.jpg",
+  "/pokemon/tn_627_Rufflet.jpg",
+  "/pokemon/tn_628_Braviary.jpg",
+  "/pokemon/tn_629_Vullaby.jpg",
+  "/pokemon/tn_630_Mandibuzz.jpg",
+  "/pokemon/tn_631_Heatmor.jpg",
+  "/pokemon/tn_632_Durant.jpg",
+  "/pokemon/tn_633_Deino.jpg",
+  "/pokemon/tn_634_Zweilous.jpg",
+  "/pokemon/tn_636_Larvesta.jpg",
+  "/pokemon/tn_637_Volcarona.jpg",
+  "/pokemon/tn_638_Cobalion.jpg",
+  "/pokemon/tn_639_Terrakion.jpg",
+  "/pokemon/tn_640_Virizion.jpg",
+  "/pokemon/tn_643_Reshiram.jpg",
+  "/pokemon/tn_644_Zekrom.jpg",
+  "/pokemon/tn_645_Landorus.jpg",
+  "/pokemon/tn_646_Kyurem.jpg",
+  "/pokemon/tn_650.jpg",
+  "/pokemon/tn_651.jpg",
+  "/pokemon/tn_652.jpg",
+  "/pokemon/tn_653.jpg",
+  "/pokemon/tn_654.jpg",
+  "/pokemon/tn_655.jpg",
+  "/pokemon/tn_656.jpg",
+  "/pokemon/tn_657.jpg",
+  "/pokemon/tn_658.jpg",
+  "/pokemon/tn_659.jpg",
+  "/pokemon/tn_660.jpg",
+  "/pokemon/tn_661.jpg",
+  "/pokemon/tn_662.jpg",
+  "/pokemon/tn_663.jpg",
+  "/pokemon/tn_664.jpg",
+  "/pokemon/tn_665.jpg",
+  "/pokemon/tn_666.jpg",
+  "/pokemon/tn_667.jpg",
+  "/pokemon/tn_668.jpg",
+  "/pokemon/tn_669.jpg",
+  "/pokemon/tn_670.jpg",
+  "/pokemon/tn_671.jpg",
+  "/pokemon/tn_672.jpg",
+  "/pokemon/tn_673.jpg",
+  "/pokemon/tn_674.jpg",
+  "/pokemon/tn_675.jpg",
+  "/pokemon/tn_676.jpg",
+  "/pokemon/tn_677.jpg",
+  "/pokemon/tn_678.jpg",
+  "/pokemon/tn_678Meowstic-Female.jpg",
+  "/pokemon/tn_678Meowstic-Male.jpg",
+  "/pokemon/tn_679.jpg",
+  "/pokemon/tn_680.jpg",
+  "/pokemon/tn_681.jpg",
+  "/pokemon/tn_681Aegislash-Blade.jpg",
+  "/pokemon/tn_682.jpg",
+  "/pokemon/tn_683.jpg",
+  "/pokemon/tn_684.jpg",
+  "/pokemon/tn_685.jpg",
+  "/pokemon/tn_686.jpg",
+  "/pokemon/tn_687.jpg",
+  "/pokemon/tn_688.jpg",
+  "/pokemon/tn_689.jpg",
+  "/pokemon/tn_690.jpg",
+  "/pokemon/tn_691.jpg",
+  "/pokemon/tn_692.jpg",
+  "/pokemon/tn_693.jpg",
+  "/pokemon/tn_694.jpg",
+  "/pokemon/tn_695.jpg",
+  "/pokemon/tn_696.jpg",
+  "/pokemon/tn_697.jpg",
+  "/pokemon/tn_698.jpg",
+  "/pokemon/tn_699.jpg",
+  "/pokemon/tn_700.jpg",
+  "/pokemon/tn_701.jpg",
+  "/pokemon/tn_702.jpg",
+  "/pokemon/tn_703.jpg",
+  "/pokemon/tn_704.jpg",
+  "/pokemon/tn_705.jpg",
+  "/pokemon/tn_706.jpg",
+  "/pokemon/tn_707.jpg",
+  "/pokemon/tn_708.jpg",
+  "/pokemon/tn_709.jpg",
+  "/pokemon/tn_710.jpg",
+  "/pokemon/tn_711.jpg",
+  "/pokemon/tn_712.jpg",
+  "/pokemon/tn_713.jpg",
+  "/pokemon/tn_714.jpg",
+  "/pokemon/tn_715.jpg",
+  "/pokemon/tn_716.jpg",
+  "/pokemon/tn_717.jpg",
+  "/pokemon/tn_718.jpg",
+  "/pokemon/tn_Absol.jpg",
+  "/pokemon/tn_Aggron.jpg",
+  "/pokemon/tn_Altaria.jpg",
+  "/pokemon/tn_Armaldo.jpg",
+  "/pokemon/tn_Aron.jpg",
+  "/pokemon/tn_Bagon.jpg",
+  "/pokemon/tn_Baltoy.jpg",
+  "/pokemon/tn_Banette.jpg",
+  "/pokemon/tn_Barboach.jpg",
+  "/pokemon/tn_Beautifly.jpg",
+  "/pokemon/tn_Beldum.jpg",
+  "/pokemon/tn_Blaziken.jpg",
+  "/pokemon/tn_Breloom.jpg",
+  "/pokemon/tn_Cacnea.jpg",
+  "/pokemon/tn_Cacturne.jpg",
+  "/pokemon/tn_Camerupt.jpg",
+  "/pokemon/tn_Carvanha.jpg",
+  "/pokemon/tn_Cascoon.jpg",
+  "/pokemon/tn_Castform.jpg",
+  "/pokemon/tn_Chimecho.jpg",
+  "/pokemon/tn_Clamperl.jpg",
+  "/pokemon/tn_Claydoll.jpg",
+  "/pokemon/tn_Combusken.jpg",
+  "/pokemon/tn_Corphish.jpg",
+  "/pokemon/tn_Cradily.jpg",
+  "/pokemon/tn_Crawdaunt.jpg",
+  "/pokemon/tn_Delcatty.jpg",
+  "/pokemon/tn_Deoxys.jpg",
+  "/pokemon/tn_Dusclops.jpg",
+  "/pokemon/tn_Duskull.jpg",
+  "/pokemon/tn_araquanid.jpg",
+  "/pokemon/tn_bewear.jpg",
+  "/pokemon/tn_bounsweet.jpg",
+  "/pokemon/tn_brionne.jpg",
+  "/pokemon/tn_charjabug.jpg",
+  "/pokemon/tn_codigo_cero.jpg",
+  "/pokemon/tn_comfey.jpg",
+  "/pokemon/tn_cosmog.jpg",
+  "/pokemon/tn_crabominable.jpg",
+  "/pokemon/tn_crabrawler.jpg",
+  "/pokemon/tn_cutiefly.jpg",
+  "/pokemon/tn_dartrix.jpg",
+  "/pokemon/tn_decidueye.jpg",
+  "/pokemon/tn_dewpider.jpg",
+  "/pokemon/tn_dhelmise.jpg",
+  "/pokemon/tn_diglett_alola.jpg",
+  "/pokemon/tn_drampa.jpg",
+  "/pokemon/tn_exeggutor_alola.jpg",
+  "/pokemon/tn_fomantis.jpg",
+  "/pokemon/tn_geodude_alola.jpg",
+  "/pokemon/tn_gigantamax_toxtricity.jpg",
+  "/pokemon/tn_golem_alola.jpg",
+  "/pokemon/tn_golisopod.jpg",
+  "/pokemon/tn_gossifleur.jpg",
+  "/pokemon/tn_graveler_alola.jpg",
+  "/pokemon/tn_greninja_ash.jpg",
+  "/pokemon/tn_grimer_alola.jpg",
+  "/pokemon/tn_grookey.jpg",
+  "/pokemon/tn_grubbin.jpg",
+  "/pokemon/tn_gumshoos.jpg",
+  "/pokemon/tn_hakamo-o.jpg",
+  "/pokemon/tn_incineroar.jpg",
+  "/pokemon/tn_inteleon.jpg",
+  "/pokemon/tn_jangmo-o.jpg",
+  "/pokemon/tn_komala.jpg",
+  "/pokemon/tn_kommo-o.jpg",
+  "/pokemon/tn_kubfu.jpg",
+  "/pokemon/tn_linoone_galar.jpg",
+  "/pokemon/tn_litten.jpg",
+  "/pokemon/tn_lurantis.jpg",
+  "/pokemon/tn_lycanroc_forma_diurna.jpg",
+  "/pokemon/tn_lycanroc_forma_nocturna.jpg",
+  "/pokemon/tn_magearna.jpg",
+  "/pokemon/tn_mareanie.jpg",
+  "/pokemon/tn_marowak_alola.jpg",
+  "/pokemon/tn_melmetal.jpg",
+  "/pokemon/tn_meltan.jpg",
+  "/pokemon/tn_meowth_alola.jpg",
+  "/pokemon/tn_mimikyu.jpg",
+  "/pokemon/tn_minior_1.jpg",
+  "/pokemon/tn_minior_2.jpg",
+  "/pokemon/tn_morelull.jpg",
+  "/pokemon/tn_morpeko_forma_saciada.jpg",
+  "/pokemon/tn_morpeko_forma_voraz.jpg",
+  "/pokemon/tn_mudbray.jpg",
+  "/pokemon/tn_mudsdale.jpg",
+  "/pokemon/tn_muk_alola.jpg",
+  "/pokemon/tn_mysterious.jpg",
+  "/pokemon/tn_ninetales_alola.jpg",
+  "/pokemon/tn_obstagoon.jpg",
+  "/pokemon/tn_oranguru.jpg",
+  "/pokemon/tn_oricorio_estilo_animado.jpg",
+  "/pokemon/tn_oricorio_estilo_apasionado.jpg",
+  "/pokemon/tn_oricorio_estilo_placido.jpg",
+  "/pokemon/tn_oricorio_estilo_refinado.jpg",
+  "/pokemon/tn_palossand.jpg",
+  "/pokemon/tn_passimian.jpg",
+  "/pokemon/tn_persian_alola.jpg",
+  "/pokemon/tn_pikipek.jpg",
+  "/pokemon/tn_polteageist.jpg",
+  "/pokemon/tn_ponyta_galar.jpg",
+  "/pokemon/tn_popplio.jpg",
+  "/pokemon/tn_primarina.jpg",
+  "/pokemon/tn_pyukumuku.jpg",
+  "/pokemon/tn_raboot.jpg",
+  "/pokemon/tn_raichu_alola.jpg",
+  "/pokemon/tn_raticate_alola.jpg",
+  "/pokemon/tn_rattata_alola.jpg",
+  "/pokemon/tn_ribombee.jpg",
+  "/pokemon/tn_rillaboom.jpg",
+  "/pokemon/tn_rockruff.jpg",
+  "/pokemon/tn_rolycoly.jpg",
+  "/pokemon/tn_rowlet.jpg",
+  "/pokemon/tn_salandit.jpg",
+  "/pokemon/tn_salazzle.jpg",
+  "/pokemon/tn_sandaconda.jpg",
+  "/pokemon/tn_sandshrew_alola.jpg",
+  "/pokemon/tn_sandslash_alola.jpg",
+  "/pokemon/tn_sandygasti.jpg",
+  "/pokemon/tn_scorbunny.jpg",
+  "/pokemon/tn_shiinotic.jpg",
+  "/pokemon/tn_silvally.jpg",
+  "/pokemon/tn_sirfetchd.jpg",
+  "/pokemon/tn_sobble.jpg",
+  "/pokemon/tn_solgaleo.jpg",
+  "/pokemon/tn_steenee.jpg",
+  "/pokemon/tn_stonjourner.jpg",
+  "/pokemon/tn_stufful.jpg",
+  "/pokemon/tn_tapu_bulu.jpg",
+  "/pokemon/tn_tapu_fini.jpg",
+  "/pokemon/tn_tapu_koko.jpg",
+  "/pokemon/tn_tapu_lele.jpg",
+  "/pokemon/tn_thwackey.jpg",
+  "/pokemon/tn_togedemaru.jpg",
+  "/pokemon/tn_torracat.jpg",
+  "/pokemon/tn_toucannon.jpg",
+  "/pokemon/tn_toxapex.jpg",
+  "/pokemon/tn_toxtricity_forma_aguda.jpg",
+  "/pokemon/tn_toxtricity_forma_grave.jpg",
+  "/pokemon/tn_trumbeak.jpg",
+  "/pokemon/tn_tsareena.jpg",
+  "/pokemon/tn_turtonator.jpg",
+  "/pokemon/tn_ultra_ente_03_resplandor.jpg",
+  "/pokemon/tn_ultra_entre_05_voracidad.jpg",
+  "/pokemon/tn_urshifu_estilo_brusco.jpg",
+  "/pokemon/tn_vikavolt.jpg",
+  "/pokemon/tn_vulpix_alola.jpg",
+  "/pokemon/tn_weezing_galar.jpg",
+  "/pokemon/tn_wimpod.jpg",
+  "/pokemon/tn_wishiwashi_forma_banco.jpg",
+  "/pokemon/tn_wishiwashi_forma_individual.jpg",
+  "/pokemon/tn_wooloo.jpg",
+  "/pokemon/tn_yungoos.jpg",
+  "/pokemon/tn_zacian.jpg",
+  "/pokemon/tn_zamazenta.jpg",
+  "/pokemon/tn_zigzagoon_galar.jpg",
+  "/pokemon/tn_zygarde_10_porciento.jpg",
+  "/pokemon/tn_zygarde_50_porciento.jpg",
+  "/pokemon/tn_zygarde_forma_completa.jpg",
+  "/pokemon/tn_zygarde_nucleo_celula.jpg",
+  "/casa/alfombra.jpeg",
+  "/casa/baño.jpg",
+  "/casa/botonera ascensor.jpeg",
+  "/casa/canastoropa.jpeg",
+  "/casa/casa.jpg",
+  "/casa/cerradura.jpeg",
+  "/casa/chimenea.jpg",
+  "/casa/comedro.jpg",
+  "/casa/dorbell.jpeg",
+  "/casa/dormitorio.jpg",
+  "/casa/enchufe.jpeg",
+  "/casa/escaleras.jpg",
+  "/casa/extensor.jpeg",
+  "/casa/futon.jpeg",
+  "/casa/garaje.jpg",
+  "/casa/interruptor.jpeg",
+  "/casa/lavarropa.jpeg",
+  "/casa/messa.jpeg",
+  "/casa/pared.jpg",
+  "/casa/piso.jpg",
+  "/casa/plancha para pelo.jpeg",
+  "/casa/puerta.jpg",
+  "/casa/sala de estar.jpg",
+  "/casa/silla.jpeg",
+  "/casa/taburete.jpeg",
+  "/casa/techo.jpg",
+  "/casa/ventana.jpg",
+  "/casa/zapatilla.jpeg",
+  "/flowers/Daisy flower.jfif",
+  "/flowers/Lirio.jfif",
+  "/flowers/diente de leon.jfif",
+  "/flowers/hydrangea.jfif",
+  "/flowers/lavander.jfif",
+  "/flowers/magnolia.jfif",
+  "/flowers/orchid.jfif",
+  "/flowers/popy.jfif",
+  "/flowers/rose.jfif",
+  "/flowers/springflower.jfif",
+  "/flowers/sunflower.jfif",
+  "/flowers/tulipan.jfif",
+  "/flowers/vervena.jfif",
+  "/herramientas/Martillo-de-garras.jpg",
+  "/herramientas/Repelente de insectos.jpeg",
+  "/herramientas/acha.jfif",
+  "/herramientas/alambre de pua.jpeg",
+  "/herramientas/alambre.jpeg",
+  "/herramientas/alicate.jfif",
+  "/herramientas/amoladora.jpeg",
+  "/herramientas/azada.jfif",
+  "/herramientas/barreta.jfif",
+  "/herramientas/bolsadebasura.jpeg",
+  "/herramientas/bolsadormir.jpeg",
+  "/herramientas/botas.jpeg",
+  "/herramientas/brujula.jpeg",
+  "/herramientas/cable.jpeg",
+  "/herramientas/carpa.jpeg",
+  "/herramientas/carril deslizante.jpeg",
+  "/herramientas/casco.jfif",
+  "/herramientas/cepilldeacero.jpeg",
+  "/herramientas/cinta metrica.jfif",
+  "/herramientas/cocina portatil.jpeg",
+  "/herramientas/colchoninflable.jpeg",
+  "/herramientas/compresoraire.jpeg",
+  "/herramientas/descarga.jfif",
+  "/herramientas/destornilladores.jfif",
+  "/herramientas/disco amoladora.jpeg",
+  "/herramientas/engrane.jpeg",
+  "/herramientas/espatula.jfif",
+  "/herramientas/formones.jfif",
+  "/herramientas/french.jfif",
+  "/herramientas/fresadora.jpg",
+  "/herramientas/gabinetedeherramientas.jpeg",
+  "/herramientas/gato.jfif",
+  "/herramientas/gps.jpeg",
+  "/herramientas/grupoelectrogeno.jpeg",
+  "/herramientas/guantes.jfif",
+  "/herramientas/ladrillo.jpeg",
+  "/herramientas/ladrillocemento.jpeg",
+  "/herramientas/ladrilloplastico.jpeg",
+  "/herramientas/lima.jfif",
+  "/herramientas/linterna.jpeg",
+  "/herramientas/llave cruz.jfif",
+  "/herramientas/maza.jfif",
+  "/herramientas/medidoraire.jpeg",
+  "/herramientas/nabaja suisa.jpeg",
+  "/herramientas/nivel.jfif",
+  "/herramientas/nivel.jpeg",
+  "/herramientas/pala.jfif",
+  "/herramientas/pico.jfif",
+  "/herramientas/pinza.jfif",
+  "/herramientas/pinza2.jfif",
+  "/herramientas/pituto.jpeg",
+  "/herramientas/plomada.jpeg",
+  "/herramientas/primeros auxilios.jpeg",
+  "/herramientas/protector solar.jpeg",
+  "/herramientas/rastrillo.jfif",
+  "/herramientas/rench.jfif",
+  "/herramientas/rulemman.jpeg",
+  "/herramientas/sargento.jfif",
+  "/herramientas/serrucho.webp",
+  "/herramientas/sierra de arco.jfif",
+  "/herramientas/sierra electrica.jfif",
+  "/herramientas/sierraplegable.jpeg",
+  "/herramientas/soga.jpeg",
+  "/herramientas/soldadora.jpeg",
+  "/herramientas/soldenoche.jpeg",
+  "/herramientas/soporte en l.jpeg",
+  "/herramientas/taladros.jfif",
+  "/herramientas/tarugo.jpeg",
+  "/herramientas/tarugomadera.jpeg",
+  "/herramientas/tenaza.jfif",
+  "/herramientas/termometro.jpeg",
+  "/herramientas/tornillo.jpeg",
+  "/herramientas/tornillocabeza10.jpeg",
+  "/herramientas/tuerca.jpeg",
+  "/herramientas/tuercamariposa.jpeg",
+  "/herramientas/visagra.jpeg",
+  "/herramientas/visagracazoleta.jpeg",
+  "/acsesorios/Camisa.jpg",
+  "/acsesorios/Camiseta.jpg",
+  "/acsesorios/Chaqueta.jpg",
+  "/acsesorios/Cuchilla de afeitar.jpg",
+  "/acsesorios/Falda.jpg",
+  "/acsesorios/Hilo dental.jpg",
+  "/acsesorios/Jeans.jpg",
+  "/acsesorios/Lima de uñas.jpg",
+  "/acsesorios/Papel higiénico.jpg",
+  "/acsesorios/Peine.jpg",
+  "/acsesorios/Sudadera con capucha.jpg",
+  "/acsesorios/Traje.jpg",
+  "/acsesorios/alicate.jpg",
+  "/acsesorios/anillos.jpg",
+  "/acsesorios/auriculares.jpeg",
+  "/acsesorios/barbijo.jpg",
+  "/acsesorios/billetera.jpg",
+  "/acsesorios/bolso.jpg",
+  "/acsesorios/bufanda.jpg",
+  "/acsesorios/cartera.jpg",
+  "/acsesorios/cepillo.jpg",
+  "/acsesorios/cinturon.jpg",
+  "/acsesorios/collar.jpg",
+  "/acsesorios/corbata.jpg",
+  "/acsesorios/cucharasmedidoras.jpeg",
+  "/acsesorios/descarga.jpg",
+  "/acsesorios/hisopos.jpg",
+  "/acsesorios/jabon.jpg",
+  "/acsesorios/lentes de sol.jpg",
+  "/acsesorios/lentes.jpg",
+  "/acsesorios/llaveros.jpg",
+  "/acsesorios/mochila.jpg",
+  "/acsesorios/paraguas.jpg",
+  "/acsesorios/pasta dental.jpg",
+  "/acsesorios/pendientes.jpg",
+  "/acsesorios/reloj.jpg",
+  "/acsesorios/sombrero.jpg",
+  "/acsesorios/telefono movil.jpg",
+  "/acsesorios/toalla.jpg",
+  "/acsesorios/vestido.jpeg",
+  "/acsesorios/zapatos.jpg",
+  "/it/CPU.jpg",
+  "/it/Disco Duro.jpg",
+  "/it/Motherboard.jpg",
+  "/it/Ventiladores y disipadores térmicos.jpg",
+  "/it/cableusb.jpg",
+  "/it/headseat.jpg",
+  "/it/memoria.jpg",
+  "/it/microfono.jpg",
+  "/it/monitor.jpg",
+  "/it/mouse.jpg",
+  "/it/pendrive.jpg",
+  "/it/printer.jpg",
+  "/it/sd card.jpg",
+  "/it/speakers.jpg",
+  "/it/teclado.jpg",
+  "/it/webcam.jpg",
+  "/iconos/ajustes.png",
+  "/iconos/android.png",
+  "/iconos/apagado.png",
+  "/iconos/apple.png",
+  "/iconos/battery.png",
+  "/iconos/brigthness.png",
+  "/iconos/calculator.jfif",
+  "/iconos/calendario.png",
+  "/iconos/camara apagada.png",
+  "/iconos/check.png",
+  "/iconos/clock.jfif",
+  "/iconos/contactos.png",
+  "/iconos/correo.png",
+  "/iconos/dislike.png",
+  "/iconos/down arrow.png",
+  "/iconos/dowunload.png",
+  "/iconos/error.png",
+  "/iconos/folder.png",
+  "/iconos/gps.png",
+  "/iconos/hamburguer.png",
+  "/iconos/headphones.png",
+  "/iconos/house.jfif",
+  "/iconos/like.jfif",
+  "/iconos/linux.jfif",
+  "/iconos/lupa.jfif",
+  "/iconos/microfono apagado.png",
+  "/iconos/microfono.png",
+  "/iconos/minimizar.png",
+  "/iconos/mute.png",
+  "/iconos/pause.png",
+  "/iconos/phone.png",
+  "/iconos/play.png",
+  "/iconos/refresh.png",
+  "/iconos/rewind.png",
+  "/iconos/save.jfif",
+  "/iconos/sheare.png",
+  "/iconos/shopping-cart.png",
+  "/iconos/sin coneccion.png",
+  "/iconos/stop-multimedia.png",
+  "/iconos/sun.png",
+  "/iconos/to left arrow.png",
+  "/iconos/to rigth arrow.png",
+  "/iconos/tools.png",
+  "/iconos/trash-delet.png",
+  "/iconos/up arrow.png",
+  "/iconos/upload.png",
+  "/iconos/user.png",
+  "/iconos/video.jfif",
+  "/iconos/volumen.png",
+  "/iconos/wifi.png",
+  "/iconos/windows.jfif",
+  "/dibujos/Abradolf Lincler.jpeg",
+  "/dibujos/Alan_Trenes.webp",
+  "/dibujos/Amish Cyborg.jpeg",
+  "/dibujos/Arma_de_Pepinillo_Rick.webp",
+  "/dibujos/BILAL.png",
+  "/dibujos/Bepis.jpeg",
+  "/dibujos/Beth_Smith.webp",
+  "/dibujos/Blim Blam the Korblok.jpeg",
+  "/dibujos/Bruce.jpeg",
+  "/dibujos/CORTO MALTESE.png",
+  "/dibujos/Chris.jpeg",
+  "/dibujos/Crocubot.jpeg",
+  "/dibujos/DAGO.png",
+  "/dibujos/Director_Gene_Vagina.webp",
+  "/dibujos/Dr. Glip-Glop.jpeg",
+  "/dibujos/Dr. Wong.jpeg",
+  "/dibujos/Dr. Xenon Bloom.jpeg",
+  "/dibujos/Drive_Knight_anime.webp",
+  "/dibujos/EL.jpeg",
+  "/dibujos/ETERNAUTA.png",
+  "/dibujos/El_Presidente.webp",
+  "/dibujos/Espantoso_Terry.webp",
+  "/dibujos/Evil Morty.jpeg",
+  "/dibujos/Fart.jpeg",
+  "/dibujos/Frank Palicky.jpeg",
+  "/dibujos/Frankenstein.jpeg",
+  "/dibujos/GILGAMESH.png",
+  "/dibujos/Gazorpazorpfield_UNCENSORED.webp",
+  "/dibujos/Gearhead.jpeg",
+  "/dibujos/Glaxo Slimslom.jpeg",
+  "/dibujos/Gwendolyn.jpeg",
+  "/dibujos/Icon_Bankenman.webp",
+  "/dibujos/Icon_Blast.webp",
+  "/dibujos/Icon_Flashy_Flash.webp",
+  "/dibujos/Icon_Genos.webp",
+  "/dibujos/Icon_Kamikaze.webp",
+  "/dibujos/Icon_King.webp",
+  "/dibujos/Icon_Metal_Knight.webp",
+  "/dibujos/Icon_Prisionero.webp",
+  "/dibujos/Icon_TTM.webp",
+  "/dibujos/Icon_Tats (1).webp",
+  "/dibujos/Icon_Tats.webp",
+  "/dibujos/Icon_Zombieman.webp",
+  "/dibujos/JUDGE DREED.png",
+  "/dibujos/Jaguar.jpeg",
+  "/dibujos/Jerry Smith.jpeg",
+  "/dibujos/Jessica.webp",
+  "/dibujos/Krombopulos Michael.jpeg",
+  "/dibujos/Kyle.jpeg",
+  "/dibujos/LOBO.png",
+  "/dibujos/Los_Vindicadores.webp",
+  "/dibujos/MAFALDA.png",
+  "/dibujos/MOEBIUS.png",
+  "/dibujos/MORT CINDER.png",
+  "/dibujos/MeeseeksHQ.webp",
+  "/dibujos/Michael Jenkins.jpeg",
+  "/dibujos/Million Ants.jpeg",
+  "/dibujos/Nancy.jpeg",
+  "/dibujos/Noob-Noob.jpeg",
+  "/dibujos/PHANTOM.png",
+  "/dibujos/PRINCE VALIANT.png",
+  "/dibujos/Pencilvester.jpeg",
+  "/dibujos/Pig_God_anime.webp",
+  "/dibujos/Ponsta.jpeg",
+  "/dibujos/ROBERT CRUMB.png",
+  "/dibujos/ROCKETEER.png",
+  "/dibujos/Reverse Giraffe.jpeg",
+  "/dibujos/Ruben.jpeg",
+  "/dibujos/SD_%3Fcono.webp",
+  "/dibujos/Shleemypants.jpeg",
+  "/dibujos/Shrimply Pibbles.jpeg",
+  "/dibujos/Snowball.jpeg",
+  "/dibujos/Squanchy.webp",
+  "/dibujos/Sr._Pantalones_de_Pop%3F.webp",
+  "/dibujos/Stealy.jpeg",
+  "/dibujos/Supernova.jpeg",
+  "/dibujos/THE SHADOW.png",
+  "/dibujos/TINTIN.png",
+  "/dibujos/Taddy Mason.jpeg",
+  "/dibujos/The Cat in the Hat.jpeg",
+  "/dibujos/The Cromulons.jpeg",
+  "/dibujos/Tinkles.jpeg",
+  "/dibujos/Tony.jpeg",
+  "/dibujos/Tony`s wife.jpeg",
+  "/dibujos/Tricia_Lange.webp",
+  "/dibujos/Trunkphobic suspenders guy.jpeg",
+  "/dibujos/Uncle Steve.jpeg",
+  "/dibujos/Unidad.webp",
+  "/dibujos/Zeep Xanflorp.jpeg",
+  "/dibujos/abram.png",
+  "/dibujos/ace.jpeg",
+  "/dibujos/acuaman.jpeg",
+  "/dibujos/ades.jpeg",
+  "/dibujos/alicia.jpeg",
+  "/dibujos/antman.jpeg",
+  "/dibujos/archundia.png",
+  "/dibujos/ariel.jpeg",
+  "/dibujos/arthricia_from_rick_and_morty_by_constantchange45_db85yrf-fullview.jpg",
+  "/dibujos/asterix.png",
+  "/dibujos/atrocitus.jpeg",
+  "/dibujos/aurora.jpeg",
+  "/dibujos/azrael.jpg",
+  "/dibujos/baby wizard.jpeg",
+  "/dibujos/badguys.jpeg",
+  "/dibujos/banelope.jpeg",
+  "/dibujos/barney.jpeg",
+  "/dibujos/bart.png",
+  "/dibujos/batman.jpeg",
+  "/dibujos/bb8.jpeg",
+  "/dibujos/beast.jpeg",
+  "/dibujos/been.jpeg",
+  "/dibujos/bella.jpeg",
+  "/dibujos/ben10.jpeg",
+  "/dibujos/bho.jpeg",
+  "/dibujos/billy.jpeg",
+  "/dibujos/birdperson.jpeg",
+  "/dibujos/blackpanther.jpeg",
+  "/dibujos/blackwidow.jpeg",
+  "/dibujos/blancanieves.jpeg",
+  "/dibujos/bobsponja.jpeg",
+  "/dibujos/bobsponja.jpg",
+  "/dibujos/bojack.jpeg",
+  "/dibujos/bugs.jpg",
+  "/dibujos/burns.jpeg",
+  "/dibujos/burro.jpeg",
+  "/dibujos/buzz.jpeg",
+  "/dibujos/c3p0.jpeg",
+  "/dibujos/capitan america.jpeg",
+  "/dibujos/carl.jpeg",
+  "/dibujos/catdog.jpeg",
+  "/dibujos/cenicienta.jpeg",
+  "/dibujos/charlybrown.jpeg",
+  "/dibujos/chavo del 8.jpeg",
+  "/dibujos/chicassuperpoderosas.jpeg",
+  "/dibujos/chico bestia.jpeg",
+  "/dibujos/chubaca.jpeg",
+  "/dibujos/ciborg.jpeg",
+  "/dibujos/coco.jpeg",
+  "/dibujos/codos.jpeg",
+  "/dibujos/comicguy.png",
+  "/dibujos/constantin.jpeg",
+  "/dibujos/coraje.jpeg",
+  "/dibujos/cornvelious daniel.jpeg",
+  "/dibujos/cortes.jpeg",
+  "/dibujos/cruela de vil.jpeg",
+  "/dibujos/darcksidius.jpeg",
+  "/dibujos/daredavil.jpeg",
+  "/dibujos/daria.jpeg",
+  "/dibujos/darkvader.jpeg",
+  "/dibujos/darwin.png",
+  "/dibujos/deadpool.jpeg",
+  "/dibujos/descarga (1).jpeg",
+  "/dibujos/descarga.jpeg",
+  "/dibujos/dexter.jpeg",
+  "/dibujos/doctor strange.jpeg",
+  "/dibujos/dongato.jpeg",
+  "/dibujos/dora.png",
+  "/dibujos/doraemon.jpeg",
+  "/dibujos/dory.jpeg",
+  "/dibujos/dracula.jpeg",
+  "/dibujos/duendeverde.jpeg",
+  "/dibujos/duffman.jpeg",
+  "/dibujos/edd zuliban.jpeg",
+  "/dibujos/edna modax.jpeg",
+  "/dibujos/eldorado.jpeg",
+  "/dibujos/elena avalor.jpeg",
+  "/dibujos/eli`s girlfriend.jpeg",
+  "/dibujos/elsa.jpeg",
+  "/dibujos/ensiassangrantes.png",
+  "/dibujos/entrena a tu dragon 2.jpeg",
+  "/dibujos/equiporoket.jpeg",
+  "/dibujos/espantatiburones.jpeg",
+  "/dibujos/familyguy.jpeg",
+  "/dibujos/flanders.png",
+  "/dibujos/flash.png",
+  "/dibujos/forky.jpeg",
+  "/dibujos/frankestein.jpeg",
+  "/dibujos/furiadiurna.jpeg",
+  "/dibujos/gambito.jpeg",
+  "/dibujos/gargamel.jpeg",
+  "/dibujos/gatoconbotas.jpeg",
+  "/dibujos/gatubela.jpeg",
+  "/dibujos/gatubella.jpeg",
+  "/dibujos/gloria.jpeg",
+  "/dibujos/gobo.jpeg",
+  "/dibujos/goku.jpg",
+  "/dibujos/goofie.jpeg",
+  "/dibujos/gorgory.jpeg",
+  "/dibujos/green hornet.jpeg",
+  "/dibujos/greenarrow.jpeg",
+  "/dibujos/grodd.jpeg",
+  "/dibujos/grods.jpeg",
+  "/dibujos/gruñon.jpeg",
+  "/dibujos/hackus-vexi.jpg",
+  "/dibujos/harley quinn.jpeg",
+  "/dibujos/harrypotter.jpeg",
+  "/dibujos/hawkeye.jpeg",
+  "/dibujos/hellboy.jpeg",
+  "/dibujos/hello kitty.png",
+  "/dibujos/hercules.jpeg",
+  "/dibujos/hibbert.png",
+  "/dibujos/hombrelobo.jpeg",
+  "/dibujos/home.jpeg",
+  "/dibujos/homero.jpeg",
+  "/dibujos/homero.png",
+  "/dibujos/hulk.jpeg",
+  "/dibujos/ironman.jpeg",
+  "/dibujos/itchy.png",
+  "/dibujos/jack.jpeg",
+  "/dibujos/jackfrost.jpeg",
+  "/dibujos/jake.png",
+  "/dibujos/jazmin.jpeg",
+  "/dibujos/jerry.jpeg",
+  "/dibujos/jimmy neutron.jpeg",
+  "/dibujos/joker.jpeg",
+  "/dibujos/jonny bravo.jpeg",
+  "/dibujos/jorobado.jpeg",
+  "/dibujos/julien.jpeg",
+  "/dibujos/krakens y sirenas.jpeg",
+  "/dibujos/kripto.jpeg",
+  "/dibujos/kunfupanda2.jpeg",
+  "/dibujos/lahermanastra mas fea.jpeg",
+  "/dibujos/lenny.png",
+  "/dibujos/lexluthor.jpeg",
+  "/dibujos/leyendadeang.jpeg",
+  "/dibujos/linternaverde.jpeg",
+  "/dibujos/lisa.png",
+  "/dibujos/loki.jpeg",
+  "/dibujos/loqueelaguasellevo.jpeg",
+  "/dibujos/mafalda.jpeg",
+  "/dibujos/magneto.jpeg",
+  "/dibujos/magui.png",
+  "/dibujos/malefica.jpeg",
+  "/dibujos/marge.png",
+  "/dibujos/martian manhunter.png",
+  "/dibujos/maude.png",
+  "/dibujos/megamente.jpeg",
+  "/dibujos/meimei.jpeg",
+  "/dibujos/merida.jpeg",
+  "/dibujos/mickey.png",
+  "/dibujos/mike wasausky.jpeg",
+  "/dibujos/milhowse.png",
+  "/dibujos/mini.jpg",
+  "/dibujos/minions.jpeg",
+  "/dibujos/mirabell.jpeg",
+  "/dibujos/misterincreible.jpeg",
+  "/dibujos/moana.jpeg",
+  "/dibujos/moe.jpeg",
+  "/dibujos/mordecay.png",
+  "/dibujos/morthy.jpeg",
+  "/dibujos/morty.jr.jpeg",
+  "/dibujos/muerte.jpeg",
+  "/dibujos/mulan.jpeg",
+  "/dibujos/munal.jpg",
+  "/dibujos/musculoso.jpeg",
+  "/dibujos/mushu.jpeg",
+  "/dibujos/nana.jpeg",
+  "/dibujos/nelson.jpeg",
+  "/dibujos/nick.png",
+  "/dibujos/ninjaturtles.jpeg",
+  "/dibujos/ninos.jpg",
+  "/dibujos/obelix.jpeg",
+  "/dibujos/olaf.jpeg",
+  "/dibujos/otto.jpeg",
+  "/dibujos/ottopus.jpeg",
+  "/dibujos/ozz.jpeg",
+  "/dibujos/padrinos magicos.jpeg",
+  "/dibujos/pajaroloco.png",
+  "/dibujos/papa-pitufo.jpg",
+  "/dibujos/patodonal.jpg",
+  "/dibujos/pedro.jpeg",
+  "/dibujos/penguien.jpeg",
+  "/dibujos/peterpan.jpeg",
+  "/dibujos/phineas y fer.jpeg",
+  "/dibujos/pikachu.jpg",
+  "/dibujos/pinguinos de madagascar.jpeg",
+  "/dibujos/pinkyycerebro.jpeg",
+  "/dibujos/pitufina.jpg",
+  "/dibujos/pitufo-abuelo-y-pitufina-abuela.jpg",
+  "/dibujos/pitufo-astronauta.jpg",
+  "/dibujos/pitufo-bebe.jpg",
+  "/dibujos/pitufo-bromista.jpg",
+  "/dibujos/pitufo-filosofo.jpg",
+  "/dibujos/pitufo-fortachon.jpg",
+  "/dibujos/pitufo-goloso.jpg",
+  "/dibujos/pitufo-granjero.jpg",
+  "/dibujos/pitufo-grunon.jpg",
+  "/dibujos/pitufo-manitas.jpg",
+  "/dibujos/pitufo-perezoso.jpg",
+  "/dibujos/pitufo-rey.jpg",
+  "/dibujos/pitufo-salvaje.jpg",
+  "/dibujos/pitufo-tontin.jpg",
+  "/dibujos/pitufo-vanidoso.jpg",
+  "/dibujos/pitufos.png",
+  "/dibujos/pocahontas.jpeg",
+  "/dibujos/poison hivi.jpeg",
+  "/dibujos/popeye.jpg",
+  "/dibujos/powerrangers.jpeg",
+  "/dibujos/prince nebulon.jpeg",
+  "/dibujos/puca.jpeg",
+  "/dibujos/puchi.png",
+  "/dibujos/punisher.jpeg",
+  "/dibujos/queen of hearts.jpeg",
+  "/dibujos/quienengañoarollerrabit.jpeg",
+  "/dibujos/r2d2.jpeg",
+  "/dibujos/ralf.jpeg",
+  "/dibujos/rapunzel.jpeg",
+  "/dibujos/rasal gul.jpeg",
+  "/dibujos/raven.jpeg",
+  "/dibujos/rick sanches.jpeg",
+  "/dibujos/robin.png",
+  "/dibujos/rockomodernslife.jpeg",
+  "/dibujos/rogue.jpeg",
+  "/dibujos/samurayjack.jpeg",
+  "/dibujos/santa.jpeg",
+  "/dibujos/santaorigenguardianes.jpeg",
+  "/dibujos/sauron.jpeg",
+  "/dibujos/scandalosos.jpeg",
+  "/dibujos/scooby.jpg",
+  "/dibujos/scratchy.jpeg",
+  "/dibujos/señoritabelo.jpeg",
+  "/dibujos/shazam.jpeg",
+  "/dibujos/she-ra.jpeg",
+  "/dibujos/sherck.jpeg",
+  "/dibujos/shreck.jpeg",
+  "/dibujos/silversurfer.jpeg",
+  "/dibujos/simba.jpeg",
+  "/dibujos/sinbad.jpeg",
+  "/dibujos/sinestro.jpeg",
+  "/dibujos/skiner.jpeg",
+  "/dibujos/slastycgirl.jpeg",
+  "/dibujos/smiders.jpeg",
+  "/dibujos/snoopy.png",
+  "/dibujos/snopy.png",
+  "/dibujos/spawn.jpeg",
+  "/dibujos/spiderman.jpg",
+  "/dibujos/spirit.jpeg",
+  "/dibujos/squanchy.jpg",
+  "/dibujos/starfire.jpeg",
+  "/dibujos/stich.jpeg",
+  "/dibujos/storm.jpeg",
+  "/dibujos/summer smith.jpeg",
+  "/dibujos/supergirl.jpeg",
+  "/dibujos/superman.jpeg",
+  "/dibujos/susan.jpeg",
+  "/dibujos/swamp thing.jpeg",
+  "/dibujos/tammy.jpeg",
+  "/dibujos/tarzan.jpeg",
+  "/dibujos/thanos.jpeg",
+  "/dibujos/thor.jpeg",
+  "/dibujos/tiana.jpeg",
+  "/dibujos/tn_395Empoleon.jpg",
+  "/dibujos/tn_396Starly.jpg",
+  "/dibujos/tn_399Bidoof.jpg",
+  "/dibujos/tontin.jpeg",
+  "/dibujos/totoro.jpeg",
+  "/dibujos/turbo.jpeg",
+  "/dibujos/voldemor.jpeg",
+  "/dibujos/wonderwoman.jpeg",
+  "/dibujos/zuco.jpeg",
+  "/metodos de comunicacion/cartAS.jpeg",
+  "/metodos de comunicacion/internet.jpeg",
+  "/metodos de comunicacion/periodicos.jpeg",
+  "/metodos de comunicacion/publicidad.jpeg",
+  "/metodos de comunicacion/radio.jpeg",
+  "/metodos de comunicacion/redessociales.jpeg",
+  "/metodos de comunicacion/revistas.jpeg",
+  "/metodos de comunicacion/telefono.jpeg",
+  "/metodos de comunicacion/telefonomovil.jpeg",
+  "/metodos de comunicacion/television.jpeg",
+  "/metodos de comunicacion/videocall.jpeg",
+  "/bandas/311-logo.png",
+  "/bandas/AC-DC-Logo-1.png",
+  "/bandas/Aerosmith-Logo.png",
+  "/bandas/Bon-Jovi-band-logo.png",
+  "/bandas/Borknagar-logo.png",
+  "/bandas/Crass-band-logo.png",
+  "/bandas/Dave-Matthews-Band-logo.png",
+  "/bandas/Gay-Dad-logo.png",
+  "/bandas/Helloween-logo.png",
+  "/bandas/Kiss_Logo.png",
+  "/bandas/Klaxons-logo.png",
+  "/bandas/New-York-Dolls-band-logo-1.png",
+  "/bandas/Panic_-At-the-Disco-logo.png",
+  "/bandas/Party-Cannon-logo.png",
+  "/bandas/Phish-logo-1.png",
+  "/bandas/Queen-logo.png",
+  "/bandas/Radiohead-band-logo.png",
+  "/bandas/Ramones-band-logo.png",
+  "/bandas/Red_Hot_Chili_Peppers_logo.png",
+  "/bandas/Sex-Pistols-Logo.png",
+  "/bandas/Staind-logo.png",
+  "/bandas/Stickman-by-Pearl-Jam-logo.png",
+  "/bandas/Sushi-Roll-band-logo.png",
+  "/bandas/The-Monkees-logo.png",
+  "/bandas/The-Rolling-Stones-logo.png",
+  "/bandas/The_Beatles_logo.png",
+  "/bandas/The_Doors_Logo.png",
+  "/bandas/Tokio-Hotel-logo.png",
+  "/bandas/WHAM-logo.png",
+  "/bandas/Yes_band_logo.png",
+  "/bandas/a-ha-logo.png",
+  "/bandas/death-logo.png",
+  "/bandas/eagles-band-logo.png",
+  "/bandas/nirvana-logo.png",
+  "/bandas/the-knack-logo.png",
+  "/bandas/the-who-logo.png",
+  "/marcas autos/Logo-AC-marca-autos.jpg",
+  "/marcas autos/Logo-Abarth-marca-autos.png",
+  "/marcas autos/Logo-Alpine-marca-autos.png",
+  "/marcas autos/Logo-Arash-Motors-marca-autos.png",
+  "/marcas autos/Logo-Arrinera-marca-autos.png",
+  "/marcas autos/Logo-Austin-Healy-marca-autos.png",
+  "/marcas autos/Logo-Bentley-marca-autos.png",
+  "/marcas autos/Logo-Borgward-marca-autos.png",
+  "/marcas autos/Logo-Briggs-Automotive-Company-marca-autos.png",
+  "/marcas autos/Logo-Brilliance-marca-autos.png",
+  "/marcas autos/Logo-Caterham-marca-autos.png",
+  "/marcas autos/Logo-Changan-marca-autos.png",
+  "/marcas autos/Logo-Chery-marca-autos.png",
+  "/marcas autos/Logo-Chrysler-marca-autos.png",
+  "/marcas autos/Logo-Cizeta-Marca-Autos.jpg",
+  "/marcas autos/Logo-DS-marca-autos.png",
+  "/marcas autos/Logo-Dacia-marca-autos.png",
+  "/marcas autos/Logo-Datsun-marca-autos.png",
+  "/marcas autos/Logo-Detroit-Electric-marca-autos.png",
+  "/marcas autos/Logo-Dodge-marca-autos.png",
+  "/marcas autos/Logo-FAW-marca-autos.png",
+  "/marcas autos/Logo-Faraday-Future-marca-autos.png",
+  "/marcas autos/Logo-Fisker-marca-autos.png",
+  "/marcas autos/Logo-Ford-marca-autos.png",
+  "/marcas autos/Logo-GAC-marca-autos.png",
+  "/marcas autos/Logo-GFG-Style-marca-autos.png",
+  "/marcas autos/Logo-GMC-marca-autos.png",
+  "/marcas autos/Logo-Geely-marca-autos.png",
+  "/marcas autos/Logo-Genty-marca-autos.png",
+  "/marcas autos/Logo-Ginetta-marca-autos.png",
+  "/marcas autos/Logo-Great-Wall-marca-autos.png",
+  "/marcas autos/Logo-Gumpert-marca-autos.png",
+  "/marcas autos/Logo-Haval-marca-autos.png",
+  "/marcas autos/Logo-Holden-marca-autos.png",
+  "/marcas autos/Logo-Honda-marca-autos.png",
+  "/marcas autos/Logo-Hudson-marca-autos.png",
+  "/marcas autos/Logo-Hyundai-marca-autos.png",
+  "/marcas autos/Logo-IKA-marca-autos.png",
+  "/marcas autos/Logo-Icona-marca-autos.png",
+  "/marcas autos/Logo-Inferno-marca-autos.png",
+  "/marcas autos/Logo-Jeep-marca-autos.png",
+  "/marcas autos/Logo-Kawei-Auto-marca-autos.png",
+  "/marcas autos/Logo-Kia-marca-autos.png",
+  "/marcas autos/Logo-Koenigsegg-marca-autos.png",
+  "/marcas autos/Logo-Lancia-marca-autos.jpg",
+  "/marcas autos/Logo-Land-Wind-marca-autos (1).png",
+  "/marcas autos/Logo-Land-Wind-marca-autos.png",
+  "/marcas autos/Logo-Lifan-marca-autos.jpg",
+  "/marcas autos/Logo-Lincoln-marca-autos.jpg",
+  "/marcas autos/Logo-Lister-marca-autos.png",
+  "/marcas autos/Logo-Local-Motors-marca-autos.png",
+  "/marcas autos/Logo-Lotus-marca-autos.png",
+  "/marcas autos/Logo-Lucid-Motors-marca-autos.png",
+  "/marcas autos/Logo-MG-marca-autos.png",
+  "/marcas autos/Logo-Mahindra-marca-autos.png",
+  "/marcas autos/Logo-Mazda-marca-autos.png",
+  "/marcas autos/Logo-Mazzanti-marca-autos.png",
+  "/marcas autos/Logo-Mercedes-Benz-marca-autos.png",
+  "/marcas autos/Logo-Milan-Automotive-marca-autos.png",
+  "/marcas autos/Logo-Mobius-Motors-marca-autos.png",
+  "/marcas autos/Logo-Morgan-marca-autos.png",
+  "/marcas autos/Logo-Nissan-marca-autos.png",
+  "/marcas autos/Logo-Oldsmobile-marca-autos.png",
+  "/marcas autos/Logo-Pagani-marca-autos.png",
+  "/marcas autos/Logo-Panoz-marca-autos.png",
+  "/marcas autos/Logo-Plymouth-marca-autos.png",
+  "/marcas autos/Logo-Pontiac-marca-autos.png",
+  "/marcas autos/Logo-Puritalia-Automobili-marca-autos.png",
+  "/marcas autos/Logo-RAM-marca-autos.png",
+  "/marcas autos/Logo-Radical-marca-autos.png",
+  "/marcas autos/Logo-Renault-marca-autos.png",
+  "/marcas autos/Logo-Rezvani-marca-autos.png",
+  "/marcas autos/Logo-Rimac-marca-autos.png",
+  "/marcas autos/Logo-Rolls-Royce-marca-autos.png",
+  "/marcas autos/Logo-SWM-marca-autos.png",
+  "/marcas autos/Logo-Saleen-marca-autos.png",
+  "/marcas autos/Logo-Samsung-Motors-marca-autos.png",
+  "/marcas autos/Logo-Scion-marca-autos.png",
+  "/marcas autos/Logo-Seat-marca-autos.png",
+  "/marcas autos/Logo-Shelby-marca-autos.png",
+  "/marcas autos/Logo-Smart-marca-autos.png",
+  "/marcas autos/Logo-Studebacker-marca-autos.png",
+  "/marcas autos/Logo-Subaru-marca-autos.png",
+  "/marcas autos/Logo-Suzuki-marca-autos.png",
+  "/marcas autos/Logo-Tesla-marca-autos.png",
+  "/marcas autos/Logo-Toyota-marca-autos.png",
+  "/marcas autos/Logo-Trion-marca-autos.png",
+  "/marcas autos/Logo-Tushek-marca-autos.png",
+  "/marcas autos/Logo-VLF-marca-autos.png",
+  "/marcas autos/Logo-Vauxhall-marca-autos.png",
+  "/marcas autos/Logo-Venucia-marca-autos.png",
+  "/marcas autos/Logo-Volkswagen-marca-autos.png",
+  "/marcas autos/Logo-Volvo-marca-autos.png",
+  "/marcas autos/Logo-W-Motors-marca-autos.png",
+  "/marcas autos/Logo-Zenos-marca-autos.png",
+  "/marcas autos/Logo-Zenvo-marca-autos.png",
+  "/marcas autos/logo-Acura-marca-autos.jpg",
+  "/marcas autos/logo-Alfa-Romeo-marca-autos.jpg",
+  "/marcas autos/logo-Apollo-marca-autos.png",
+  "/marcas autos/logo-Ariel-marca-autos.jpg",
+  "/marcas autos/logo-Aston-Martin-marca-autos.jpg",
+  "/marcas autos/logo-Audi-marca-autos.jpg",
+  "/marcas autos/logo-BMW-marca-autos.jpg",
+  "/marcas autos/logo-BYD-marca-autos.jpg",
+  "/marcas autos/logo-Baic-marca-autos.jpg",
+  "/marcas autos/logo-Brabham-marca-autos.jpeg",
+  "/marcas autos/logo-Bugatti-marca-autos.jpg",
+  "/marcas autos/logo-Buick-marca-autos.jpg",
+  "/marcas autos/logo-Byton-marca-autos.jpg",
+  "/marcas autos/logo-Cadillac-marca-autos.jpg",
+  "/marcas autos/logo-Chevrolet-marca-autos.jpg",
+  "/marcas autos/logo-Citroën-marca-autos.jpg",
+  "/marcas autos/logo-Cupra-marca-autos.jpg",
+  "/marcas autos/logo-DFSK-marca-autos.jpg",
+  "/marcas autos/logo-Daewoo-marca-autos.jpg",
+  "/marcas autos/logo-Daihatsu-marca-autos.jpg",
+  "/marcas autos/logo-DeLorean-marca-autos.jpg",
+  "/marcas autos/logo-Dendrobium-marca-autos.jpg",
+  "/marcas autos/logo-Devel-marca-autos.jpg",
+  "/marcas autos/logo-Donkervoort-marca-autos.jpg",
+  "/marcas autos/logo-Ermini-marca-autos.jpg",
+  "/marcas autos/logo-Ferrari-marca-autos.jpg",
+  "/marcas autos/logo-Fiat-marca-autos.jpg",
+  "/marcas autos/logo-Foton-marca-autos.jpg",
+  "/marcas autos/logo-Genesis-marca-autos.jpg",
+  "/marcas autos/logo-Hennessey-marca-autos.jpg",
+  "/marcas autos/logo-Hummer-marca-autos.jpg",
+  "/marcas autos/logo-IAME-marca-autos.jpg",
+  "/marcas autos/logo-Infiniti-marca-autos.jpg",
+  "/marcas autos/logo-Isuzu-marca-autos.jpg",
+  "/marcas autos/logo-JAC-marca-autos.jpg",
+  "/marcas autos/logo-Jaguar-marca-autos.jpg",
+  "/marcas autos/logo-Jannarelly-Automotive-marca-autos.jpg",
+  "/marcas autos/logo-KTM-marca-autos.jpg",
+  "/marcas autos/logo-Lada-marca-autos.jpg",
+  "/marcas autos/logo-Lamborghini-marca-autos.jpg",
+  "/marcas autos/logo-Lexus-marca-autos.jpg",
+  "/marcas autos/logo-Link-&-Co-marca-autos.jpg",
+  "/marcas autos/logo-Lyons-Motor-marca-autos.jpg",
+  "/marcas autos/logo-MAT-marca-autos.jpg",
+  "/marcas autos/logo-MINI-marca-autos.jpg",
+  "/marcas autos/logo-Maserati-marca-autos.jpg",
+  "/marcas autos/logo-Mastretta-marca-autos.jpg",
+  "/marcas autos/logo-McLaren-marca-autos.jpg",
+  "/marcas autos/logo-Mercedes-Benz-AMG-marca-autos.jpg",
+  "/marcas autos/logo-Mercedes-Maybach-marca-autos.jpeg",
+  "/marcas autos/logo-Mercury-marca-autos.jpg",
+  "/marcas autos/logo-Mitsubishi-marca-autos.jpg",
+  "/marcas autos/logo-Nano-Flowcell-marca-autos.jpg",
+  "/marcas autos/logo-Nash-marca-autos.jpg",
+  "/marcas autos/logo-Opel-marca-autos.jpg",
+  "/marcas autos/logo-Packard-marca-autos.jpg",
+  "/marcas autos/logo-Peugeot-marca-autos.jpg",
+  "/marcas autos/logo-Pininfarina-marca-autos.jpg",
+  "/marcas autos/logo-Porsche-marca-autos.jpg",
+  "/marcas autos/logo-Praga-marca-autos.jpg",
+  "/marcas autos/logo-Qoros-marca-autos.jpg",
+  "/marcas autos/logo-Rambler-marca-autos.jpg",
+  "/marcas autos/logo-Rivian-marca-autos.jpg",
+  "/marcas autos/logo-Rover-marca-autos.jpg",
+  "/marcas autos/logo-SIAM-Di-Tella-marca-autos.jpg",
+  "/marcas autos/logo-Saab-marca-autos.jpg",
+  "/marcas autos/logo-Saturn-marca-autos.jpg",
+  "/marcas autos/logo-Scuderia-Cameron-Glickenhaus-marca-autos.png",
+  "/marcas autos/logo-Shineray-marca-autos.jpg",
+  "/marcas autos/logo-Skoda-marca-autos.jpg",
+  "/marcas autos/logo-Spania-GTA-marca-autos.jpg",
+  "/marcas autos/logo-Spyker-marca-autos.jpg",
+  "/marcas autos/logo-Ssang-Yong-marca-autos.jpg",
+  "/marcas autos/logo-TVR-marca-autos.jpg",
+  "/marcas autos/logo-Tata-marca-autos.jpg",
+  "/marcas autos/logo-Triumph-marca-autos.jpg",
+  "/marcas autos/logo-Troller-marca-autos.jpg",
+  "/marcas autos/logo-VUHL-marca-autos.jpg",
+  "/marcas autos/logo-Vencer-marca-autos.jpg",
+  "/marcas autos/logo-Willys-marca-autos.jpg",
+  "/marcas autos/logo-Zarooq-marca-autos.jpg",
+  "/marcas autos/logo-Zotye-marca-autos.jpg",
+  "/sonic/180px-Chris.webp",
+  "/sonic/Babylonrogues.webp",
+  "/sonic/Big_The_Cat_(ACTUALMENTE).webp",
+  "/sonic/BlazeDecal.webp",
+  "/sonic/Bokkun.webp",
+  "/sonic/Decoe_y_Bocoe.webp",
+  "/sonic/Metal_Sonic_2012.webp",
+  "/sonic/Mighty_in_Knuckles_Chaotix.webp",
+  "/sonic/Shade_The_Echidna_by_Puritylf4.webp",
+  "/sonic/Sonicchannel_chaos.webp",
+  "/sonic/Team_Chaotix.webp",
+  "/sonic/Vanilla.webp",
+  "/sonic/amyrosecolorsharpeditduck.webp",
+  "/sonic/chadow.png",
+  "/sonic/creammodern.webp",
+  "/sonic/emerl_battle_giant.webp",
+  "/sonic/images.jpeg",
+  "/sonic/knux.webp",
+  "/sonic/ll.webp",
+  "/sonic/son06_rouge.webp",
+  "/sonic/sonic_the_hedgehog.png",
+  "/sonic/tails.webp",
+  "/caballo/Caballo islandés.jpeg",
+  "/caballo/Caballo oldenburgo.jpeg",
+  "/caballo/Caballo shire.jpeg",
+  "/caballo/Caballo tarpán.jpeg",
+  "/caballo/Caballo-andaluz.jpg",
+  "/caballo/Caballo-appaloosa.jpg",
+  "/caballo/Caballo-arabe.jpg",
+  "/caballo/Caballo-belga-de-tiro-brabante.jpeg",
+  "/caballo/Caballo-cuarto-de-milla.jpg",
+  "/caballo/Caballo-frison.jpg",
+  "/caballo/Clydesdale.jpeg",
+  "/caballo/Criollo.jpeg",
+  "/caballo/Gypsy-vanner.jpeg",
+  "/caballo/Haflinger.jpeg",
+  "/caballo/Holsteiner.jpg",
+  "/caballo/Knabstrupper.jpg",
+  "/caballo/Lipizzaner.jpg",
+  "/caballo/Noriker.jpeg",
+  "/caballo/Poni de Connemara.jpeg",
+  "/caballo/Poni-de-las-Shetland.jpeg",
+  "/caballo/Poni.jpeg",
+  "/caballo/Purasangre.jpeg",
+  "/caballo/descarga (1).jpeg",
+  "/caballo/descarga.jpeg",
+  "/gatos/CAT HERO_0000_Abyssinian.jpg",
+  "/gatos/CAT HERO_0001_Balinese.jpg",
+  "/gatos/CAT HERO_0002_Bengal.jpg",
+  "/gatos/CAT HERO_0003_Birman.jpg",
+  "/gatos/CAT HERO_0004_British_shorthair.jpg",
+  "/gatos/CAT HERO_0005_Burmese.jpg",
+  "/gatos/CAT HERO_0007_Cornish_rex.jpg",
+  "/gatos/CAT HERO_0008_Devon_rex.jpg",
+  "/gatos/CAT HERO_0009_Egyptian_mau.jpg",
+  "/gatos/CAT HERO_0010_Exotic_shorthair.jpg",
+  "/gatos/CAT HERO_0011_Korat.jpg",
+  "/gatos/CAT HERO_0012_Maine_coon.jpg",
+  "/gatos/CAT HERO_0013_Norwegian_forest.jpg",
+  "/gatos/CAT HERO_0014_Ocicat.jpg",
+  "/gatos/CAT HERO_0015_Oriental_longhair.jpg",
+  "/gatos/CAT HERO_0016_Oriental_shorthair.jpg",
+  "/gatos/CAT HERO_0017_Persian.jpg",
+  "/gatos/CAT HERO_0018_Pixiebob.jpg",
+  "/gatos/CAT HERO_0019_Ragdoll.jpg",
+  "/gatos/CAT HERO_0020_Russian_blue.jpg",
+  "/gatos/CAT HERO_0021_Scottish_fold.jpg",
+  "/gatos/CAT HERO_0022_Selkirk_rex.jpg",
+  "/gatos/CAT HERO_0023_Siamese.jpg",
+  "/gatos/CAT HERO_0024_Snowshoe.jpg",
+  "/gatos/CAT HERO_0025_Somali.jpg",
+  "/gatos/CAT HERO_0026_Sphynx.jpg",
+  "/gatos/CAT HERO_0027_Tonkinese.jpg",
+  "/gatos/cat_american_wirehair.jpg",
+  "/gatos/cat_asian.jpg",
+  "/gatos/cat_australian_mist.jpg",
+  "/gatos/cat_bombay.jpg",
+  "/gatos/cat_chinchilla.jpg",
+  "/gatos/cat_cymrics.jpg",
+  "/gatos/cat_japanese_bobtail_long_hair.jpg",
+  "/gatos/cat_japanese_bobtail_short_hair.jpg",
+  "/gatos/cat_khao_manee.jpg",
+  "/gatos/cat_la_perms.jpg",
+  "/gatos/cat_manx.jpg",
+  "/gatos/cat_munchkin.jpg",
+  "/gatos/cat_savannah.jpg",
+  "/gatos/cat_siberian_forest.jpg",
+  "/gatos/cat_singapura.jpg",
+  "/gatos/cat_tiffanie.jpg",
+  "/gatos/cat_turkish_van.jpg",
+  "/insectos/caracol.jfif",
+  "/insectos/escarabajo pelotero.jfif",
+  "/insectos/escarabajo.jfif",
+  "/insectos/honey-bee-water-buckfast-59829.jpeg",
+  "/insectos/ladybugs-ladybirds-bugs-insects-144243.jpeg",
+  "/insectos/mosquito.jfif",
+  "/insectos/ormiga mielera.jfif",
+  "/insectos/pexels-photo-1046492.jpeg",
+  "/insectos/pexels-photo-1085542.jpeg",
+  "/insectos/pexels-photo-1114171.webp",
+  "/insectos/pexels-photo-1114318.jpeg",
+  "/insectos/pexels-photo-1119582.jpeg",
+  "/insectos/pexels-photo-17290182.webp",
+  "/insectos/pexels-photo-206770.jpeg",
+  "/insectos/pexels-photo-209074.jpeg",
+  "/insectos/pexels-photo-6722951.webp",
+  "/insectos/pexels-photo-675313.jpeg",
+  "/insectos/pexels-photo-6962243.jpeg",
+  "/insectos/pexels-photo-7808577.jpeg",
+  "/insectos/pexels-photo-7887002.jpeg",
+  "/insectos/spin-web-nature-bug-51394.jpeg",
+  "/libreria/calcar.jfif",
+  "/libreria/carbonico.jfif",
+  "/libreria/carpeta.jfif",
+  "/libreria/compas.jfif",
+  "/libreria/correctorliquido.jfif",
+  "/libreria/crayones.jfif",
+  "/libreria/cuaderno.jfif",
+  "/libreria/escuadra.jfif",
+  "/libreria/fibras.jfif",
+  "/libreria/glue.jfif",
+  "/libreria/lapicera.jfif",
+  "/libreria/lapiz.jfif",
+  "/libreria/libros.jfif",
+  "/libreria/pincel.jfif",
+  "/libreria/planisferio.jfif",
+  "/libreria/pluma.jfif",
+  "/libreria/resaltadores.jfif",
+  "/libreria/rubber.jfif",
+  "/libreria/ruler.jfif",
+  "/libreria/tempera.jfif",
+  "/libreria/tinta.jfif",
+  "/libreria/transportador.jfif",
+  "/lugares/640px-Taj_Mahal,_Agra,_India_edit3.jpg",
+  "/lugares/ARG.png",
+  "/lugares/BRAZIL.png",
+  "/lugares/CHINA.png",
+  "/lugares/ESPANHA.png",
+  "/lugares/FRANCE.png",
+  "/lugares/GERMANY.png",
+  "/lugares/GREAT BRITAIN.png",
+  "/lugares/GRECIA.png",
+  "/lugares/ISRAEL.png",
+  "/lugares/ITALIA.png",
+  "/lugares/JAPAN.png",
+  "/lugares/Monte-Fuji.jpg",
+  "/lugares/RUSIA.png",
+  "/lugares/TURQUIA.png",
+  "/lugares/URUGUAY.png",
+  "/lugares/USA.png",
+  "/lugares/bigben.jfif",
+  "/lugares/coliceo.jfif",
+  "/lugares/dubai.jfif",
+  "/lugares/effeil.jfif",
+  "/lugares/everest.jfif",
+  "/lugares/gran cañon.jfif",
+  "/lugares/iguazu.jfif",
+  "/lugares/liberty.jfif",
+  "/lugares/londres.jfif",
+  "/lugares/murallachina.jfif",
+  "/lugares/museofrancia.jfif",
+  "/lugares/obelizco.jfif",
+  "/lugares/pascua.jfif",
+  "/lugares/piramides egipto.jfif",
+  "/lugares/piramides peru.jfif",
+  "/lugares/piza.jfif",
+  "/lugares/rosmore.jfif",
+  "/lugares/sidney.jfif",
+  "/lugares/stonehege.jfif",
+  "/lugares/triunfo.jfif",
+  "/oficios/abogada.jfif",
+  "/oficios/actor.jpg",
+  "/oficios/albanil.jfif",
+  "/oficios/arquitecto.jfif",
+  "/oficios/astronauta.jpg",
+  "/oficios/azafata.jpg",
+  "/oficios/bailarin.jfif",
+  "/oficios/bombero.jfif",
+  "/oficios/cajero.jfif",
+  "/oficios/carpintero.jfif",
+  "/oficios/chef.jfif",
+  "/oficios/colectivder.jfif",
+  "/oficios/doctor.jfif",
+  "/oficios/electricista.jfif",
+  "/oficios/emfermero.jfif",
+  "/oficios/escritor.jpg",
+  "/oficios/livegard.jfif",
+  "/oficios/maestro.jfif",
+  "/oficios/militar.jfif",
+  "/oficios/modelo.jpg",
+  "/oficios/musico.jpg",
+  "/oficios/piloto.jfif",
+  "/oficios/police.jfif",
+  "/oficios/politico.jpg",
+  "/oficios/programador.jfif",
+  "/oficios/referi.jfif",
+  "/oficios/repartidor.jfif",
+  "/transporte/airship.jfif",
+  "/transporte/auto.jpeg",
+  "/transporte/avion.webp",
+  "/transporte/bicicleta.jpeg",
+  "/transporte/bote.jpeg",
+  "/transporte/buss.jpeg",
+  "/transporte/camioneta.jpeg",
+  "/transporte/chariot.jfif",
+  "/transporte/escabadora.jpeg",
+  "/transporte/globo.webp",
+  "/transporte/helicoptero.jpeg",
+  "/transporte/jate.jpeg",
+  "/transporte/jet-ski.jfif",
+  "/transporte/jet.jpeg",
+  "/transporte/moto.jpeg",
+  "/transporte/rollers.jfif",
+  "/transporte/scooter.jfif",
+  "/transporte/skate.jfif",
+  "/transporte/sled.jfif",
+  "/transporte/submarino.jfif",
+  "/transporte/teleferico.jpeg",
+  "/transporte/tractor.jpeg",
+  "/transporte/tranvia.jpeg",
+  "/transporte/tren.jpeg",
+  "/transporte/truck.jfif",
+  "/transporte/tuktuk.jfif",
+  "/transporte/veleros.jpeg",
+  "/futbol/1-escudo-seleccion-inglaterra-1024x576.webp",
+  "/futbol/12-escudo-seleccion-italia-brandemia-blog_0-1024x576.webp",
+  "/futbol/13-escudo-seleccion-brasil-brandemia-blog_0-1024x576.webp",
+  "/futbol/13-escudo-seleccion-marruecos-1024x576.webp",
+  "/futbol/17-escudo-seleccion-argentina-bandera-1024x576.webp",
+  "/futbol/3-escudo-seleccion-senegal-1024x576.webp",
+  "/futbol/4-escudo-seleccion-camerun-1024x576.webp",
+  "/futbol/5-escudo-seleccion-ghana-1024x576.webp",
+  "/futbol/6-escudo-seleccion-corea-1024x576.webp",
+  "/futbol/7-escudo-seleccion-paises-bajos-1024x576.webp",
+  "/futbol/8-escudo-seleccion-mexico-1024x576.webp",
+  "/futbol/Antoine Griezmann.jpeg",
+  "/futbol/Atlético de Rafaela (Santa Fe).jpg",
+  "/futbol/Atlético-Tucumán-512x512-PESLogos.jpg",
+  "/futbol/Ciro Immobile.jpeg",
+  "/futbol/David De Gea.jpeg",
+  "/futbol/Deportivo Moron.jpg",
+  "/futbol/Eden Hazard.jpeg",
+  "/futbol/Escudo_del_C_A_River_Plate.svg.png",
+  "/futbol/Estudiantes_BA_escudo.jpg",
+  "/futbol/Harry Kane.jpeg",
+  "/futbol/Jadon Sancho.jpeg",
+  "/futbol/Joshua Kimmich.jpeg",
+  "/futbol/Karim Benzema.jpeg",
+  "/futbol/Kevin De Bruyne.jpeg",
+  "/futbol/Luka Modrić.jpeg",
+  "/futbol/Marquinhos.jpeg",
+  "/futbol/N'Golo Kanté.jpeg",
+  "/futbol/Patronato.jpg",
+  "/futbol/Paul Pogba.jpeg",
+  "/futbol/Raheem Sterling.jpeg",
+  "/futbol/Robert Lewandowski.jpeg",
+  "/futbol/Romelu Lukaku.jpeg",
+  "/futbol/San Martín tucuman.jpg",
+  "/futbol/Sarmiento.jpg",
+  "/futbol/Sergio Agüero.jpeg",
+  "/futbol/Thiago Alcântara.jpeg",
+  "/futbol/Tiro_federal_escudo.jpg",
+  "/futbol/Virgil van Dijk.jpeg",
+  "/futbol/aldosivi.jpg",
+  "/futbol/all boys.jpg",
+  "/futbol/almagro.jpg",
+  "/futbol/argentino de quilme.jpg",
+  "/futbol/argentinos jr.jpg",
+  "/futbol/argentinos.jpeg",
+  "/futbol/argentinos.png",
+  "/futbol/armenio.jpg",
+  "/futbol/arsenal.jpg",
+  "/futbol/atlanta.jpg",
+  "/futbol/balderrama.jpeg",
+  "/futbol/banfield-1.jpg",
+  "/futbol/beckam.jpeg",
+  "/futbol/beckenbauer.jpeg",
+  "/futbol/belgrano.jpg",
+  "/futbol/boca jr.jpg",
+  "/futbol/central cordoba ro.jpg",
+  "/futbol/chaco for ever.jpg",
+  "/futbol/colon.jpg",
+  "/futbol/cristiano ronaldo.jpeg",
+  "/futbol/crucero del norte.jpg",
+  "/futbol/defensa y justicia.jpg",
+  "/futbol/deportivo español.jpg",
+  "/futbol/descarga (1).jpeg",
+  "/futbol/descarga (2).jpeg",
+  "/futbol/descarga.jpeg",
+  "/futbol/distefano.jpeg",
+  "/futbol/escudo central cordoba.jpg",
+  "/futbol/escudo-francia-seleccion-mundial-1024x576.webp",
+  "/futbol/escudo-seleccion-espana-1024x576.webp",
+  "/futbol/escudo-seleccion-japon-mundial-1024x576.webp",
+  "/futbol/estudiantes lp.jpg",
+  "/futbol/ferro.jpg",
+  "/futbol/gimnasia jujuy.jpg",
+  "/futbol/gimnasia la plata.jpg",
+  "/futbol/gimnasia y tiro.jpg",
+  "/futbol/godoy cruz.jpg",
+  "/futbol/haland.jpeg",
+  "/futbol/huracan corriente.jpg",
+  "/futbol/huracan tre arroyo.jpg",
+  "/futbol/huracan.jpg",
+  "/futbol/independiente.jpg",
+  "/futbol/inista.jpeg",
+  "/futbol/instituto.jpg",
+  "/futbol/italiano.jpg",
+  "/futbol/kaka.jpeg",
+  "/futbol/lanus.jpg",
+  "/futbol/los andes.jpg",
+  "/futbol/mandiyu.jpg",
+  "/futbol/maradona.jpeg",
+  "/futbol/mascherano.jpeg",
+  "/futbol/mbape.jpeg",
+  "/futbol/messi.jpeg",
+  "/futbol/newells.jpg",
+  "/futbol/neymar.jpeg",
+  "/futbol/nueva chicago.jpg",
+  "/futbol/ollimpo.jpg",
+  "/futbol/pele.jpeg",
+  "/futbol/platense.jpg",
+  "/futbol/quilmes.jpg",
+  "/futbol/racing club.jpg",
+  "/futbol/ronaldiño.jpeg",
+  "/futbol/sadio9 mane.jpeg",
+  "/futbol/san lorenzo.jpg",
+  "/futbol/san martin de san juan.jpg",
+  "/futbol/san telmo.jpg",
+  "/futbol/sergio ramos.jpeg",
+  "/futbol/talleres c.jpg",
+  "/futbol/talleres re.jpg",
+  "/futbol/temperley.png",
+  "/futbol/tigre.jpg",
+  "/futbol/union.jpg",
+  "/futbol/velez.jpg",
+  "/futbol/zidan.jpeg",
+  "/consolas/Atari 2600.jpg",
+  "/consolas/Game Boy.jpg",
+  "/consolas/Neo Geo.jpg",
+  "/consolas/Nintendo Entertainment System (NES).jpg",
+  "/consolas/PlayStation 2.jpg",
+  "/consolas/PlayStation Portable (PSP).jpg",
+  "/consolas/Sega Genesis (también conocida como Sega Mega Drive).jpg",
+  "/consolas/Xbox.jpg",
+  "/consolas/tamagotch.jpg",
+  "/consolas/tetris1000-1.jpg",
+  "/juegoss mecanicos/(Drop Tower).jpg",
+  "/juegoss mecanicos/Barcas Vikingas.jpg",
+  "/juegoss mecanicos/Carruseles.jpg",
+  "/juegoss mecanicos/Góndolas Voladoras.jpg",
+  "/juegoss mecanicos/Montaña Rusa.jpg",
+  "/juegoss mecanicos/Norias Gigantes.jpg",
+  "/juegoss mecanicos/Rápidos en Balsa.jpg",
+  "/juegoss mecanicos/Tagada.jpg",
+  "/juegoss mecanicos/Top Spin.jpg",
+  "/juegoss mecanicos/Tren Fantasma.jpg",
+  "/juguetes/Action Figures.jpg",
+  "/juguetes/Blackjack.jpeg",
+  "/juguetes/Craps.jpeg",
+  "/juguetes/Cubos de Rubik.jpg",
+  "/juguetes/Hot Wheels.jpg",
+  "/juguetes/Monopoly.jpg",
+  "/juguetes/Máquinas Tragamonedas.jpeg",
+  "/juguetes/Peluches.jpg",
+  "/juguetes/Playmobil.jpg",
+  "/juguetes/Puzzles.jpg",
+  "/juguetes/Scrabble.jpg",
+  "/juguetes/Trenes de juguete.jpg",
+  "/juguetes/barbi.jpg",
+  "/juguetes/bingo.jpeg",
+  "/juguetes/descarga.jpg",
+  "/juguetes/microscopios.jpg",
+  "/juguetes/pelotaplaya.jpg",
+  "/juguetes/retroracer.jpg",
+  "/juguetes/ruleeta.jpeg",
+  "/juguetes/telescopio de juguete.jpg",
+  "/juguetes/weel of fortune.jpeg",
+  "/mascotas/Cobayas.jpg",
+  "/mascotas/Erizos africanosErizos africanos.jpg",
+  "/mascotas/Hamsters.jpg",
+  "/mascotas/Hurones.jpg",
+  "/mascotas/aves.jpg",
+  "/mascotas/conejos.jpg",
+  "/mascotas/descarga.jpg",
+  "/mascotas/gatos.jpg",
+  "/mascotas/images.jpg",
+  "/mascotas/peces.jpg",
+  "/mascotas/reptiles.jpg",
+  "/mascotas/tortugas.jpg",
+  "/mascotas/vivoras.jpg",
+  "/comida/Papayas.jpg",
+  "/comida/aceite de oliva.jpg",
+  "/comida/ajo.jpg",
+  "/comida/arroz.jpg",
+  "/comida/azucar.jpg",
+  "/comida/cebolla.jpg",
+  "/comida/cereza.jpg",
+  "/comida/curri.jpg",
+  "/comida/durazno.jpg",
+  "/comida/fruta.jpg",
+  "/comida/frutilla.jpg",
+  "/comida/granada.jpg",
+  "/comida/hamburguesa.jpg",
+  "/comida/harina.jpg",
+  "/comida/helado.jpg",
+  "/comida/hiervas aromaticas.jpg",
+  "/comida/higo.jpg",
+  "/comida/huevos.jpg",
+  "/comida/kiwi.jpg",
+  "/comida/leche.jpg",
+  "/comida/limon.jpg",
+  "/comida/mango.jpg",
+  "/comida/manteca.jpg",
+  "/comida/manzana.jpg",
+  "/comida/melon.jpg",
+  "/comida/naranja.jpg",
+  "/comida/pasta.jpg",
+  "/comida/pera.jpg",
+  "/comida/pizza.jpg",
+  "/comida/piña.jpg",
+  "/comida/platano.jpg",
+  "/comida/pollofrito.jpg",
+  "/comida/pomelo.jpg",
+  "/comida/queso.jpg",
+  "/comida/sandia.jpg",
+  "/comida/sopa de fideo.jpg",
+  "/comida/sopa de tomate.jpg",
+  "/comida/sushi.jpg",
+  "/comida/tacos.jpg",
+  "/comida/tarta de manzana.jpg",
+  "/comida/tomate.jpg",
+  "/comida/uvas.jpg",
+  "/perros/BREED Hero Japanese Chin.jpg",
+  "/perros/BREED Hero bauceron.jpg",
+  "/perros/BREED Hero_0000_afghan_hound_0.jpg",
+  "/perros/BREED Hero_0002_alaskan_malamute_0.jpg",
+  "/perros/BREED Hero_0006_basenji_0.jpg",
+  "/perros/BREED Hero_0007_basset_griffon_vendeen_grande_0.jpg",
+  "/perros/BREED Hero_0008_basset_hound_0.jpg",
+  "/perros/BREED Hero_0009_beagle_0.jpg",
+  "/perros/BREED Hero_0010_bearded_collie_0.jpg",
+  "/perros/BREED Hero_0011_bedlington_terrier_0.jpg",
+  "/perros/BREED Hero_0012_belgian_shepherd_lakenois_0.jpg",
+  "/perros/BREED Hero_0015_bernese_mountain_dog.jpg",
+  "/perros/BREED Hero_0016_bichon_frise.jpg",
+  "/perros/BREED Hero_0017_bloodhound.jpg",
+  "/perros/BREED Hero_0018_border_collie.jpg",
+  "/perros/BREED Hero_0019_border_terrier.jpg",
+  "/perros/BREED Hero_0020_borzoi.jpg",
+  "/perros/BREED Hero_0021_boston_terrier.jpg",
+  "/perros/BREED Hero_0022_bouvoir_des_flandres.jpg",
+  "/perros/BREED Hero_0023_boxer.jpg",
+  "/perros/BREED Hero_0024_bracco_italiano.jpg",
+  "/perros/BREED Hero_0026_brittany.jpg",
+  "/perros/BREED Hero_0027_bull_terrier.jpg",
+  "/perros/BREED Hero_0028_bull_terrier_miniature.jpg",
+  "/perros/BREED Hero_0029_Bulldog.jpg",
+  "/perros/BREED Hero_0030_Bullmastiff.jpg",
+  "/perros/BREED Hero_0031_Cairn_terrier.jpg",
+  "/perros/BREED Hero_0032_king_charles_spaniel.jpg",
+  "/perros/BREED Hero_0033_Chihuahua_long.jpg",
+  "/perros/BREED Hero_0034_chihuahua_smooth.jpg",
+  "/perros/BREED Hero_0035_chinese_crested.jpg",
+  "/perros/BREED Hero_0044_dalmatian.jpg",
+  "/perros/BREED Hero_0045_deerhound.jpg",
+  "/perros/BREED Hero_0046_doberman.jpg",
+  "/perros/BREED Hero_0047_dogue de bordeaux (1).jpg",
+  "/perros/BREED Hero_0051_french_bulldog.jpg",
+  "/perros/BREED Hero_0054_german_shorthaired_pointer.jpg",
+  "/perros/BREED Hero_0057_german_wirehaired_pointer.jpg",
+  "/perros/BREED Hero_0059_golden_retriever.jpg",
+  "/perros/BREED Hero_0062_greyhound.jpg",
+  "/perros/BREED Hero_0063_griffon_bruxellois.jpg",
+  "/perros/BREED Hero_0064_havanese.jpg",
+  "/perros/BREED Hero_0065_hovawart.jpg",
+  "/perros/BREED Hero_0066_hungarian_kuvasz.jpg",
+  "/perros/BREED Hero_0067_hungarian_vizsla.jpg",
+  "/perros/BREED Hero_0071_irish_wolfhound.jpg",
+  "/perros/BREED Hero_0072_italian_greyhound.jpg",
+  "/perros/BREED Hero_0074_japanese_akita.jpg",
+  "/perros/BREED Hero_0076_keeshond.jpg",
+  "/perros/BREED Hero_0078_leonberger.jpg",
+  "/perros/BREED Hero_0079_lhasa_apso.jpg",
+  "/perros/BREED Hero_0080_maltese.jpg",
+  "/perros/BREED Hero_0081_manchester_terrier.jpg",
+  "/perros/BREED Hero_0091_old_english_sheepdog.jpg",
+  "/perros/BREED Hero_0096_poodle_toy.jpg",
+  "/perros/BREED Hero_0097_poodle_standard.jpg",
+  "/perros/BREED Hero_0098_poodle_miniature.jpg",
+  "/perros/BREED Hero_0100_pug.jpg",
+  "/perros/BREED Hero_0106_retriever_labrador.jpg",
+  "/perros/BREED Hero_0107_nova_scotia_ducke_toller.jpg",
+  "/perros/BREED Hero_0108_rhodesian_ridgeback.jpg",
+  "/perros/BREED Hero_0118_siberian_husky.jpg",
+  "/perros/BREED Hero_0122_spaniel_american_cocker.jpg",
+  "/perros/BREED Hero_0123_spaniel_clumber.jpg",
+  "/perros/BREED Hero_0124_spaniel_cocker.jpg",
+  "/perros/BREED Hero_0127_spaniel_field.jpg",
+  "/perros/BREED Hero_0135_weimeraner.jpg",
+  "/perros/BREED Hero_0136_welsh_corgi_cardigan.jpg",
+  "/perros/BREED Hero_0137_welsh_corgi_pembroke.jpg",
+  "/perros/affenpinscher.jpg",
+  "/perros/basset_bleu_de_gascogne.jpg",
+  "/perros/basset_fauve_de_bretagne.jpg",
+  "/perros/basset_griffon_vendeen_petit.jpg",
+  "/perros/bergamasco.jpg",
+  "/perros/bolognese.jpg",
+  "/perros/cavalier_king_charles_spaniel.jpg",
+  "/perros/chow-dogs.jpg",
+  "/perros/chow_chow_rough.jpg",
+  "/perros/coton_de_tulear.jpg",
+  "/perros/dandie_dinmont_terrier.jpg",
+  "/perros/fox-terrier-de-pelo-duro.htm",
+  "/perros/foxhound.jpg",
+  "/perros/grand_bleu_de_gascogne.jpg",
+  "/perros/great_dane.jpg",
+  "/perros/hamiltonstovare.jpg",
+  "/perros/hungarian_wire_haired_vizsla.webp",
+  "/perros/kerry_blue_terrier.jpg",
+  "/perros/komondor.jpg",
+  "/perros/lakeland_terrier.jpg",
+  "/perros/lancashire_heeler.jpg",
+  "/perros/lowchen_little_lion.jpg",
+  "/perros/norwegian_buhund.jpg",
+  "/perros/norwegian_elkhound.jpg",
+  "/basquet/Andrés Nocioni.jpeg",
+  "/basquet/Carlos Delfino.jpeg",
+  "/basquet/Chris Paul.jpeg",
+  "/basquet/Dirk Nowitzki.jpeg",
+  "/basquet/Dwyane Wade.jpeg",
+  "/basquet/Fabricio Oberto.jpeg",
+  "/basquet/Giannis Antetokounmpo.jpeg",
+  "/basquet/Hakeem Olajuwon.jpeg",
+  "/basquet/Kareem Abdul-Jabbar.jpeg",
+  "/basquet/Karl Malone.jpeg",
+  "/basquet/Kawhi Leonard.jpeg",
+  "/basquet/Kevin Garnett.jpeg",
+  "/basquet/Larry Bird.jpeg",
+  "/basquet/LeBron James.jpeg",
+  "/basquet/Luis Scola.jpeg",
+  "/basquet/Magic Johnson.jpeg",
+  "/basquet/Manu Ginóbili.jpeg",
+  "/basquet/Shaquille O'Neal.jpeg",
+  "/basquet/Stephen Curry.jpeg",
+  "/basquet/Tim Duncan.jpeg",
+  "/basquet/Wilt Chamberlain.jpeg",
+  "/basquet/micaeldios jordan.jpeg",
+  "/tenis/Andre Agassi.jpeg",
+  "/tenis/Billie Jean King.jpeg",
+  "/tenis/Bjorn Borg.jpeg",
+  "/tenis/Boris Becker.jpeg",
+  "/tenis/Chris Evert.jpeg",
+  "/tenis/David Nalbandian.jpeg",
+  "/tenis/Gabriela Sabatini.jpeg",
+  "/tenis/Gisela Dulko.jpeg",
+  "/tenis/Guillermo Vilas.jpeg",
+  "/tenis/Ivan Lendl.jpeg",
+  "/tenis/John McEnroe.jpeg",
+  "/tenis/Juan Martín del Potro.jpeg",
+  "/tenis/Justine Henin.jpeg",
+  "/tenis/Margaret Court.jpeg",
+  "/tenis/Maria Sharapova.jpeg",
+  "/tenis/Martina Hingis.jpeg",
+  "/tenis/Martina Navratilova.jpeg",
+  "/tenis/Monica Seles.jpeg",
+  "/tenis/Novak Djokovic.jpeg",
+  "/tenis/Pete Sampra.jpeg",
+  "/tenis/Rod Laver.jpeg",
+  "/tenis/Roger Federe.jpeg",
+  "/tenis/Serena Williams.jpeg",
+  "/tenis/Steffi Graf.jpeg",
+  "/tenis/nadal.jpeg",
+];
 
 export default images;
