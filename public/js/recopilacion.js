@@ -35,6 +35,7 @@ const directorioProyecto = [
   "../mascotas",
   "../comida",
   "../perros",
+  "../basquet",
   "../",
 ];
 
