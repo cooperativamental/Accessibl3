@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+# accEa$e: Web3 Wallet with Lifestyle Image Password Recovery
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![accEa$e Logo](https://accease.vercel.app/ACC_EASE_sombra.png)
 
-## Available Scripts
+accEa$e is a proof-of-concept web3 wallet that aims to highlight the importance of accessibility features in the world of cryptocurrency and decentralized finance. It features a novel password recovery system that utilizes images related to the user's lifestyle, making password retrieval both secure and memorable.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Web3 Wallet**: accEa$e provides a user-friendly web3 wallet for managing your cryptocurrencies and interacting with decentralized applications (dApps).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Lifestyle Image Password Recovery**: Forget the hassle of remembering complex passwords. accEa$e offers a unique password recovery system where users select images related to their lifestyle to regain access to their wallet.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Accessibility Features**: We prioritize accessibility, ensuring that accEa$e can be used by a diverse audience, including those with disabilities.
 
-### `npm test`
+- **Next.js Framework**: Built with Next.js, a popular and powerful React framework, accEa$e offers a fast and responsive user experience.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started
 
-### `npm run build`
+To get started with accEa$e on your local machine, follow these steps:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone this repository to your local environment:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```bash
+   git clone https://github.com/cooperativamental/Accessibl3.git
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Navigate to the project directory:
 
-### `npm run eject`
+   ```bash
+   cd Accessibl3
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Install the dependencies:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```bash
+   npm install
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. Run the development server:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   ```bash
+   npm run dev
+   ```
 
-## Learn More
+5. Open your web browser and visit [http://localhost:3000](http://localhost:3000) to access accEa$e.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Usage
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Create a new account or import an existing one.
+- Explore the wallet features.
+- Experience the innovative lifestyle image password recovery system.
+- Test the accessibility features and provide feedback.
 
-### Code Splitting
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+We hope that accEa$e showcases the importance of accessibility in web3 applications and provides a unique and user-friendly experience for managing your digital assets. Thank you for exploring our project!
